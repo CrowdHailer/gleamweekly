@@ -27,7 +27,7 @@ const blacker = "#151515"
 pub fn content(issue, number) {
   let #(items, also) = issue
   let issue_url =
-    string.concat(["https://gleamweekly/issues/", int.to_string(number)])
+    string.concat(["https://gleamweekly.com/issues/", int.to_string(number)])
   h.div(
     [
       a.style([
@@ -60,12 +60,12 @@ pub fn header(issue_url) {
             h.tr([], [
               h.td([a.style([#("vertical-align", "text-bottom")])], [
                 h.img([
-                  a.src("https://gleamweekly.com/lucymail.svg"),
+                  a.src("https://gleamweekly.com/lucymail.png"),
                   a.width(80),
-                  a.height(80),
+                  a.height(64),
                   a.style([
                     #("width", "80px"),
-                    #("height", "80px"),
+                    #("height", "64px"),
                     #("vertical-align", "text-bottom"),
                     #("margin-bottom", "-30px"),
                     #("margin-top", "-10px"),
@@ -245,7 +245,7 @@ fn submit(issue_url) {
       ),
     ]),
     h.p([a.style([#("margin-bottom", "0")])], [
-      text("That's for this week, have a lovely day."),
+      text("That's all for this week, have a lovely day."),
       h.br([]),
       h.a(
         [
@@ -266,7 +266,7 @@ fn submit(issue_url) {
       h.br([]),
       text("If you enjoyed this update, please tell your friends"),
       h.br([]),
-      text("This issue is available, and sharable, at "),
+      text("This issue is available, and shareable, at "),
       h.a([a.href(issue_url)], [text("gleamweekly.com/issues/1")]),
       h.br([]),
       h.br([]),

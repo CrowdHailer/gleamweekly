@@ -18,6 +18,8 @@ pub fn render(issue, number) {
   />
   <link rel=\"shortcut icon\" href=\"/lucymail.svg\" />
   <meta property=\"og:image\" content=\"/lucymail.svg\" />
+  <script defer data-domain=\"gleamweekly.com\" src=\"https://plausible.io/js/script.js\"></script>
+
 </head>
 <body style=\"margin:0;background:#2f2f2f;\">",
     element.to_string(

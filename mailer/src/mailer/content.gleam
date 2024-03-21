@@ -23,9 +23,14 @@ pub const issues = [
         "Today Gleam v1.0.0 has been released! This is the first “stable” release of the language and a big milestone for the ecosystem.",
       ),
       News(
+        "n-sided-lucy",
+        "https://0xca551e.github.io/n-sided-lucy/",
+        "Create lucys of all sorts.",
+      ),
+      News(
         "pprint 1.0",
         "https://github.com/MystPi/pprint",
-        "A simple pretty printer for debugging and testing!",
+        "A simple pretty printer for debugging and testing.",
       ),
       News(
         "p5js_gleam",
@@ -53,6 +58,11 @@ pub const issues = [
         "Types for HTTP headers",
         "https://github.com/LilyRose2798/typed_headers",
         ProjectUpdate,
+      ),
+      Also(
+        "Simple Programming Languages",
+        "https://ryanbrewer.dev/posts/simple-programming-languages.html",
+        BlogPost,
       ),
     ],
   ),
