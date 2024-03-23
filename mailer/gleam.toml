@@ -1,0 +1,11 @@
+name = "mailer"
+target = "javascript"
+version = "1.0.0"
+
+[dependencies]
+gleam_stdlib = "~> 0.34 or ~> 1.0"
+lustre = "~> 3.1"
+simplifile = "~> 1.5"
+
+[dev-dependencies]
+gleeunit = "~> 1.0"
