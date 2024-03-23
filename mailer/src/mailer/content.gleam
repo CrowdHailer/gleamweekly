@@ -17,6 +17,27 @@ pub const issues = [
   #(
     [
       News(
+        "Monitoring Processes",
+        "https://code-change.nl/gleam-blog/20240322-monitoring-processes.html",
+        "Discussing how to trap exists an monitor processes from Gleam.",
+      ),
+      News(
+        "Exploring Gleam with Genetic Algorithms",
+        "https://silasmarvin.dev/exploring-gleam-with-genetic-algorithms",
+        "Introduction to Gleam by building a simple word-solving genetic algorithm.",
+      ),
+    ],
+    [
+      Also(
+        "Gleam's Core Team in the House. Beam Radio",
+        "https://www.beamrad.io/72",
+        Podcast,
+      ),
+    ],
+  ),
+  #(
+    [
+      News(
         "Gleam version 1",
         "https://gleam.run/news/gleam-version-1/",
         "Today Gleam v1.0.0 has been released! This is the first “stable” release of the language and a big milestone for the ecosystem.",
