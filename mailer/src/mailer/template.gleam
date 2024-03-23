@@ -139,7 +139,6 @@ pub fn header(issue_url) {
 const section_style = [#("padding", "1.5rem 1.5rem 0rem 1.5rem")]
 
 pub fn news(items) {
-  // color: #373f52; font-size: 1.25rem; margin: 0 0 0.5rem 0; line-height: 1.25; font-weight: bold;
   h.div([a.style(section_style)], [
     h.div(
       [
@@ -171,7 +170,6 @@ fn news_item(item) {
 }
 
 pub fn others(others) {
-  // color: #373f52; font-size: 1.25rem; margin: 0 0 0.5rem 0; line-height: 1.25; font-weight: bold;
   h.div([a.style(section_style)], [
     h.div(
       [
@@ -201,8 +199,6 @@ fn other_item(item) {
     render_tag(tag),
   ])
 }
-
-// background: #ff7600; color: #ffffff; font-size: 11px; border-radius: 3px; padding: 3px; white-space: nowrap
 
 fn render_tag(tag) {
   let #(content, bg, color) = case tag {

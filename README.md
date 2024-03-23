@@ -19,3 +19,6 @@ Things I haven't had time to build but that would be nice.
 
 - Social previews, so that sharing links to issues or pages so some nice content.
 - RSS feed.
+- Index page.
+- Render latest issue on homepage.
+- Date -> issue functionality.

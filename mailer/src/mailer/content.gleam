@@ -1,4 +1,3 @@
-// We want to encourage V1
 pub type News {
   News(title: String, url: String, description: String)
 }
