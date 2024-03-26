@@ -26,12 +26,38 @@ pub const issues = [
         "https://silasmarvin.dev/exploring-gleam-with-genetic-algorithms",
         "Introduction to Gleam by building a simple word-solving genetic algorithm.",
       ),
+      News(
+        "Lustre v4.0.0 released.",
+        "https://github.com/lustre-labs/lustre",
+        "Lustre is a web framework for all kinds of applications.
+        This latest release introduces server components, better dev tooling and more docs.",
+      ),
     ],
     [
       Also(
         "Gleam's Core Team in the House. Beam Radio",
         "https://www.beamrad.io/72",
         Podcast,
+      ),
+      Also(
+        "Why the number of Gleam programmers is growing so fast?",
+        "https://tahazsh.com/blog/why-gleam-is-good",
+        BlogPost,
+      ),
+      Also(
+        "PostgreSQL protocol decoder/encoder",
+        "https://github.com/grodaus/postgresql_protocol",
+        ProjectUpdate,
+      ),
+      Also(
+        "Act, compose stateful actions to simulate mutable state ",
+        "https://github.com/MystPi/act",
+        ProjectUpdate,
+      ),
+      Also(
+        "Monitoring processes",
+        "https://code-change.nl/gleam-blog/20240324-monitoring-processes.html",
+        BlogPost,
       ),
     ],
   ),
