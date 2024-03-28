@@ -19,7 +19,7 @@ pub const issues = [
       News(
         "Monitoring Processes",
         "https://code-change.nl/gleam-blog/20240322-monitoring-processes.html",
-        "Discussing how to trap exists an monitor processes from Gleam.",
+        "Discussing how to trap exits and monitor processes from Gleam.",
       ),
       News(
         "Getting to know Actors in Gleam. Code BEAM SF 2024",
@@ -40,7 +40,7 @@ pub const issues = [
       News(
         "Exploring the Gleam FFI",
         "https://www.jonashietala.se/blog/2024/01/11/exploring_the_gleam_ffi/",
-        "Josh wrote a blog post with simple examples on how to get started with interacting with Erlang/Elixir/Rust/JavaScript from Gleam.",
+        "Josh wrote a blog post with simple examples on how to get started interacting with Erlang/Elixir/Rust/JavaScript from Gleam.",
       ),
     ],
     [
@@ -50,7 +50,7 @@ pub const issues = [
         Podcast,
       ),
       Also(
-        "Why the number of Gleam programmers is growing so fast?",
+        "Why the number of Gleam programmers is growing so fast",
         "https://tahazsh.com/blog/why-gleam-is-good",
         BlogPost,
       ),
@@ -60,12 +60,12 @@ pub const issues = [
         ProjectUpdate,
       ),
       Also(
-        "Act, compose stateful actions to simulate mutable state ",
+        "Act, compose stateful actions to simulate mutable state",
         "https://github.com/MystPi/act",
         ProjectUpdate,
       ),
       Also(
-        "Monitoring processes",
+        "Monitoring processes (2/3)",
         "https://code-change.nl/gleam-blog/20240324-monitoring-processes.html",
         BlogPost,
       ),

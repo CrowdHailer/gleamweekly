@@ -35,11 +35,16 @@ pub fn content(issue, number) {
         #("line-height", "1.5"),
       ]),
     ],
-    [header(issue_url), news(items), others(also), submit(issue_url)],
+    [
+      header(issue_url, number),
+      news(items),
+      others(also),
+      submit(issue_url, number),
+    ],
   )
 }
 
-pub fn header(issue_url) {
+pub fn header(issue_url, number) {
   h.div(
     [
       a.style([
@@ -124,7 +129,7 @@ pub fn header(issue_url) {
                         #("color", blacker),
                       ]),
                     ],
-                    [text("Issue #1")],
+                    [text("Issue #"), text(int.to_string(number))],
                   ),
                 ],
               ),
@@ -221,7 +226,7 @@ fn render_tag(tag) {
   )
 }
 
-fn submit(issue_url) {
+fn submit(issue_url, number) {
   h.div([a.style([#("background", aged_plastic_yellow), ..section_style])], [
     h.div([a.style([#("text-align", "center"), #("padding", "25px")])], [
       h.a(
@@ -263,7 +268,10 @@ fn submit(issue_url) {
       text("If you enjoyed this update, please tell your friends"),
       h.br([]),
       text("This issue is available, and shareable, at "),
-      h.a([a.href(issue_url)], [text("gleamweekly.com/issues/1")]),
+      h.a([a.href(issue_url)], [
+        text("gleamweekly.com/issues/"),
+        text(int.to_string(number)),
+      ]),
       h.br([]),
       h.br([]),
     ]),
