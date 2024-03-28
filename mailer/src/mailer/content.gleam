@@ -17,6 +17,63 @@ pub const issues = [
   #(
     [
       News(
+        "Monitoring Processes",
+        "https://code-change.nl/gleam-blog/20240322-monitoring-processes.html",
+        "Discussing how to trap exits and monitor processes from Gleam.",
+      ),
+      News(
+        "Getting to know Actors in Gleam. Code BEAM SF 2024",
+        "https://www.youtube.com/watch?v=WaHx6n2UZJg",
+        "In this talk Raúl disassembles what makes an Actor and how to make them work with the Gleam type system",
+      ),
+      News(
+        "Lustre v4.0.0 released.",
+        "https://github.com/lustre-labs/lustre",
+        "Lustre is a web framework for all kinds of applications.
+        This latest release introduces server components, better dev tooling and more docs.",
+      ),
+      News(
+        "Exploring Gleam with Genetic Algorithms",
+        "https://silasmarvin.dev/exploring-gleam-with-genetic-algorithms",
+        "Introduction to Gleam by building a simple word-solving genetic algorithm.",
+      ),
+      News(
+        "Exploring the Gleam FFI",
+        "https://www.jonashietala.se/blog/2024/01/11/exploring_the_gleam_ffi/",
+        "Josh wrote a blog post with simple examples on how to get started interacting with Erlang/Elixir/Rust/JavaScript from Gleam.",
+      ),
+    ],
+    [
+      Also(
+        "Gleam's Core Team in the House. Beam Radio",
+        "https://www.beamrad.io/72",
+        Podcast,
+      ),
+      Also(
+        "Why the number of Gleam programmers is growing so fast",
+        "https://tahazsh.com/blog/why-gleam-is-good",
+        BlogPost,
+      ),
+      Also(
+        "PostgreSQL protocol decoder/encoder",
+        "https://github.com/grodaus/postgresql_protocol",
+        ProjectUpdate,
+      ),
+      Also(
+        "Act, compose stateful actions to simulate mutable state",
+        "https://github.com/MystPi/act",
+        ProjectUpdate,
+      ),
+      Also(
+        "Monitoring processes (2/3)",
+        "https://code-change.nl/gleam-blog/20240324-monitoring-processes.html",
+        BlogPost,
+      ),
+    ],
+  ),
+  #(
+    [
+      News(
         "Gleam version 1",
         "https://gleam.run/news/gleam-version-1/",
         "Today Gleam v1.0.0 has been released! This is the first “stable” release of the language and a big milestone for the ecosystem.",
