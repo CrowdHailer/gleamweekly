@@ -22,15 +22,25 @@ pub const issues = [
         "Discussing how to trap exists an monitor processes from Gleam.",
       ),
       News(
-        "Exploring Gleam with Genetic Algorithms",
-        "https://silasmarvin.dev/exploring-gleam-with-genetic-algorithms",
-        "Introduction to Gleam by building a simple word-solving genetic algorithm.",
+        "Getting to know Actors in Gleam. Code BEAM SF 2024",
+        "https://www.youtube.com/watch?v=WaHx6n2UZJg",
+        "In this talk Raúl disassembles what makes an Actor and how to make them work with the Gleam type system",
       ),
       News(
         "Lustre v4.0.0 released.",
         "https://github.com/lustre-labs/lustre",
         "Lustre is a web framework for all kinds of applications.
         This latest release introduces server components, better dev tooling and more docs.",
+      ),
+      News(
+        "Exploring Gleam with Genetic Algorithms",
+        "https://silasmarvin.dev/exploring-gleam-with-genetic-algorithms",
+        "Introduction to Gleam by building a simple word-solving genetic algorithm.",
+      ),
+      News(
+        "Exploring the Gleam FFI",
+        "https://www.jonashietala.se/blog/2024/01/11/exploring_the_gleam_ffi/",
+        "Josh wrote a blog post with simple examples on how to get started with interacting with Erlang/Elixir/Rust/JavaScript from Gleam.",
       ),
     ],
     [
