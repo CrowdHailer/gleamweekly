@@ -17,6 +17,62 @@ pub const issues = [
   #(
     [
       News(
+        "Supervisors (3/3)",
+        "https://code-change.nl/gleam-blog/20240326-monitoring-processes.html",
+        "Kero takes a look at three approaches to work with a single crashing process.",
+      ),
+      News(
+        "Louis on Software Unscripted",
+        "https://pod.link/1602572955/episode/3e3cd8a252ed08b948af0b43bf682c6a",
+        "Richard talks with Louis Pilfold, about the language's 1.0 release, as well as several other topics.",
+      ),
+      News(
+        "Ivy language",
+        "https://github.com/RyanBrewer317/ivy",
+        "A scripting language written in Gleam.",
+      ),
+      News(
+        "A little webring in Gleam",
+        "https://erikarow.land/notes/gleam-webring",
+        "I decided to create a web ring for me and my friends.",
+      ),
+    ],
+    [
+      Also(
+        "Gleam bindings to Erlang's code module",
+        "https://github.com/grodaus/glcode",
+        ProjectUpdate,
+      ),
+      Also(
+        "Carpenter, ETS bindings in Gleam",
+        "https://github.com/grottohub/carpenter",
+        ProjectUpdate,
+      ),
+      Also(
+        "Gleam: for building typesafe systems",
+        "https://daily.dev/blog/gleam-the-new-programming-language-for-building-typesafe-systems",
+        BlogPost,
+      ),
+      Also(
+        "Remote data for Gleam, Elm inspired",
+        "https://hexdocs.pm/remote_data/index.html",
+        ProjectUpdate,
+      ),
+      Also(
+        "Comparing 10 modern programming languages",
+        "https://www.youtube.com/watch?v=-MbTj8DGOP0",
+        Video,
+      ),
+      Also(
+        "Gleam: A basic introduction",
+        "https://peq42.com/blog/gleam-a-basic-introduction/",
+        BlogPost,
+      ),
+    ],
+  ),
+  #(
+    [
+      News(
         "Monitoring Processes",
         "https://code-change.nl/gleam-blog/20240322-monitoring-processes.html",
         "Discussing how to trap exits and monitor processes from Gleam.",
