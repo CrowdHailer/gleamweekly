@@ -10,7 +10,7 @@ const faff_pink = "#ffaff3"
 
 pub const white = "#fefefc"
 
-// const unnamed_blue = "#a6f0fc"
+const unnamed_blue = "#a6f0fc"
 
 const aged_plastic_yellow = "#fffbe8"
 
@@ -211,6 +211,7 @@ fn render_tag(tag) {
     content.Video -> #("Video", faff_pink, blacker)
     content.BlogPost -> #("Blog post", underwater_blue, white)
     content.ProjectUpdate -> #("Project update", aged_plastic_yellow, blacker)
+    content.Educational -> #("Educational", unnamed_blue, blacker)
   }
   h.span(
     [

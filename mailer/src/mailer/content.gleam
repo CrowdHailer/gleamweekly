@@ -11,9 +11,52 @@ pub type Tag {
   Video
   BlogPost
   ProjectUpdate
+  Educational
 }
 
+// https://www.youtube.com/watch?v=IxQ586TS8Gw
 pub const issues = [
+  #(
+    [
+      News(
+        "Building the same app in Gleam and JavaScript",
+        "https://gleaming.dev/articles/building-same-app-in-gleam-and-js/",
+        "How do we create a simple app in Gleam? This article compares the process with JavaScript for a simple project",
+      ),
+      News(
+        "This is not a toy project, with Leandro Ostera and Emil Privér",
+        "https://www.youtube.com/watch?v=cFdZ6M1zQT4",
+        "Leandro Ostera talks about OCamlm it's ecosystem and building Riot, which is bringing the best of erlang to OCaml",
+      ),
+      News(
+        "Sketch 1.0 — a new way to write your CSS in Gleam",
+        "https://github.com/ghivert/sketch",
+        "Instead of relying on an external CSS, sketch allows you to build your own styles directly from gleam, with the full power of CSS",
+      ),
+      News(
+        "Gleam 1.1.0 second release candidate",
+        "https://github.com/gleam-lang/gleam/blob/main/CHANGELOG.md#v110-rc2---2024-04-10",
+        "Try it out now.",
+      ),
+    ],
+    [
+      Also(
+        "Nessie: a friendly DNS resolution library",
+        "https://github.com/ckreiling/nessie",
+        ProjectUpdate,
+      ),
+      Also(
+        "Gleam track on codecrafters.io",
+        "https://app.codecrafters.io/tracks/gleam",
+        Educational,
+      ),
+      Also(
+        "An RGB color guesser",
+        "https://george-grec.github.io/rgbeam/",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     [
       News(
