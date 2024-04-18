@@ -63,11 +63,6 @@ pub const issues = [
         ProjectUpdate,
       ),
       Also(
-        "Gleam support added to renovate bot",
-        "https://github.com/renovatebot/renovate/pull/26767",
-        ProjectUpdate,
-      ),
-      Also(
         "term_size: retrieve the terminal’s size",
         "https://hexdocs.pm/term_size/",
         ProjectUpdate,
