@@ -14,8 +14,66 @@ pub type Tag {
   Educational
 }
 
-// https://www.youtube.com/watch?v=IxQ586TS8Gw
+// Also(
+//   "Taking Erlang to OCaml 5 (with Leandro Ostera)",
+//   "https://www.youtube.com/watch?v=IxQ586TS8Gw",
+//   Podcast,
+// ),
+
+// https://codesandbox.io/p/devbox/github/codesandbox/sandbox-templates/tree/main/gleam
+// https://hexdocs.pm/bigben/ 1.0
 pub const issues = [
+  #(
+    [
+      News(
+        "Gleam version v1.1",
+        "https://gleam.run/news/gleam-v1.1/",
+        "This latest version brings Language Server improvements, Bun support, Rebar support and more",
+      ),
+      News(
+        "Gleam Trick: Resultify",
+        "https://blog.nytsoi.net/2024/04/16/resultify",
+        "A short explaination of dealing with exceptions when calling external functions",
+      ),
+      News(
+        "Cleam",
+        "https://github.com/darky/cleam",
+        "Detect unused exports from your modules",
+      ),
+      News(
+        "Gling: 1.0",
+        "https://codeberg.org/Pi-Cla/gling",
+        "In the great Gleam tradition here is a tool to help glingify your strings!",
+      ),
+    ],
+    [
+      Also(
+        "Telega: Telegram bot",
+        "https://github.com/bondiano/telega",
+        ProjectUpdate,
+      ),
+      Also(
+        "Elm to Gleam & Lustre",
+        "https://www.youtube.com/watch?v=LNYWlHLptK0",
+        Video,
+      ),
+      Also(
+        "Shakespeare: General-purpose OTP actors",
+        "https://github.com/maxdeviant/shakespeare",
+        ProjectUpdate,
+      ),
+      Also(
+        "Gleam support added to renovate bot",
+        "https://github.com/renovatebot/renovate/pull/26767",
+        ProjectUpdate,
+      ),
+      Also(
+        "term_size: retrieve the terminal’s size",
+        "https://hexdocs.pm/term_size/",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     [
       News(
