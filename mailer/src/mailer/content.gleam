@@ -21,8 +21,51 @@ pub type Tag {
 // ),
 
 // https://codesandbox.io/p/devbox/github/codesandbox/sandbox-templates/tree/main/gleam
-// https://hexdocs.pm/bigben/ 1.0
+// https://bgleam.chromatic.garden/
+// https://changelog.com/podcast/588
+
 pub const issues = [
+  #(
+    [
+      News(
+        "Scriptorium - A simple blog generator",
+        "https://hexdocs.pm/scriptorium",
+        "A simple blog generator using Lustre and lustre_ssg.",
+      ),
+      News(
+        "The optimizations in Erlang/OTP 27",
+        "https://www.erlang.org/blog/optimizations/",
+        "Explore the new optimizations, in OTP 27, for record updates and other recent improvements.",
+      ),
+      News(
+        "Building a Redis clone from scratch",
+        "https://www.youtube.com/watch?v=_lDjzVmWsWg",
+        "Louis does the Gleam + Redis challenge on CodeCrafters",
+      ),
+      News(
+        "Big Ben 1.0",
+        "https://github.com/maxdeviant/bigben",
+        "A clock abstraction, with time travel.",
+      ),
+      News(
+        "Template to incorporate Gleam in Vue projects",
+        "https://github.com/vleam/vleam",
+        "Vleam (Vue + gLEAM) is a set of tools allowing developers to incrementally incorporate the Gleam programming language into their Vue projects.",
+      ),
+    ],
+    [
+      Also(
+        "Catppuccin: Soothing pastel library",
+        "https://github.com/MAHcodes/catppuccin",
+        ProjectUpdate,
+      ),
+      Also(
+        "A simple parallel map library",
+        "https://github.com/PastMoments/parallel_map",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     [
       News(
