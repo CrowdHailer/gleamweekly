@@ -14,17 +14,50 @@ pub type Tag {
   Educational
 }
 
-// Also(
-//   "Taking Erlang to OCaml 5 (with Leandro Ostera)",
-//   "https://www.youtube.com/watch?v=IxQ586TS8Gw",
-//   Podcast,
-// ),
-
 // https://codesandbox.io/p/devbox/github/codesandbox/sandbox-templates/tree/main/gleam
-// https://bgleam.chromatic.garden/
-// https://changelog.com/podcast/588
 
 pub const issues = [
+  #(
+    [
+      News(
+        "Run Gleam run",
+        "https://changelog.com/podcast/588",
+        "Louis joins the changelog podcast to talk about the inspiration and development of Gleam.",
+      ),
+      News(
+        "Building your first Gleam web app with Wisp and Lustre",
+        "https://gleaming.dev/articles/building-your-first-gleam-web-app/",
+        "Taha guides you through some of the many things to implement when building a web app.",
+      ),
+      News(
+        "Gleam compiler backend for Nix configurations",
+        "https://github.com/glistix/glistix",
+        "Write Nix configuration using Gleam.",
+      ),
+      News(
+        "Gleam background generator",
+        "https://bgleam.chromatic.garden/",
+        "Generate pretty Gleam backgrounds.",
+      ),
+    ],
+    [
+      Also(
+        "Taking Erlang to OCaml 5 (with Leandro Ostera)",
+        "https://www.youtube.com/watch?v=IxQ586TS8Gw",
+        Podcast,
+      ),
+      Also(
+        "A collection of handy dynamic decoders",
+        "https://github.com/hayleigh-dot-dev/decipher",
+        ProjectUpdate,
+      ),
+      Also(
+        "Gary: Gleam interface to Erlang sparse arrays",
+        "https://github.com/hunkyjimpjorps/gary",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     [
       News(
