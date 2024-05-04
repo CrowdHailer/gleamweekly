@@ -1,12 +1,13 @@
 import gleam/string
-import simplifile
 import lustre/element
 import mailer/template
+import simplifile
 
 const replace_string = "!CONTENT!"
 
-pub fn render(issue, number) {
-  let assert Ok(container) = simplifile.read("./src/mailer/template/email.html")
+pub fn render(root, issue, number) {
+  let path = string.append(root, "/src/mailer/template/email.html")
+  let assert Ok(container) = simplifile.read(path)
   string.replace(
     container,
     replace_string,
