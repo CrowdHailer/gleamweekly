@@ -14,9 +14,43 @@ pub type Tag {
   Educational
 }
 
-// https://codesandbox.io/p/devbox/github/codesandbox/sandbox-templates/tree/main/gleam
-
 pub const issues = [
+  #(
+    [
+      News(
+        "Code BEAM Lite Stockholm",
+        "https://codebeamstockholm.com/",
+        "Single day single track conference all about the BEAM ecosystem held in Stockholm.",
+      ),
+      News(
+        "Meadow",
+        "https://github.com/JoelVerm/meadow",
+        "A server side for glare, the web framework based on SolidJS.",
+      ),
+      News(
+        "Gleam starter on Codesandbox",
+        "https://codesandbox.io/p/devbox/github/codesandbox/sandbox-templates/tree/main/gleam",
+        "Fork this template and immediately have a running Gleam setup (with Erlang).",
+      ),
+      News(
+        "Projects for Gleam",
+        "https://github.com/orgs/gleam-lang/projects",
+        "Find out more information about what is being worked on in Gleam by checking out the Github projects.",
+      ),
+    ],
+    [
+      Also(
+        "Sturnidae: Bindings to Starling Bank's API.",
+        "https://github.com/lpil/sturnidae",
+        ProjectUpdate,
+      ),
+      Also(
+        "Priorityq: A priority queue implementation based on max pairing heaps. Written in pure Gleam.",
+        "https://github.com/nicklimmm/priorityq",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     [
       News(
