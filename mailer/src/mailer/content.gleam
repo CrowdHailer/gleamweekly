@@ -18,6 +18,37 @@ pub const issues = [
   #(
     [
       News(
+        "A Practical Use Case for Function Capture in Gleam",
+        "https://gleaming.dev/articles/function-capture-in-gleam/",
+        "Explaining the use of function captures in Gleam.",
+      ),
+      News(
+        "Your backend is too complicated",
+        "https://www.youtube.com/watch?v=D88S_RdagP8",
+        "Isaac shows how to simplify your backend stack using Gleam.",
+      ),
+      News(
+        "chrobot: v1.0",
+        "https://github.com/JonasGruenwald/chrobot",
+        "Gleam bindings to Chrome devtools protocol.",
+      ),
+    ],
+    [
+      Also(
+        "Stacky: BEAM stack trace in Gleam.",
+        "https://github.com/inoas/stacky",
+        ProjectUpdate,
+      ),
+      Also(
+        "Gang of None? Design Patterns in Elixir.",
+        "https://www.youtube.com/watch?v=agkXUp0hCW8",
+        Video,
+      ),
+    ],
+  ),
+  #(
+    [
+      News(
         "Code BEAM Lite Stockholm",
         "https://codebeamstockholm.com/",
         "Single day single track conference all about the BEAM ecosystem held in Stockholm.",
