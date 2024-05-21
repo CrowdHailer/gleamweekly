@@ -42,10 +42,19 @@ pub fn render_issues() {
   |> list.index_map(archive_issue)
 }
 
+const static = [
+  "index.html", "lucymail.png", "lucymail.svg", "tribe.f61a533e.css",
+]
+
 pub fn content(root) {
-  let home_path = string.replace(root, "/mailer", "/website/index.html")
-  use content <- try(simplifile.read_bits(home_path))
-  Ok([#("/index.html", content), ..render_issues()])
+  use static <- try(
+    list.try_map(static, fn(file) {
+      let path = string.replace(root, "/mailer", "/website/" <> file)
+      use content <- try(simplifile.read_bits(path))
+      Ok(#("/" <> file, content))
+    }),
+  )
+  Ok(list.append(static, render_issues()))
 }
 
 pub fn issue_path(number) {
