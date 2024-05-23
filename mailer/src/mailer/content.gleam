@@ -14,7 +14,46 @@ pub type Tag {
   Educational
 }
 
+// 1.0https://hexdocs.pm/kielet/index.html
+// HTML to Lustre
+// https://discord.com/channels/768594524158427167/1047101890707603547/threads/1242587696463872084 Gloogle
 pub const issues = [
+  #(
+    [
+      News(
+        "Gleam on NPM",
+        "https://github.com/ghivert/gleam-lang-npm",
+        "Add Gleam to your environment using NPM, helpful in certain situations.",
+      ),
+      News(
+        "Grille-Pain - A Toast component for Gleam",
+        "https://github.com/ghivert/grille-pain",
+        "A nice utility library for creating toasts, currently for the JavaScript target only.",
+      ),
+      News(
+        "Gleam 1.2.0 first release candidate",
+        "https://github.com/gleam-lang/gleam/blob/main/CHANGELOG.md#v120-rc1---2024-05-23",
+        "Try it out now.",
+      ),
+    ],
+    [
+      Also(
+        "Louis learning Lustre",
+        "https://www.youtube.com/watch?v=8o9hzyVHp7E",
+        Video,
+      ),
+      Also(
+        "Snapshot testing with Gleam (In Italian)",
+        "https://www.youtube.com/watch?v=uUqfA3aaPNg",
+        Video,
+      ),
+      Also(
+        "Erlang/OTP 27.0 Release",
+        "https://www.erlang.org/news/170",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     [
       News(
