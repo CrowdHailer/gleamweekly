@@ -4,7 +4,7 @@ version = "1.0.0"
 
 [dependencies]
 gleam_stdlib = "~> 0.34 or ~> 1.0"
-lustre = "~> 3.1"
+lustre = "~> 4.0"
 simplifile = "~> 1.5"
 
 [dev-dependencies]
