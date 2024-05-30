@@ -14,10 +14,51 @@ pub type Tag {
   Educational
 }
 
-// 1.0https://hexdocs.pm/kielet/index.html
-// HTML to Lustre
-// https://discord.com/channels/768594524158427167/1047101890707603547/threads/1242587696463872084 Gloogle
+// common mark development long discussion
+// silly library for continuations https://discord.com/channels/768594524158427167/1047101890707603547/threads/1245450462560387232
+// https://discord.com/channels/768594524158427167/1047101890707603547/threads/1245790643452776511
 pub const issues = [
+  #(
+    [
+      News(
+        "Gleam 1.2.0 release - Fault tolerant Gleam",
+        "https://gleam.run/news/fault-tolerant-gleam/",
+        "We've got fault tolerant compilation, language server improvements, improved formatting for pipes and more.",
+      ),
+      News(
+        "Kielet 2.0.0 - A GNU Gettext implementation",
+        "https://gitlab.com/Nicd/kielet",
+        "translate your Gleam or BEAM application without needing to change its source code or recompile it.",
+      ),
+      News(
+        "Gloogle - Search through all public gleam packages",
+        "https://gloogle.run",
+        "In Gloogle, you can search in functions and types by; their names, their signatures or their documentation.",
+      ),
+    ],
+    [
+      Also(
+        "The Ultimate Guide to Gleam Concurrency.",
+        "https://www.youtube.com/watch?v=8rCgnKHUUVA",
+        Video,
+      ),
+      Also(
+        "Gleam JSON 2.0 is faster using erlangs built-in JSON library.",
+        "https://github.com/gleam-lang/json/",
+        ProjectUpdate,
+      ),
+      Also(
+        "Brainf**k interpreter in Gleam.",
+        "https://github.com/Lokdien/bfgleam",
+        Educational,
+      ),
+      Also(
+        "Convert HTML into Lustre automatically.",
+        "https://lpil.github.io/html-lustre-converter/",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     [
       News(
