@@ -1,5 +1,7 @@
+import feed
 import gleam/bit_array
 import gleam/int
+import gleam/io
 import gleam/list
 import gleam/result.{try}
 import gleam/string
@@ -10,7 +12,8 @@ import simplifile
 
 pub fn main() {
   let assert Ok(cwd) = simplifile.current_directory()
-  build(cwd)
+  let _ = build(cwd)
+  let _ = feed.build(cwd)
 }
 
 pub fn build(root) {
@@ -25,7 +28,13 @@ pub fn build(root) {
     })
 
   let path = string.replace(root, "/mailer", "/email.html")
-  let assert Ok(_) = simplifile.write(path, email(root))
+  use _ <- result.try(
+    simplifile.write(path, email(root))
+    |> result.nil_error,
+  )
+
+  io.println("Successfully wrote email to " <> path)
+  |> Ok
 }
 
 pub fn current_issue_number() {
