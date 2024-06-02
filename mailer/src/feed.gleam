@@ -9,7 +9,10 @@ import lustre/element/html
 import mailer/content
 import mailer/template
 import simplifile
-import xmleam/xml_builder.{Opt, block_tag, end_xml, new, option_block_tag, tag}
+import xmleam/xml_builder.{
+  Opt, block_tag, end_xml, new, option_block_tag, option_content_tag, option_tag,
+  tag,
+}
 
 type Issue {
   Issue(id: Int, published: birl.Time, summary: String)
@@ -43,17 +46,22 @@ fn generate_rss_feed(entries: List(Issue)) -> Result(String, Nil) {
       |> tag(
         "updated",
         birl.now()
-          |> birl.to_http,
+          |> birl.to_iso8601,
       )
       // these are recommended
-      |> tag("link", "https://gleamweekly.com/")
+      |> option_tag("link", [Opt("href", "https://gleamweekly.com/")])
+      |> option_tag("link", [
+        Opt("rel", "self"),
+        Opt("href", "https://gleamweekly.com/atom.xml"),
+        Opt("type", "application/rss+xml"),
+      ])
       |> block_tag(
         "author",
         new()
           |> tag("name", "Peter Saxton"),
       )
       // everything below is optional
-      |> tag("description", "Gleam is so hot right now")
+      |> tag("subtitle", "Gleam is so hot right now")
 
     use doc, issue <- list.fold(entries, document)
     let link =
@@ -66,11 +74,15 @@ fn generate_rss_feed(entries: List(Issue)) -> Result(String, Nil) {
       // these are required
       |> tag("id", link)
       |> tag("title", "Gleam weekly #" <> int.to_string(issue.id))
-      |> tag("updated", birl.to_http(issue.published))
+      |> tag("updated", birl.to_iso8601(issue.published))
       // these are optional
-      |> tag("link", link)
-      |> tag("summary", "<![CDATA[" <> issue.summary <> "]]>")
-      |> tag("published", birl.to_http(issue.published))
+      |> option_tag("link", [Opt("href", link)])
+      |> option_content_tag(
+        "summary",
+        [Opt("type", "html")],
+        "<![CDATA[" <> issue.summary <> "]]>",
+      )
+      |> tag("published", birl.to_iso8601(issue.published))
     })
   })
   |> end_xml

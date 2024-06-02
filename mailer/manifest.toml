@@ -12,7 +12,7 @@ packages = [
   { name = "ranger", version = "1.2.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "ranger", source = "hex", outer_checksum = "1566C272B1D141B3BBA38B25CB761EF56E312E79EC0E2DFD4D3C19FB0CC1F98C" },
   { name = "simplifile", version = "1.5.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "simplifile", source = "hex", outer_checksum = "EB9AA8E65E5C1E3E0FDCFC81BC363FD433CB122D7D062750FFDF24DE4AC40116" },
   { name = "thoas", version = "1.2.1", build_tools = ["rebar3"], requirements = [], otp_app = "thoas", source = "hex", outer_checksum = "E38697EDFFD6E91BD12CEA41B155115282630075C2A727E7A6B2947F5408B86A" },
-  { name = "xmleam", version = "1.1.4", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "xmleam", source = "hex", outer_checksum = "A747975444CE3343B6728AB217A1C44888A38060DFA41CA0C0B41D3E06417981" },
+  { name = "xmleam", version = "1.1.5", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "xmleam", source = "hex", outer_checksum = "4D69B1074781E9EE335A9C0EBC56C228890940F80E18D6A1B024C2C97BFF52AB" },
 ]
 
 [requirements]
@@ -21,4 +21,4 @@ gleam_stdlib = { version = "~> 0.34 or ~> 1.0" }
 gleeunit = { version = "~> 1.0" }
 lustre = { version = "~> 4.0" }
 simplifile = { version = "~> 1.5" }
-xmleam = { version = ">= 1.1.4 and < 2.0.0" }
+xmleam = { version = ">= 1.1.5 and < 2.0.0" }
