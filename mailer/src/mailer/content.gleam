@@ -14,10 +14,62 @@ pub type Tag {
   Educational
 }
 
+// https://gleambyexample.com/
+
 // common mark development long discussion
-// silly library for continuations https://discord.com/channels/768594524158427167/1047101890707603547/threads/1245450462560387232
-// https://discord.com/channels/768594524158427167/1047101890707603547/threads/1245790643452776511
+
 pub const issues = [
+  #(
+    [
+      News(
+        "End-to-end types: full-stack web apps",
+        "https://www.youtube.com/watch?v=eVtkYQva0Ic",
+        "In this talk, from Code BEAM Europe 2023, Hayleigh takes a look at how to build a fun interactive audio application",
+      ),
+      News(
+        "Interactive Lustre tutorial",
+        "https://gleamtours.com/lustre-tutorial/introduction/welcome-to-lustre/",
+        "This interactive tutorial takes you through everything you need to build all kinds of web applications with Lustre",
+      ),
+      News(
+        "Fluoresce - algebraic effects framework for Gleam",
+        "https://github.com/RyanBrewer317/fluoresce",
+        "You should be a pretty big fan of control effects before attempting to build a serious project with fluoresce!",
+      ),
+      News(
+        "Bravo - 2.3.0",
+        "https://github.com/Michael-Mark-Edu/bravo",
+        "Comprehensive ETS bindings for Gleam. ",
+      ),
+      News(
+        "Keynote panel discussion: The next 30 years",
+        "https://www.youtube.com/watch?v=hMU5yq7l6lI",
+        "A celebration of the 30 year anniversary of the 1st international Erlang User Conference with a look towards the future.",
+      ),
+    ],
+    [
+      Also(
+        "stdin 1.0.0 - provides a synchronous iterator for consuming stdin.",
+        "https://github.com/Olian04/gleam-stdin",
+        ProjectUpdate,
+      ),
+      Also(
+        "This Gleam project prints iterations of the Dragon Curve stacked on top of each other.",
+        "https://github.com/tcoard/gleam3d",
+        ProjectUpdate,
+      ),
+      Also(
+        "Temporary - A package to work with temporary files and directories.",
+        "https://github.com/giacomocavalieri/temporary",
+        ProjectUpdate,
+      ),
+      Also(
+        "Gleam 1.2 just dropped.",
+        "https://www.youtube.com/watch?v=h91mfQgmruc",
+        Video,
+      ),
+    ],
+  ),
   #(
     [
       News(
