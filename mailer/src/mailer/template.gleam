@@ -1,9 +1,9 @@
 import gleam/int
 import gleam/list
 import gleam/string
+import lustre/attribute as a
 import lustre/element.{text}
 import lustre/element/html as h
-import lustre/attribute as a
 import mailer/content.{Also, News}
 
 const faff_pink = "#ffaff3"
@@ -25,7 +25,7 @@ const charcoal = "#2f2f2f"
 const blacker = "#151515"
 
 pub fn content(issue, number) {
-  let #(items, also) = issue
+  let #(_date, items, also) = issue
   let issue_url =
     string.concat(["https://gleamweekly.com/issues/", int.to_string(number)])
   h.div(
