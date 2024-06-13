@@ -47,7 +47,7 @@ pub fn render_issues() {
 }
 
 const static = [
-  "index.html", "lucymail.png", "lucymail.svg", "tribe.f61a533e.css",
+  "index.html", "lucymail.png", "lucymail.svg", "tribe.f61a533e.css", "atom.xml",
 ]
 
 pub fn content(root) {

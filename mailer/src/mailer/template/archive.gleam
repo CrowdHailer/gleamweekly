@@ -1,7 +1,7 @@
 import gleam/string
+import lustre/attribute as a
 import lustre/element.{text}
 import lustre/element/html as h
-import lustre/attribute as a
 import mailer/template
 
 pub fn render(issue, number) {
