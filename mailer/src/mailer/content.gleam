@@ -14,11 +14,49 @@ pub type Tag {
   Educational
 }
 
-// https://gleambyexample.com/
-
-// common mark development long discussion
-
 pub const issues = [
+  #(
+    "2024-06-13",
+    [
+      News(
+        "Create Robust Web Apps with Gleam and Lustre",
+        "https://www.youtube.com/watch?v=3kr4Ydx6GGU",
+        "In this video, Isaac shows you how to build a completely type-safe web app in Gleam using the Lustre framework.",
+      ),
+      News(
+        "Exploring Gleam, a type-safe language on the BEAM! ",
+        "https://christopher.engineering/en/blog/gleam-overview/",
+        "In this article, Christopher talks about Gleam, how they found it, and why they're already LOVING it.",
+      ),
+      News(
+        "Gleam by Example",
+        "https://gleambyexample.com/",
+        "Gleam by Example is a collection of code snippets to help you get familiar with the language.",
+      ),
+      News(
+        "Implement DNS in a weekend in Gleam",
+        "https://github.com/snorfalorpagus/dns-in-a-weekend-gleam",
+        "A recursive DNS resolver written in Gleam based on Implement DNS in a weekend.",
+      ),
+    ],
+    [
+      Also(
+        "A Gleam rewrite of a bullet hell style game.",
+        "https://github.com/Acepie/bullet_heck_gleam",
+        ProjectUpdate,
+      ),
+      Also(
+        "Game of Life in Gleam.",
+        "https://github.com/tcoopman/gleam-of-life",
+        ProjectUpdate,
+      ),
+      Also(
+        "Introducing Midas a task library for Gleam",
+        "https://vimeo.com/956066721",
+        Video,
+      ),
+    ],
+  ),
   #(
     "2024-06-06",
     [
