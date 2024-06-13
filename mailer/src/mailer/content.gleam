@@ -20,7 +20,7 @@ pub type Tag {
 
 pub const issues = [
   #(
-    "2024-05-30",
+    "2024-06-06",
     [
       News(
         "End-to-end types: full-stack web apps",
@@ -72,6 +72,7 @@ pub const issues = [
     ],
   ),
   #(
+    "2024-05-30",
     [
       News(
         "Gleam 1.2.0 release - Fault tolerant Gleam",
@@ -150,7 +151,7 @@ pub const issues = [
     ],
   ),
   #(
-    "2024-05-20",
+    "2024-05-16",
     [
       News(
         "A Practical Use Case for Function Capture in Gleam",
@@ -261,7 +262,7 @@ pub const issues = [
     ],
   ),
   #(
-    "2024-05-01",
+    "2024-04-25",
     [
       News(
         "Scriptorium - A simple blog generator",
@@ -350,7 +351,7 @@ pub const issues = [
     ],
   ),
   #(
-    "2024-04-12",
+    "2024-04-11",
     [
       News(
         "Building the same app in Gleam and JavaScript",
@@ -507,7 +508,7 @@ pub const issues = [
     ],
   ),
   #(
-    "2024-03-23",
+    "2024-03-21",
     [
       News(
         "Gleam version 1",

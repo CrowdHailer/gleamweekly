@@ -93,7 +93,7 @@ pub fn build(root) {
   let contents: List(Issue) = render_issues()
 
   use feed <- result.try(generate_rss_feed(contents))
-  let path = string.replace(root, "/mailer", "/atom.xml")
+  let path = string.replace(root, "/mailer", "/website/atom.xml")
   use _ <- result.try(
     simplifile.write(path, feed)
     |> result.nil_error,

@@ -10,12 +10,6 @@ import mailer/template/archive
 import mailer/template/email
 import simplifile
 
-pub fn main() {
-  let assert Ok(cwd) = simplifile.current_directory()
-  let _ = build(cwd)
-  let _ = feed.build(cwd)
-}
-
 pub fn build(root) {
   let issues = render_issues()
   let assert Ok(_) =
@@ -34,7 +28,8 @@ pub fn build(root) {
   )
 
   io.println("Successfully wrote email to " <> path)
-  |> Ok
+
+  let _ = feed.build(root)
 }
 
 pub fn current_issue_number() {
