@@ -16,6 +16,38 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2014-06-20",
+    [
+      News(
+        "A Gleam compiler written in Gleam.",
+        "https://github.com/schurhammer/gig",
+        "A Gleam compiler targeting C.",
+      ),
+      News(
+        "PriceFlow - Startup using Gleam",
+        "https://github.com/usepriceflow/app",
+        "The source code for PriceFlow all in on Gleam and building in the open.",
+      ),
+      News(
+        "Handles - Pure Gleam templating language.",
+        "https://github.com/Olian04/gleam_handles",
+        "A templating language heavily inspired by Mustache and Handlebars.js.",
+      ),
+    ],
+    [
+      Also(
+        "Gleam library that provides an IEEE 754 compliant float type.",
+        "https://github.com/richard-viney/ieee_float",
+        ProjectUpdate,
+      ),
+      Also(
+        "A TUI library for gleam.",
+        "https://github.com/sanchit1053/gleam_tui",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2024-06-13",
     [
       News(
