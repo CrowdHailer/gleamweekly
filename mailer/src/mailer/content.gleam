@@ -16,7 +16,39 @@ pub type Tag {
 
 pub const issues = [
   #(
-    "2014-06-27",
+    "2024-07-05",
+    [
+      News(
+        "Decode library",
+        "https://github.com/lpil/decode",
+        "Dynamic decoders without the decodeN problem, a potential addition to the standard library so check it out.",
+      ),
+      News(
+        "Simple canvas demo",
+        "https://github.com/ChillyBwoy/canvax",
+        "A simple example of working with the canvas API in Gleam.",
+      ),
+      News(
+        "Gleam ffi essentials",
+        "https://www.youtube.com/watch?v=mreYmQc306c",
+        "This video teaches you how to use ffi to access the underlying platform, be it JavaScript, Erlang or Elixir.",
+      ),
+    ],
+    [
+      Also(
+        "A simple Date type for working with dates without times or zones.",
+        "https://github.com/michaeljones/rada",
+        ProjectUpdate,
+      ),
+      Also(
+        "Pink - Bindings to Ink for building terminal UIs",
+        "https://github.com/Massolari/pink",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
+    "2024-06-27",
     [
       News(
         "Glint reaches version 1.0",
@@ -53,7 +85,7 @@ pub const issues = [
     ],
   ),
   #(
-    "2014-06-20",
+    "2024-06-20",
     [
       News(
         "A Gleam compiler written in Gleam.",
