@@ -16,6 +16,43 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2014-06-27",
+    [
+      News(
+        "Glint reaches version 1.0",
+        "https://github.com/TanklesXL/glint",
+        "Glint is a library for writing command line tools in gleam",
+      ),
+      News(
+        "Gleam + Tauri template",
+        "https://github.com/mscharley/gleam-tauri-demo",
+        "This template should help get you started developing with Tauri in Gleam with Tailwind CSS.",
+      ),
+      News(
+        "Using Gleam Packages in Your Elixir Project",
+        "https://blog.nytsoi.net/2024/06/26/gleam-deps-in-elixir",
+        "A quick explaination of two issues preventing simple usage of Gleam in Elixir projects.",
+      ),
+    ],
+    [
+      Also(
+        "Formal 2.0 - Type safe HTML form decoding and validation.",
+        "https://github.com/lpil/formal",
+        ProjectUpdate,
+      ),
+      Also(
+        "A Gemini-to-Gopher proxy that bridges the smolweb to even more smolweb.",
+        "https://github.com/gemrest/momoka",
+        ProjectUpdate,
+      ),
+      Also(
+        "The Star Language that will outshine Rust? Gleam.",
+        "https://www.youtube.com/watch?v=Zy-eDWVam_Y",
+        Video,
+      ),
+    ],
+  ),
+  #(
     "2014-06-20",
     [
       News(
