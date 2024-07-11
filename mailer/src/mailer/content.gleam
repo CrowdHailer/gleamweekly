@@ -16,6 +16,33 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2024-07-11",
+    [
+      News(
+        "Gleam 1.3.0 released",
+        "https://gleam.run/news/auto-imports-and-tolerant-expressions/",
+        "With auto-imports and tolerant expressions.",
+      ),
+      News(
+        "Using use in Gleam",
+        "https://erikarow.land/notes/using-use-gleam",
+        "A helpful walkthrough of one of Gleam's potentially confusing features",
+      ),
+    ],
+    [
+      Also(
+        "Introducing Cactus - A tool for managing git lifecycle hooks.",
+        "https://github.com/bwireman/cactus",
+        ProjectUpdate,
+      ),
+      Also(
+        "mat - simple string formatting for Gleam.",
+        "https://github.com/loipesmas/mat",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2024-07-05",
     [
       News(
