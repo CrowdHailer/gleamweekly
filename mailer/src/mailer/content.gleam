@@ -16,6 +16,58 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2024-07-25",
+    [
+      News(
+        "The Gloder",
+        "https://loipesmas.github.io/the_gloder/",
+        "Since writing decoders can be a bit of a chore, here is a web tool to automate that.",
+      ),
+      News(
+        "Errors as values are the future",
+        "https://www.youtube.com/watch?v=T3pcb3o415c",
+        "Video guide on how to handle errors as values.",
+      ),
+      News(
+        "The Gleam Language Server reference",
+        "https://gleam.run/language-server/",
+        "Reference material explaining the Gleam IDE features available via the Language Server protocol.",
+      ),
+      News(
+        "Cake: 1.0",
+        "https://github.com/inoas/gleam-cake",
+        "A Gleam library to compose SQL queries targeting SQL dialects PostgreSQL, SQLite, MariaDB and MySQL.",
+      ),
+    ],
+    [
+      Also(
+        "A simple static site to find out Who Owes Whom How Much Money",
+        "https://yoonthegoon.gitlab.io/wowhmm/",
+        ProjectUpdate,
+      ),
+      Also(
+        "Enhancing Your Elixir Codebase with Gleam",
+        "https://blog.appsignal.com/2024/07/23/enhancing-your-elixir-codebase-with-gleam.html",
+        BlogPost,
+      ),
+      Also(
+        "Argus - Argon2 password hashing library.",
+        "https://github.com/Pevensie/argus",
+        ProjectUpdate,
+      ),
+      Also(
+        "gleroglero - heroicons converted to lustre ",
+        "https://github.com/skinkade/gleroglero?tab=readme-ov-file",
+        ProjectUpdate,
+      ),
+      Also(
+        "gpxb - A tiny GPX builder.",
+        "https://github.com/lpil/gpxb",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2024-07-11",
     [
       News(
