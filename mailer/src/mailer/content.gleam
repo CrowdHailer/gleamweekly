@@ -16,6 +16,38 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2024-08-01",
+    [
+      News(
+        "Kirakira forum is announced",
+        "https://kirakira.keii.dev/",
+        "A forum made in Gleam for the Gleam community.",
+      ),
+      News(
+        "A new Gleam feature I love",
+        "https://giacomocavalieri.me/posts/a-new-gleam-feature-i-love",
+        "A little blog post about the upcoming label shorthand syntax.",
+      ),
+    ],
+    [
+      Also(
+        "Slash Lustre Load Times with Server Side Rendering.",
+        "https://www.youtube.com/watch?v=q9j5V8CDPQY",
+        Video,
+      ),
+      Also(
+        "A CLI tool and library to generate Gleam constants from files, env vars, and other sources.",
+        "https://gitlab.com/arkandos/gleam-embeds",
+        ProjectUpdate,
+      ),
+      Also(
+        "Supercharge your tests with snapshot testing.",
+        "https://twitter.com/lambdadays/status/1818216208035959272?s=61&t=ylKuyw0aqfwpsgnMudueaA",
+        Video,
+      ),
+    ],
+  ),
+  #(
     "2024-07-25",
     [
       News(
