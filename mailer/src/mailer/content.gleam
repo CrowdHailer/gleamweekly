@@ -16,6 +16,43 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2014-08-08",
+    [
+      News(
+        "Gleam 1.4.0 released",
+        "https://gleam.run/news/supercharged-labels/",
+        "With a shorthand syntax for labels, warnings on every build, constant concatenation and more.",
+      ),
+      News(
+        "The basics for a fullstack SPA in Gleam",
+        "https://keii.dev/posts/the-basics-for-a-fullstack-spa-in-gleam",
+        "This article goes into the stack and libraries used to create a fully functional fullstack application with Gleam.",
+      ),
+      News(
+        "Eventsourcing 3.0 (and 2.0 and 1.0) released",
+        "https://github.com/renatillas/eventsourcing",
+        "CQRS and Event Sourcing for Gleam.",
+      ),
+    ],
+    [
+      Also(
+        "First impressions of Gleam: lots of joys and some rough edges.",
+        "https://ntietz.com/blog/first-impressions-of-gleam/",
+        BlogPost,
+      ),
+      Also(
+        "Betamine - A Minecraft server written in Gleam.",
+        "https://github.com/zwubs/betamine",
+        ProjectUpdate,
+      ),
+      Also(
+        "Gleesend - API client for resend.com",
+        "https://github.com/dinkelspiel/gleesend",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2024-08-01",
     [
       News(
