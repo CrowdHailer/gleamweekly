@@ -19,6 +19,43 @@ pub const issues = [
     "2014-08-08",
     [
       News(
+        "Squirrel 1.0 released",
+        "https://github.com/giacomocavalieri/squirrel",
+        "Type safe SQL in Gleam ",
+      ),
+      News(
+        "How to deploy Gleam apps anywhere",
+        "https://www.youtube.com/watch?v=SheuSu3Slzw",
+        "This week's video from Isaac focuses on how to get your Gleam apps into production.",
+      ),
+    ],
+    [
+      Also(
+        "Arctic - A declarative way of authoring fast websites.",
+        "https://github.com/RyanBrewer317/arctic",
+        ProjectUpdate,
+      ),
+      Also(
+        "FluentCI 1.0.0 - Write CI/CD pipelines in Gleam.",
+        "https://hex.pm/packages/fluentci",
+        ProjectUpdate,
+      ),
+      Also(
+        "Webls - A clean simple package for common web listing files such as Sitemaps & RSS Feeds",
+        "https://github.com/versecafe/webls",
+        ProjectUpdate,
+      ),
+      Also(
+        "Humanise - Easily format values for human readability.",
+        "https://github.com/SaphiraKai/humanise",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
+    "2014-08-08",
+    [
+      News(
         "Gleam 1.4.0 released",
         "https://gleam.run/news/supercharged-labels/",
         "With a shorthand syntax for labels, warnings on every build, constant concatenation and more.",
