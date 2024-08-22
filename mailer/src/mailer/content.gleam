@@ -34,22 +34,22 @@ pub const issues = [
       News(
         "Globin 1.0 released",
         "https://github.com/apainintheneck/globlin",
-        "File globbing for Gleam ",
+        "File globbing for Gleam.",
       ),
     ],
     [
       Also(
-        "Nymph - programming language, implemented with gleam",
+        "Nymph - programming language, implemented with Gleam",
         "https://github.com/theonlytails/nymph_gleam",
         ProjectUpdate,
       ),
       Also(
-        "Pocket_watch - Easily time execution of a block or function!",
+        "Pocket_watch - Easily time the execution of a block or function.",
         "https://hexdocs.pm/pocket_watch/",
         ProjectUpdate,
       ),
       Also(
-        "Platform - A zero dependency gleam package to get information about the host system",
+        "Platform - A zero dependency Gleam package to get information about the host system.",
         "https://github.com/ditherwither/platform",
         ProjectUpdate,
       ),
