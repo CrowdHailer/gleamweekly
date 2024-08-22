@@ -19,7 +19,7 @@ pub type Tag {
 pub const issues = [
   #(
     "2024-08-22",
-    None,
+    Some("Another good cache of packages from the community this week."),
     [
       News(
         "Know-How-Computer emulator",
