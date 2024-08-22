@@ -1,3 +1,5 @@
+import gleam/option.{None, Some}
+
 pub type News {
   News(title: String, url: String, description: String)
 }
@@ -16,7 +18,10 @@ pub type Tag {
 
 pub const issues = [
   #(
-    "2014-08-08",
+    "2024-08-08",
+    Some(
+      "Strong library game from the community in this weeks Gleam weekly. type safe SQL!!",
+    ),
     [
       News(
         "Squirrel 1.0 released",
@@ -53,7 +58,8 @@ pub const issues = [
     ],
   ),
   #(
-    "2014-08-08",
+    "2024-08-08",
+    None,
     [
       News(
         "Gleam 1.4.0 released",
@@ -91,6 +97,7 @@ pub const issues = [
   ),
   #(
     "2024-08-01",
+    None,
     [
       News(
         "Kirakira forum is announced",
@@ -123,6 +130,7 @@ pub const issues = [
   ),
   #(
     "2024-07-25",
+    None,
     [
       News(
         "The Gloder",
@@ -175,6 +183,7 @@ pub const issues = [
   ),
   #(
     "2024-07-11",
+    None,
     [
       News(
         "Gleam 1.3.0 released",
@@ -202,6 +211,7 @@ pub const issues = [
   ),
   #(
     "2024-07-05",
+    None,
     [
       News(
         "Decode library",
@@ -234,6 +244,7 @@ pub const issues = [
   ),
   #(
     "2024-06-27",
+    None,
     [
       News(
         "Glint reaches version 1.0",
@@ -271,6 +282,7 @@ pub const issues = [
   ),
   #(
     "2024-06-20",
+    None,
     [
       News(
         "A Gleam compiler written in Gleam.",
@@ -303,6 +315,7 @@ pub const issues = [
   ),
   #(
     "2024-06-13",
+    None,
     [
       News(
         "Create Robust Web Apps with Gleam and Lustre",
@@ -345,6 +358,7 @@ pub const issues = [
   ),
   #(
     "2024-06-06",
+    None,
     [
       News(
         "End-to-end types: full-stack web apps",
@@ -397,6 +411,7 @@ pub const issues = [
   ),
   #(
     "2024-05-30",
+    None,
     [
       News(
         "Gleam 1.2.0 release - Fault tolerant Gleam",
@@ -439,6 +454,7 @@ pub const issues = [
   ),
   #(
     "2024-05-23",
+    None,
     [
       News(
         "Gleam on NPM",
@@ -476,6 +492,7 @@ pub const issues = [
   ),
   #(
     "2024-05-16",
+    None,
     [
       News(
         "A Practical Use Case for Function Capture in Gleam",
@@ -508,6 +525,7 @@ pub const issues = [
   ),
   #(
     "2024-05-09",
+    None,
     [
       News(
         "Code BEAM Lite Stockholm",
@@ -545,6 +563,7 @@ pub const issues = [
   ),
   #(
     "2024-05-02",
+    None,
     [
       News(
         "Run Gleam run",
@@ -587,6 +606,7 @@ pub const issues = [
   ),
   #(
     "2024-04-25",
+    None,
     [
       News(
         "Scriptorium - A simple blog generator",
@@ -629,6 +649,7 @@ pub const issues = [
   ),
   #(
     "2024-04-18",
+    None,
     [
       News(
         "Gleam version v1.1",
@@ -676,6 +697,7 @@ pub const issues = [
   ),
   #(
     "2024-04-11",
+    None,
     [
       News(
         "Building the same app in Gleam and JavaScript",
@@ -718,6 +740,7 @@ pub const issues = [
   ),
   #(
     "2024-04-04",
+    None,
     [
       News(
         "Supervisors (3/3)",
@@ -775,6 +798,7 @@ pub const issues = [
   ),
   #(
     "2024-03-28",
+    None,
     [
       News(
         "Monitoring Processes",
@@ -833,6 +857,7 @@ pub const issues = [
   ),
   #(
     "2024-03-21",
+    None,
     [
       News(
         "Gleam version 1",

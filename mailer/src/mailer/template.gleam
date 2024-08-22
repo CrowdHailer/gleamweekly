@@ -24,10 +24,14 @@ const charcoal = "#2f2f2f"
 
 const blacker = "#151515"
 
+pub fn issue_url(number) {
+  string.concat(["https://gleamweekly.com/issues/", int.to_string(number)])
+}
+
 pub fn content(issue, number) {
-  let #(_date, items, also) = issue
-  let issue_url =
-    string.concat(["https://gleamweekly.com/issues/", int.to_string(number)])
+  let #(_date, _comment, items, also) = issue
+  let issue_url = issue_url(number)
+
   h.div(
     [
       a.style([

@@ -22,7 +22,7 @@ fn render_issues() -> List(Issue) {
   list.reverse(content.issues)
   |> list.index_map(fn(issue, index) {
     let number = index + 1
-    let #(date, _, _) = issue
+    let #(date, _, _, _) = issue
     // assert is ok here since all issues (should) have a valid date associated with them
     let assert Ok(time) = birl.from_naive(date)
     Issue(

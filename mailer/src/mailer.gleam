@@ -3,9 +3,11 @@ import gleam/bit_array
 import gleam/int
 import gleam/io
 import gleam/list
+import gleam/option.{None, Some}
 import gleam/result.{try}
 import gleam/string
 import mailer/content
+import mailer/template
 import mailer/template/archive
 import mailer/template/email
 import simplifile
@@ -39,6 +41,24 @@ pub fn current_issue_number() {
 pub fn email(root) {
   let assert [latest, ..] = content.issues
   email.render(root, latest, current_issue_number())
+}
+
+pub type Share {
+  Share(comment: String, title: String, issue_url: String)
+}
+
+pub fn share() {
+  let assert [latest, ..] = content.issues
+  let number = current_issue_number()
+  case latest.1 {
+    Some(comment) ->
+      Ok(Share(
+        comment: comment,
+        title: "This week in Gleam. Issue " <> int.to_string(number),
+        issue_url: template.issue_url(number),
+      ))
+    None -> Error("no comment data for this issue")
+  }
 }
 
 pub fn render_issues() {
