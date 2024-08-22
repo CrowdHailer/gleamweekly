@@ -18,7 +18,45 @@ pub type Tag {
 
 pub const issues = [
   #(
-    "2024-08-08",
+    "2024-08-22",
+    None,
+    [
+      News(
+        "Know-How-Computer emulator",
+        "https://poelstra.github.io/know-how-computer/",
+        "Learn about how computers 'really work', with an online emulator for the Know How Computer.",
+      ),
+      News(
+        "Directories 1.0 released",
+        "https://github.com/ditherwither/directories",
+        "A package to get standard locations of directories for temporary files, config, cache, etc.",
+      ),
+      News(
+        "Globin 1.0 released",
+        "https://github.com/apainintheneck/globlin",
+        "File globbing for Gleam ",
+      ),
+    ],
+    [
+      Also(
+        "Nymph - programming language, implemented with gleam",
+        "https://github.com/theonlytails/nymph_gleam",
+        ProjectUpdate,
+      ),
+      Also(
+        "Pocket_watch - Easily time execution of a block or function!",
+        "https://hexdocs.pm/pocket_watch/",
+        ProjectUpdate,
+      ),
+      Also(
+        "Platform - A zero dependency gleam package to get information about the host system",
+        "https://github.com/ditherwither/platform",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
+    "2024-08-15",
     Some(
       "Strong library game from the community in this weeks Gleam weekly. type safe SQL!!",
     ),
