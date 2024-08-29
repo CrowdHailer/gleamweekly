@@ -18,6 +18,37 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2024-08-29",
+    Some(
+      "A short an sweet update from the Gleam community this week,
+      maybe everyone was having too much fun at the second Gleam London meetup.",
+    ),
+    [
+      News(
+        "Gleam is not Rust",
+        "https://www.youtube.com/watch?v=uvQL-xJWGwI",
+        "If you ever need to explain why Gleam is not Rust Issac has your back.",
+      ),
+      News(
+        "My first experience with Gleam",
+        "https://pliutau.com/my-first-experience-with-gleam-lang/",
+        "Alex shares their personal experience with the language.",
+      ),
+    ],
+    [
+      Also(
+        "Glake - Snake written in Gleam",
+        "https://glake.run/",
+        ProjectUpdate,
+      ),
+      Also(
+        "Polly 1.0 - a portable polling file system watcher",
+        "https://gitlab.com/arkandos/polly",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2024-08-22",
     Some("Another good cache of packages from the community this week."),
     [
