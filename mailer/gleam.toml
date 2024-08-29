@@ -8,6 +8,9 @@ lustre = "~> 4.0"
 simplifile = "~> 1.5"
 xmleam = ">= 1.1.5 and < 2.0.0"
 birl = ">= 1.6.1 and < 2.0.0"
+snag = ">= 0.3.0 and < 1.0.0"
+midas = ">= 0.4.6 and < 1.0.0"
+# midas = {path= "../../midas"}
 
 [dev-dependencies]
 gleeunit = "~> 1.0"
