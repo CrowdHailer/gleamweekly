@@ -18,6 +18,44 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2024-09-05",
+    Some("Updates from the Gleamlings."),
+    [
+      News(
+        "Building a real-time chat in Gleam",
+        "https://gautier.dev/articles/real-time-gleam-chat",
+        "Gautier recounts their first steps in Gleam, from a Hello World to building a complete chat application.",
+      ),
+      News(
+        "Paint: make drawings, animations, and games with Gleam",
+        "https://adelhult.github.io/paint/",
+        "A DSL for drawing images and making interactive experiences/small games (currently targeting the HTML Canvas API).",
+      ),
+    ],
+    [
+      Also(
+        "Small library for rsa keys generation and message signing",
+        "https://github.com/jmrflora/rsa_keys",
+        ProjectUpdate,
+      ),
+      Also(
+        "Tagg - An HTML template library that uses an XML/HTML tag syntax",
+        "https://github.com/jasonprogrammer/tagg",
+        ProjectUpdate,
+      ),
+      Also(
+        "Elm Town 79 - Inspired: Gleam with Hayleigh",
+        "https://discourse.elm-lang.org/t/elm-town-79-inspired-gleam-with-hayleigh/9956",
+        Podcast,
+      ),
+      Also(
+        "Bucket - Gleam S3 API client",
+        "https://github.com/lpil/bucket",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2024-08-29",
     Some(
       "A short an sweet update from the Gleam community this week,
