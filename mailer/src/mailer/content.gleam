@@ -14,9 +14,46 @@ pub type Tag {
   BlogPost
   ProjectUpdate
   Educational
+  JobOportunity
 }
 
 pub const issues = [
+  #(
+    "2024-09-19",
+    Some(
+      "Been away for a week on my honeymoon and a quick checkin with the Gleam community shows the release of yet another version.
+    The release of 1.5.0 comes with more community contributions than ever before.",
+    ),
+    [
+      News(
+        "Gleam 1.5.0 released",
+        "https://gleam.run/news/convenient-code-actions/",
+        "Context aware exhaustiveness errors, prettier documentation, prettier errors and so much more.",
+      ),
+      News(
+        "JSON-Typedef 1.0",
+        "https://github.com/lpil/json-typedef",
+        "Work with JSON using a schema! RFC8927.",
+      ),
+      News(
+        "Radiate",
+        "https://github.com/pta2002/gleam-radiate",
+        "Hot reloading while in development for Gleam.",
+      ),
+    ],
+    [
+      Also(
+        "leviathan 1-.0 - Implementation of a state monad.",
+        "https://github.com/tttardigrado/leviathan",
+        ProjectUpdate,
+      ),
+      Also(
+        "Steerlab — A Job opportunity in Gleam",
+        "https://steerlab.notion.site/Software-engineer-dd672cafae4c46438f91f37851b473ae",
+        JobOportunity,
+      ),
+    ],
+  ),
   #(
     "2024-09-12",
     Some("Short but sweet update of the goings on in Gleam land."),
