@@ -18,6 +18,39 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2024-09-12",
+    Some("Short but sweet update of the goings on in Gleam land."),
+    [
+      News(
+        "gleewhois 1.0",
+        "https://github.com/kjartanhr/gleewhois",
+        "WHOIS client for Gleam.",
+      ),
+      News(
+        "Macabre an experiment to compile Gleam source code to Python.",
+        "https://github.com/dusty-phillips/macabre",
+        "Dusty is having fun on the path to making a self hosted compiler.",
+      ),
+      News(
+        "Why not join the Gleam Dev Squad on Daily.dev.",
+        "https://app.daily.dev/squads/gleamdev/vK2dDOzzoH0NNB_GVC3Y8x-YhijF5p1RUE8hsownNZE",
+        "This squad is a place to share tech posts, ideas, and discussions all about Gleam.",
+      ),
+    ],
+    [
+      Also(
+        "gloq - API Wrapper for the GroqCloud.",
+        "https://github.com/AryaanSheth/gloq",
+        ProjectUpdate,
+      ),
+      Also(
+        "Gleam - Next Step for Backend Engineers.",
+        "https://www.youtube.com/watch?v=Wr2OPvheLHg",
+        Video,
+      ),
+    ],
+  ),
+  #(
     "2024-09-05",
     Some("Updates from the Gleamlings."),
     [
