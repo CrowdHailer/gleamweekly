@@ -3,13 +3,15 @@ target = "javascript"
 version = "1.0.0"
 
 [dependencies]
-gleam_stdlib = "~> 0.34 or ~> 1.0"
-lustre = "~> 4.0"
+gleam_stdlib = ">= 0.40.0 and < 1.0.0"
 simplifile = "~> 1.5"
+gleam_json = ">= 1.0.0 and < 3.0.0"
 xmleam = ">= 1.1.5 and < 2.0.0"
 birl = ">= 1.6.1 and < 2.0.0"
 snag = ">= 0.3.0 and < 1.0.0"
-midas = ">= 0.4.6 and < 1.0.0"
+midas = ">= 1.0.0 and < 2.0.0"
+midas_sdk = ">= 0.1.0 and < 1.0.0"
+lustre = ">= 4.3.0 and < 5.0.0"
 # midas = {path= "../../midas"}
 
 [dev-dependencies]
