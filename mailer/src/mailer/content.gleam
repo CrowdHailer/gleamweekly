@@ -19,6 +19,47 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2024-09-26",
+    Some(
+      "This weeks Gleam update has one of my favourite kind of project, someone playing with languages.
+    Why not try transpile Gleam to F#.",
+    ),
+    [
+      News(
+        "Gleam Cookbook",
+        "https://github.com/gleam-lang/cookbook/",
+        "A repo for collecting examples of how to do stuff in Gleam.",
+      ),
+      News(
+        "Midas 1.0 - stable task abstraction",
+        "https://github.com/midas-framework/midas",
+        "Midas is for making quick scripts and automations.",
+      ),
+      News(
+        "Gleam.NET - An F# target for Gleam",
+        "https://github.com/josh-degraw/gleam",
+        "A fun project that demonstrates compiling Gleam to F#.",
+      ),
+    ],
+    [
+      Also(
+        "gleemenu - A neat little API for creating single choice dialogs using dmenu clones.",
+        "https://github.com/SaphiraKai/gleemenu",
+        ProjectUpdate,
+      ),
+      Also(
+        "An Erlanger's encounter with Gleam.",
+        "https://www.youtube.com/watch?v=vPP8ib2qqtI",
+        Video,
+      ),
+      Also(
+        "gleamy_lights - Coloured terminal output for Gleam.",
+        "https://github.com/strawmelonjuice/gleamy_lights",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2024-09-19",
     Some(
       "Been away for a week on my honeymoon and a quick checkin with the Gleam community shows the release of yet another version.
