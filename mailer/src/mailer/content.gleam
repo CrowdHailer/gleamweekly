@@ -19,6 +19,37 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2024-10-03",
+    Some(
+      "This week is apparently video week in Gleam land. why not find out what makes Lustre tick, the pre-eminent front end framework for Gleam.",
+    ),
+    [
+      News(
+        "Designing The Lustre Web Framework",
+        "https://www.youtube.com/watch?v=4n5fFMLVOBo",
+        "Lustre is a web framework that takes inspiration from Elm, React, and Erlang's actor model.
+        Listen to Hayleigh talk about how it came to be and where it's going.",
+      ),
+      News(
+        "Lustre and Gleam Make my Heart Rate Go Down",
+        "https://dev.to/enoonan/lustre-and-gleam-make-my-heart-rate-go-down-a-case-study-5765",
+        "A quick case study on the experience of building a financial assessment client app in Gleam.",
+      ),
+    ],
+    [
+      Also(
+        "Your next favorite programming language: Gleam.",
+        "https://www.youtube.com/watch?v=vyEWc0-kbkw",
+        Video,
+      ),
+      Also(
+        "Mysig - ideas for a tiny asset bundler in Gleam.",
+        "https://vimeo.com/1014472629/d60bd6ecea",
+        Video,
+      ),
+    ],
+  ),
+  #(
     "2024-09-26",
     Some(
       "This weeks Gleam update has one of my favourite kind of project, someone playing with languages.
