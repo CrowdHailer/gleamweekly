@@ -19,6 +19,39 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2024-10-10",
+    None,
+    [
+      News(
+        "Gleam is Pragmatic",
+        "https://blog.drewolson.org/gleam-is-pragmatic/",
+        "Over the past few months Drew has been experimenting with the Gleam programming language and is very impressed.",
+      ),
+      News(
+        "6 years with Gleam",
+        "https://crowdhailer.me/2024-10-04/6-years-with-gleam/",
+        "I first contributed to Gleam in 2018, this is a summary of my journey so far.",
+      ),
+    ],
+    [
+      Also(
+        "Going local-first with Tauri v2 and Gleam.",
+        "https://www.youtube.com/watch?v=lPO1UT3NE6o",
+        Video,
+      ),
+      Also(
+        "hexdeck.pm - A hexdocs aggregator.",
+        "https://hexdeck.pm/",
+        ProjectUpdate,
+      ),
+      Also(
+        "gleamlz_string - Implementation of pieroxy's lz-string compression algorithm.",
+        "https://github.com/eelmafia/gleamlz_string",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2024-10-03",
     Some(
       "This week is apparently video week in Gleam land. why not find out what makes Lustre tick, the pre-eminent front end framework for Gleam.",
