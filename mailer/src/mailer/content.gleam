@@ -20,7 +20,9 @@ pub type Tag {
 pub const issues = [
   #(
     "2024-10-10",
-    None,
+    Some(
+      "Two blog posts celebrating the down to earth nature of Gleam in this weeks issue of Gleam weekly.",
+    ),
     [
       News(
         "Gleam is Pragmatic",
