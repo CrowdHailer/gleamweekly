@@ -15,9 +15,45 @@ pub type Tag {
   ProjectUpdate
   Educational
   JobOportunity
+  Meetup
 }
 
 pub const issues = [
+  #(
+    "2024-10-17",
+    Some(
+      "Code BEAM EU was a great event this week. If you got excited about Gleam here are some updates for you.",
+    ),
+    [
+      News(
+        "A hands-on exploration of modern web development strategies.",
+        "https://magic-numbers.fly.dev/",
+        "This site neatly demonstrates different ways of building web applications.",
+      ),
+      News(
+        "Code BEAM EU has happened",
+        "https://twitter.com/loreniuxmr/status/1846086567921963242",
+        "This year's edition had more Gleam mentioned than ever before.",
+      ),
+      News(
+        "Gleam Lustre Progressive Web App",
+        "https://github.com/sanabel-al-firdaws/lustre_pwa",
+        "A concrete example of working with Gleam and Lustre to build PWA's.",
+      ),
+    ],
+    [
+      Also(
+        "Gleam Afterwork in Paris",
+        "https://www.meetup.com/fr-FR/gleam-paris/events/303945572/",
+        Meetup,
+      ),
+      Also(
+        "Gleam - An Introduction to the Language and Platform",
+        "https://www.youtube.com/watch?v=N4nJ7EK-e2s",
+        Video,
+      ),
+    ],
+  ),
   #(
     "2024-10-10",
     Some(
