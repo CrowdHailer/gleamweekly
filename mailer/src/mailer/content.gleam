@@ -20,6 +20,42 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2024-10-24",
+    Some(
+      "Being able to inspect the processes of a running application is a super power for languages on the BEAM.
+    Gleam now has a native view into this information.",
+    ),
+    [
+      News(
+        "Spectator: A BEAM observer tool for Gleam",
+        "https://github.com/JonasGruenwald/spectator",
+        "A beautiful tool using a lustre server component to render a live view of active processes and information about them.",
+      ),
+    ],
+    [
+      Also(
+        "Barnacle 1.0 - Self-healing clusters for Gleam applications on the BEAM.",
+        "https://github.com/Pevensie/barnacle",
+        ProjectUpdate,
+      ),
+      Also(
+        "How to use Lustre Server Components",
+        "https://www.youtube.com/watch?v=bzvYJHRrin0",
+        Video,
+      ),
+      Also(
+        "Squeal 1.0 - format your .sql files.",
+        "https://github.com/MoeDevelops/squeal",
+        ProjectUpdate,
+      ),
+      Also(
+        "string_width - Layout and measure the sizes of a strings printed in the terminal.",
+        "https://gitlab.com/arkandos/string-width",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2024-10-17",
     Some(
       "Code BEAM EU was a great event this week. If you got excited about Gleam here are some updates for you.",
