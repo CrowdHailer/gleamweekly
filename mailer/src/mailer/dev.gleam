@@ -4,6 +4,7 @@
 // social integrations are hardcoded to my user id's which are committed to source.
 // This are not id that can be used without authentication as myself.
 
+import gleam/int
 import gleam/option.{Some}
 import gleam/result
 import mailer
@@ -22,10 +23,20 @@ pub fn task(args, twitter_app, linkedin_app) {
   }
 }
 
+fn twitter_authenticate(client_id, redirect_uri, local, scopes) {
+  let state = int.to_string(int.random(1_000_000_000))
+  let state = case local {
+    True -> "LOCAL" <> state
+    False -> state
+  }
+  let challenge = int.to_string(int.random(1_000_000_000))
+  twitter.do_authenticate(client_id, redirect_uri, scopes, state, challenge)
+}
+
 fn share_on_twitter(app) {
   let scopes = ["tweet.read", "tweet.write", "users.read"]
   let #(client_id, redirect_uri) = app
-  use token <- t.do(twitter.authenticate(client_id, redirect_uri, scopes))
+  use token <- t.do(twitter_authenticate(client_id, redirect_uri, True, scopes))
 
   use share <- t.try(mailer.share() |> result.map_error(snag.new))
   let mailer.Share(comment, title, issue_url) = share
