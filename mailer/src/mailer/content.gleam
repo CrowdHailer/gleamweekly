@@ -20,6 +20,29 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2024-10-31",
+    None,
+    [
+      News(
+        "Gleam's Journey on the BEAM",
+        "https://www.youtube.com/watch?v=6I0IbJtUC3U",
+        "Keynote from Code BEAM Europe '24 How Gleam is part of and enriches the erlang ecosystem.",
+      ),
+      News(
+        "Stóráil 1,0",
+        "https://github.com/lpil/storail",
+        "A simple on-disc JSON based data store",
+      ),
+    ],
+    [
+      Also(
+        "Gleam Postgres Starter with Mist",
+        "https://github.com/nermalcat69/gleam-mist-pgo",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2024-10-24",
     Some(
       "Being able to inspect the processes of a running application is a super power for languages on the BEAM.
