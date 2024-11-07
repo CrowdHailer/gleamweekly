@@ -20,6 +20,43 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2024-11-07",
+    Some(
+      "The Gleam developer survey 2024 is out. This is your chance to shape our 2025 plans, so fill it in and share with your friends!",
+    ),
+    [
+      News(
+        "The Gleam developer survey 2024 is out",
+        "https://developer-survey.gleam.run/",
+        "This is your chance to shape our 2025 plans, so fill it in and share with your friends!
+        You don't need to currently be a Gleam programmer to participate. Just an interest is good.",
+      ),
+      News(
+        "Arctic framework website",
+        "https://arctic-framework.org/",
+        "The Arctic framework now has a website that explains more about the project.",
+      ),
+      News(
+        "You don't need loops",
+        "https://www.youtube.com/watch?v=92b5-yPZfxQ",
+        "Looping is a very common, and very useful, practice in software development.
+        But do you need it, or are there other alternatives? Perhaps, better alternatives?",
+      ),
+    ],
+    [
+      Also(
+        "Basic support for Gleam is now available on Zerops.",
+        "https://github.com/zeropsio/recipe-gleam",
+        ProjectUpdate,
+      ),
+      Also(
+        "preppy - a nifty app to help in the kitchen.",
+        "https://giacomocavalieri.github.io/preppy/",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2024-10-31",
     None,
     [
