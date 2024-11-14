@@ -20,6 +20,44 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2024-11-14",
+    Some("Another week another survey, this time for Women of the BEAM."),
+    [
+      News(
+        "lenient_parse is feature complete against the Python equivalents it emulates.",
+        "https://github.com/JosephTLyons/lenient_parse",
+        "Lenient parsing functions for Gleam, modelled after Python's `int()` and `float()` built-ins. ",
+      ),
+      News(
+        "Raycast extension for Gleam packages",
+        "https://www.raycast.com/ryanmiville/gleam-packages",
+        "Raycast is a collection of powerful productivity tools all within an extendable launcher.",
+      ),
+      News(
+        "Women in the BEAM survey",
+        "https://docs.google.com/forms/d/e/1FAIpQLScRW_1tvqCbM1mGv9ak5Zu9sacvOobYHJT-Uqwgd992Ac1SnQ/viewform",
+        "Lorena Mireles is conducting a survey to better understand diversity and inclusion within this ecosystem.",
+      ),
+    ],
+    [
+      Also(
+        "OAS 1.0 - parse an OpenAPI spec.",
+        "https://github.com/crowdhailer/oas",
+        ProjectUpdate,
+      ),
+      Also(
+        "Zerl: Making Zig in the BEAM an ez time.",
+        "https://www.youtube.com/watch?v=ejYcWRERetM",
+        Video,
+      ),
+      Also(
+        "Gleam implementation of the last-write-wins register CRDT.",
+        "https://github.com/lpil/lww-register-crdt",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2024-11-07",
     Some(
       "The Gleam developer survey 2024 is out. This is your chance to shape our 2025 plans, so fill it in and share with your friends!",
