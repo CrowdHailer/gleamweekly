@@ -20,6 +20,41 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2024-11-21",
+    Some(
+      "The Gleam language tooling continues it's rapid improvement with the latest 1.6 release and other news in this issue of Gleam Weekly.",
+    ),
+    [
+      News(
+        "Gleam 1.6.0 released",
+        "https://gleam.run/news/context-aware-compilation/",
+        "Featuring so many excellent improvements that Louis struggled to title this post. Dive into the 1.6 release post to see all the new things.",
+      ),
+      News(
+        "Gleam's Lustre is Frontend Development's Endgame",
+        "https://blog.nestful.app/p/gleams-lustre-is-frontend-developments?triedRedirect=true",
+        "How a combination of language, architecture and ecosystem lead to more maintainable code and a more enjoyable experience.",
+      ),
+      News(
+        "Watching a task with Midas on nodejs",
+        "https://vimeo.com/1030747035",
+        "Demonstration of watching for filesystem changes and automatically rerunning a build and deploy task with Midas on node.",
+      ),
+    ],
+    [
+      Also(
+        "BEAM's bright future with Gleam (and JavaScript?) - Code BEAM Lite Stockholm 2024",
+        "https://www.youtube.com/watch?v=fhJBEuJjxFQ",
+        Video,
+      ),
+      Also(
+        "A subset of the Haskell Euterpea library, translated while learning Gleam.",
+        "https://github.com/karlsson/gleuterpea",
+        Educational,
+      ),
+    ],
+  ),
+  #(
     "2024-11-14",
     Some("Another week another survey, this time for Women of the BEAM."),
     [
