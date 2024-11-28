@@ -20,6 +20,46 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2024-11-28",
+    Some(
+      "This week a bunch of useful libraries reach 1.0, early Christmas perhaps.",
+    ),
+    [
+      News(
+        "Atto 1.0",
+        "https://github.com/ieeemma/atto",
+        "Robust and extensible parser-combinators.",
+      ),
+      News(
+        "Optimist 1.0",
+        "https://github.com/hayleigh-dot-dev/optimist",
+        "A simple package for modelling optimistic ui updates.",
+      ),
+      News(
+        "Gleameter 1.0",
+        "https://github.com/theonlytails/gleameter",
+        "Implementation of the International System of Units, including support for adding custom units.",
+      ),
+      News(
+        "Persevero 1.0",
+        "https://github.com/JosephTLyons/persevero",
+        "Execute fallible operations multiple times. ",
+      ),
+    ],
+    [
+      Also(
+        "Nothing To Do - A Gleam service that throws out random tasks for inspiration",
+        "https://ntd.naomieow.xyz/",
+        ProjectUpdate,
+      ),
+      Also(
+        "A Code Centric Journey Into the Gleam Language",
+        "https://www.youtube.com/watch?v=yHe_wzFg4W8",
+        Video,
+      ),
+    ],
+  ),
+  #(
     "2024-11-21",
     Some(
       "The Gleam language tooling continues it's rapid improvement with the latest 1.6 release and other news in this issue of Gleam Weekly.",
