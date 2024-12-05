@@ -36,8 +36,6 @@ fn twitter_authenticate(client_id, redirect_uri, local, scopes) {
   twitter.do_authenticate(client_id, redirect_uri, scopes, state, challenge)
 }
 
-const api_host = "bsky.social"
-
 fn share_on_bluesky(cred) {
   let #(handle, password) = cred
 

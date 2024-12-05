@@ -262,6 +262,15 @@ fn submit(issue_url, number) {
         ],
         [text("@Crowdhailer")],
       ),
+      text(" ("),
+      h.a(
+        [
+          a.style([#("text-decoration", "none")]),
+          a.href("https://bsky.app/profile/crowdhailer.bsky.social"),
+        ],
+        [text("or on Bluesky")],
+      ),
+      text(")"),
       text(" from "),
       h.a(
         [

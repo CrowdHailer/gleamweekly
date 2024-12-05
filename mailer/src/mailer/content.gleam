@@ -20,6 +20,61 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2024-12-05",
+    Some(
+      "Even more great libraries this week, I've even snuck in my own offering, Felix, that implements passkey authentication.",
+    ),
+    [
+      News(
+        "Glexer 2.0 released",
+        "https://github.com/DanielleMaywood/glexer",
+        "A lexer for Gleam, written in Gleam. Now whitespace preserving.",
+      ),
+      News(
+        "Hexdocs Offline",
+        "https://github.com/daniellionel01/hexdocs_offline/",
+        "Useful if you want to reduce the tabs in your browser or travel a lot/don't have a stable internet connection all the time.",
+      ),
+      News(
+        "Felix 1.0 released",
+        "https://github.com/CrowdHailer/felix",
+        "Authentication via Passkey (WebAuthn/FIDO2)",
+      ),
+      News(
+        "json_blueprint 1.0 released",
+        "https://github.com/lostbean/json_blueprint",
+        "Encoding, decoding and generated JSON schemas for your data types.",
+      ),
+    ],
+    [
+      Also(
+        "gleamstar 1.0 - The A* search algorithm implemented",
+        "https://github.com/dinkelspiel/gleamstar",
+        ProjectUpdate,
+      ),
+      Also(
+        "A short video primer on using 'use'",
+        "https://www.youtube.com/watch?v=-rtVWja_vJI",
+        Video,
+      ),
+      Also(
+        "Cigogne 1.0 - A Postgres migration tool",
+        "https://github.com/Billuc/cigogne",
+        ProjectUpdate,
+      ),
+      Also(
+        "tobble 1.0 - A simple table library",
+        "https://github.com/ollien/tobble",
+        ProjectUpdate,
+      ),
+      Also(
+        "Gleam weekly is now sharing to Bluesky.",
+        "https://bsky.app/profile/crowdhailer.bsky.social/post/3lcl2t64np227",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2024-11-28",
     Some(
       "This week a bunch of useful libraries reach 1.0, early Christmas perhaps.",
