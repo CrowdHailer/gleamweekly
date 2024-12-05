@@ -8,16 +8,19 @@ import gleam/int
 import gleam/option.{Some}
 import gleam/result
 import mailer
+import midas/sdk/bluesky
 import midas/sdk/linkedin
 import midas/sdk/twitter
 import midas/task as t
+import plinth/javascript/date
 import snag
 
 // https://developer.twitter.com/en/portal/projects-and-apps
-pub fn task(args, twitter_app, linkedin_app) {
+pub fn task(args, twitter_app, linkedin_app, bluesky_creds) {
   case args {
     ["share", "twitter"] -> share_on_twitter(twitter_app)
     ["share", "linkedin"] -> share_on_linkedin(linkedin_app)
+    ["share", "bluesky"] -> share_on_bluesky(bluesky_creds)
 
     _ -> t.abort(snag.new("no task for gleam weekly"))
   }
@@ -31,6 +34,26 @@ fn twitter_authenticate(client_id, redirect_uri, local, scopes) {
   }
   let challenge = int.to_string(int.random(1_000_000_000))
   twitter.do_authenticate(client_id, redirect_uri, scopes, state, challenge)
+}
+
+const api_host = "bsky.social"
+
+fn share_on_bluesky(cred) {
+  let #(handle, password) = cred
+
+  use access_token <- t.do(bluesky.create_session(handle, password))
+
+  let now = date.now()
+  let now = date.to_iso_string(now)
+
+  use share <- t.try(mailer.share() |> result.map_error(snag.new))
+  let mailer.Share(comment, title, issue_url) = share
+
+  let text = title <> " now available. " <> issue_url <> "\n\n" <> comment
+
+  use url <- t.do(bluesky.create_post(access_token, handle, text, now))
+  use Nil <- t.do(t.log(url))
+  t.done(Nil)
 }
 
 fn share_on_twitter(app) {
