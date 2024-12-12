@@ -20,6 +20,44 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2024-12-12",
+    Some("Start getting excited for next year with the Gleam roadmap."),
+    [
+      News(
+        "Introducing the Gleam roadmap!",
+        "https://gleam.run/news/introducing-the-gleam-roadmap/",
+        "A bird's eye view of what's happening in Gleam",
+      ),
+      News(
+        "VSCode IDE Debugging Setup & Demo",
+        "https://cdaringe.com/gleam-debugging-early-days/",
+        "Blog post and video on how to use the VSCode JS debugger.",
+      ),
+    ],
+    [
+      Also(
+        "The Gleam London xmas social will be on the 19th in Paddington!",
+        "https://meetdown.app/group/58acfb/Gleam-London",
+        Meetup,
+      ),
+      Also(
+        "TicTacToe implemented in Gleam and Phoenix",
+        "https://github.com/chouzar/tictactoe",
+        ProjectUpdate,
+      ),
+      Also(
+        "Queer Mandelbrot with Gleam + HTML5 Canvas",
+        "https://github.com/sigmasternchen/queermandelbrot",
+        Educational,
+      ),
+      Also(
+        "Advent of Code in Gleam",
+        "https://dev.to/sethcalebweeks/series/29636",
+        Educational,
+      ),
+    ],
+  ),
+  #(
     "2024-12-05",
     Some(
       "Even more great libraries this week, I've even snuck in my own offering, Felix, that implements passkey authentication.",

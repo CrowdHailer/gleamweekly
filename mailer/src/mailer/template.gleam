@@ -216,8 +216,8 @@ fn render_tag(tag) {
     content.BlogPost -> #("Blog post", underwater_blue, white)
     content.ProjectUpdate -> #("Project update", aged_plastic_yellow, blacker)
     content.Educational -> #("Educational", unnamed_blue, blacker)
-    content.JobOportunity -> #("Job oportunity", unnamed_blue, blacker)
-    content.Meetup -> #("Job oportunity", unexpected_aubergine, blacker)
+    content.JobOportunity -> #("Job oportunity", unnamed_blue, white)
+    content.Meetup -> #("Meetup", unexpected_aubergine, white)
   }
   h.span(
     [
