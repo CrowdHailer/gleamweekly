@@ -20,6 +20,36 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2024-12-19",
+    Some(
+      "Short and sweet selection of links for this Gleam Weekly. Still some classic content as we talk about recusion and the ever relevant Todo app.",
+    ),
+    [
+      News(
+        "Learn recursion with Gleam",
+        "https://www.youtube.com/watch?v=debOFwJyXyk",
+        "Recursion is a difficult topic for people new to it, but it doesn't have to be! Let's take a tour of recursion using Gleam.",
+      ),
+      News(
+        "Fish completions for Gleam",
+        "https://github.com/glpda/gleam-completions",
+        "Handwritten completions for Gleam when using the Fish shell",
+      ),
+    ],
+    [
+      Also(
+        "The classic TodoMVC written in Lustre",
+        "https://github.com/ryanmiville/lustre-todomvc",
+        Educational,
+      ),
+      Also(
+        "given - Ergonomic early returns (lazy guards) for Bool, Result and Option types in Gleam",
+        "https://github.com/inoas/gleam-given",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2024-12-12",
     Some("Start getting excited for next year with the Gleam roadmap."),
     [
