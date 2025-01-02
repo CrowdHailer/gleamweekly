@@ -7,7 +7,7 @@ Handpicked articles and community news delivered to your inbox in one weekly ema
 Script to build archive of issues and current email content.
 
 ```
-(cd mailer; gleam run)
+(cd mailer; gleam run -m gleamweekly preview)
 ```
 
 The output of this command is committed, see `email.html` and `website/issues`.

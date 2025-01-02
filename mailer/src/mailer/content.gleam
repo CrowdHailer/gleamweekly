@@ -20,6 +20,82 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2025-01-02",
+    Some(
+      "New year, new gleam release. Obviously. But that's not all we have some cool libraries and games programming.",
+    ),
+    [
+      News(
+        "Game Dev Log: Game Loop",
+        "https://www.wking.dev/logs/game-loop",
+        "Will is building a Tactical RPG, think Final Fantasy Tactics or XCOM from scratch in Gleam.",
+      ),
+      News(
+        "Cog 1.0",
+        "https://github.com/DanielleMaywood/cog",
+        "A package for performing code generation actions.",
+      ),
+      News(
+        "Gleam 1.7.0 third release candidate",
+        "https://github.com/gleam-lang/gleam/releases/tag/v1.7.0-rc3",
+        "The next version of Gleam is now ready to try.",
+      ),
+    ],
+    [
+      Also(
+        "gleam-pkg for installing Gleam CLI programs right inside your OS",
+        "https://github.com/enkerewpo/gleam-pkg",
+        ProjectUpdate,
+      ),
+      Also(
+        "Clad 1.0 - an intuitive way to parse command line arguments into a record.",
+        "https://github.com/ryanmiville/clad",
+        ProjectUpdate,
+      ),
+      Also(
+        "Lifeguard 1.0 - a generic actor pool",
+        "https://github.com/Pevensie/lifeguard",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
+    "2024-12-26",
+    Some(
+      "It's been a great year to be coding in Gleam; we got a 1.0 release, 
+    this newsletter started and many new people joined the Gleam community. It has been a pleasure to be part of it, see you all in 2025.",
+    ),
+    [
+      News(
+        "Pevensie framework v1.0 release",
+        "https://github.com/Pevensie/pevensie",
+        "A modular backend framework for Gleam, this first release includes solutions for authentication and caching.",
+      ),
+      News(
+        "\"Gleam: Past, Present, Future\" from FOSDEM 2024",
+        "https://www.youtube.com/watch?v=clsTrQUt-4M",
+        "Looking back to earlier this year when Gleam 1.0 was announced.",
+      ),
+      News(
+        "\"The Mess We're In\" by Joe Armstrong",
+        "https://www.youtube.com/watch?v=lKXe3HUG2l4",
+        "An all time classic from one of the creators of Erlang.",
+      ),
+    ],
+    [
+      Also(
+        "Themis 1.0 - Prometheus client",
+        "https://github.com/guillheu/Themis",
+        ProjectUpdate,
+      ),
+      Also(
+        "Bath - a generic resource pool for Gleam",
+        "https://github.com/Pevensie/bath",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2024-12-19",
     Some(
       "Short and sweet selection of links for this Gleam Weekly. Still some classic content as we talk about recusion and the ever relevant Todo app.",

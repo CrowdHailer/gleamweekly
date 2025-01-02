@@ -26,7 +26,7 @@ pub fn build(root) {
   let path = string.replace(root, "/mailer", "/email.html")
   use _ <- result.try(
     simplifile.write(path, email(root))
-    |> result.nil_error,
+    |> result.replace_error(Nil),
   )
 
   io.println("Successfully wrote email to " <> path)
