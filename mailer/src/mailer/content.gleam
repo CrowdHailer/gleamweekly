@@ -19,6 +19,42 @@ pub type Tag {
 }
 
 pub const issues = [
+  // https://hexdocs.pm/shork/
+  #(
+    "2025-01-09",
+    Some(
+      "News from Gleam this week. We have some WASM tooling which is not Gleam to WASM compilation. Important distinction there.",
+    ),
+    [
+      News(
+        "Popcicle 1.0",
+        "https://github.com/dinkelspiel/popcicle",
+        "Simple to use, styleable popovers for Lustre ",
+      ),
+      News(
+        "Game Dev Log: Render Loop",
+        "https://www.wking.dev/logs/render-loop",
+        "Will breaks down the render loop of his Gleam game engine..",
+      ),
+      News(
+        "gl_wasm 1.0",
+        "https://github.com/gertvv/gl_wasm",
+        "Create binary WebAssembly modules in Gleam.",
+      ),
+    ],
+    [
+      Also(
+        "GleamRPC - Remote Procedure Call.",
+        "https://github.com/Billuc/gleamrpc",
+        ProjectUpdate,
+      ),
+      Also(
+        "Evolving a structural editor.",
+        "https://crowdhailer.me/2025-01-02/the-evolution-of-a-structural-code-editor/",
+        BlogPost,
+      ),
+    ],
+  ),
   #(
     "2025-01-02",
     Some(
