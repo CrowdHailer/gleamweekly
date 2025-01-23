@@ -19,7 +19,36 @@ pub type Tag {
 }
 
 pub const issues = [
-  // https://hexdocs.pm/shork/
+  #(
+    "2025-01-16",
+    Some(
+      "I never heard of phantom types until I got into Gleam. This week you can find out about them and much more.",
+    ),
+    [
+      News(
+        "bungibindies 1.0 released",
+        "https://github.com/strawmelonjuice/bungibindies",
+        "Gleam bindings to the Bun runtime API's.",
+      ),
+      News(
+        "Lustre Universal Components from Lambda Days 2024",
+        "https://www.youtube.com/watch?v=TbCm-zR7qZ0",
+        "The best of Elm and Phoenix LiveView.",
+      ),
+      News(
+        "Phantom types",
+        "https://www.youtube.com/watch?v=dMtZdPiMfb0",
+        "You could be doing more with static typing.",
+      ),
+    ],
+    [
+      Also(
+        "Shork 1.0 - A MySQL/MariaDB database client.",
+        "https://github.com/ninanomenon/shork",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     "2025-01-09",
     Some(
