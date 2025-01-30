@@ -20,6 +20,46 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2025-01-23",
+    Some(
+      "Details on two conferences happening in the next 8 days in this weeks issue.",
+    ),
+    [
+      News(
+        "Spoke 1.0 released",
+        "https://github.com/sbergen/spoke",
+        "An MQTT 3.1.1 client written in Gleam for the Erlang runtime.",
+      ),
+      News(
+        "Code BEAM Lite London | 31 January 2025",
+        "https://codebeamlondon.com",
+        "Next Friday, a single day single track conference for the BEAM, with a GLEAM keynote from Louis.",
+      ),
+      News(
+        "Functional Conf 2025 | 24 - 25 January 2025",
+        "https://functionalconf.com/",
+        "Starting tomorrow! Includes Robert Virding talking about erlang and myself talking about vegetables and language design.",
+      ),
+    ],
+    [
+      Also(
+        "Gaste - A termbin.com clone written in Gleam",
+        "https://codeberg.org/cmooon/gaste",
+        ProjectUpdate,
+      ),
+      Also(
+        "Raul received a stipend grant to help released the version 1 of Chip",
+        "https://www.youtube.com/watch?v=0qEi_aCPIq8",
+        Video,
+      ),
+      Also(
+        "Brett does a quick write-up of their impressions of Gleam after writing a small Lustre app.",
+        "https://snarky.ca/my-impressions-of-gleam/",
+        BlogPost,
+      ),
+    ],
+  ),
+  #(
     "2025-01-16",
     Some(
       "I never heard of phantom types until I got into Gleam. This week you can find out about them and much more.",
