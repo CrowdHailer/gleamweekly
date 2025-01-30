@@ -20,6 +20,39 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2025-01-30",
+    None,
+    [
+      News(
+        "Beencode a fast Bencode library.",
+        "https://github.com/giacomocavalieri/beencode",
+        "It's around 1.3x faster and less memory hungry than bento.",
+      ),
+      News(
+        "Fabulous 1.0",
+        "https://github.com/DeveloperSpoot/fabulous",
+        "Table library with text wrapping.",
+      ),
+      News(
+        "Trellis 1.0",
+        "https://github.com/ethanthoma/trellis",
+        "A simple library for pretty printing tabular data.",
+      ),
+    ],
+    [
+      Also(
+        "Call for feedback on Gleam material for a university course",
+        "https://discord.com/channels/768594524158427167/1047101890707603547/threads/1333917437346840576",
+        Educational,
+      ),
+      Also(
+        "Erlang/OTP 27.2.1",
+        "https://www.erlang.org/patches/otp-27.2.1",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2025-01-23",
     Some(
       "Details on two conferences happening in the next 8 days in this weeks issue.",
