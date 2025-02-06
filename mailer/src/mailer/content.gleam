@@ -19,6 +19,40 @@ pub type Tag {
 }
 
 pub const issues = [
+  // https://hex.pm/packages/gleam_time
+  #(
+    "2025-02-06",
+    None,
+    [
+      News(
+        "An implementation of a Bidirectional Map - 1.0 release",
+        "https://github.com/GearsDatapacks/gleam-mapped",
+        "Efficiently navigate from key to value and back",
+      ),
+      News(
+        "Gleam 1.8.0 is out for testing",
+        "https://github.com/gleam-lang/gleam/releases/tag/v1.8.0-rc1",
+        "Here is the next version of Gleam ready to try.",
+      ),
+      News(
+        "Squirrel lib explained in a video",
+        "https://www.youtube.com/watch?v=f_T5PZYLK2A",
+        "Squirrel is a library for type safe SQL queries.",
+      ),
+    ],
+    [
+      Also(
+        "gleam_javascript is now v1.0.0.",
+        "https://github.com/gleam-lang/javascript",
+        ProjectUpdate,
+      ),
+      Also(
+        "Boyer-Moore search algorithm implementation.",
+        "https://git.ahlcode.fi/nicd/boyer_moore",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     "2025-01-30",
     None,
