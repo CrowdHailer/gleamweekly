@@ -19,7 +19,47 @@ pub type Tag {
 }
 
 pub const issues = [
-  // https://hex.pm/packages/gleam_time
+  // https://hex.pm/packages/gleam_time wait 1.0
+  #(
+    "2025-02-13",
+    Some(
+      "Talking about the future with Jak and the present with the developer survey results. This issue of Gleam Weekly even offers us loops.",
+    ),
+    [
+      News(
+        "The Future of Gleam: Innovations and Insights with Giacomo Cavalieri",
+        "https://www.beamrad.io/86",
+        "Jak and Lars have a delightful conversation about Gleam, the language's type safety, adoption and ecosystem growth. ",
+      ),
+      News(
+        "Developer survey results for 2024",
+        "https://gleam.run/news/developer-survey-2024-results/",
+        "The results are in for the first ever Gleam Developer Survey. It ran for a couple months at the end of 2024 and received 841 responses.",
+      ),
+      News(
+        "iv - general-purpose, persistent array structure",
+        "https://gitlab.com/arkandos/iv",
+        "Use it like you would use an array in other programming languages and expect comparable or better runtime characteristics.",
+      ),
+    ],
+    [
+      Also(
+        "lustre_alpine - A library for working with Alpine.JS through Lustre attributes.",
+        "https://github.com/renatillas/lustre_alpine",
+        ProjectUpdate,
+      ),
+      Also(
+        "dag_json - JSON Directed Acyclic Graph for IPLD.",
+        "https://github.com/CrowdHailer/dag_json",
+        ProjectUpdate,
+      ),
+      Also(
+        "gloop - Stack-safe `while do` and `do while` loops.",
+        "https://github.com/DriesDhooghe/gloop",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     "2025-02-06",
     None,
