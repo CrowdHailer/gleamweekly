@@ -19,7 +19,46 @@ pub type Tag {
 }
 
 pub const issues = [
-  // https://hex.pm/packages/gleam_time wait 1.0
+  #(
+    "2025-02-20",
+    Some(
+      "This issue of Gleam weekly it's Gleam Time. We also have some great talks from the community.",
+    ),
+    [
+      News(
+        "Fullstack Gleam: Static Types on the BEAM, and Javascript You'll Love.",
+        "https://www.youtube.com/watch?v=4n6O_u0SSAc",
+        "Brett Kolodny took a deep dive into Gleam and demonstrated how to build a non-trivial full-stack application with it.",
+      ),
+      News(
+        "Gleam Time!",
+        "https://github.com/gleam-lang/time",
+        "It's always 'Gleam Time'. And now there is a library for working with times and dates.",
+      ),
+      News(
+        "Contributing to the Gleam Compiler",
+        "https://www.youtube.com/watch?v=Nqs196deu_c",
+        "Surya (Gears) talks through contributing to the Gleam compiler.",
+      ),
+    ],
+    [
+      Also(
+        "pinkdf2 - bindings to the heavily-optimized fast_pbkdf2 NIF for PBKDF2",
+        "https://github.com/yazatamorph/pinkdf2",
+        ProjectUpdate,
+      ),
+      Also(
+        "Women in BEAM: survey results",
+        "https://www.erlang-solutions.com/blog/women-in-beam/",
+        Educational,
+      ),
+      Also(
+        "tarbomb an implementation of XKCD 1168",
+        "https://tarbomb-b4a21a.gitlab.io/",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     "2025-02-13",
     Some(
