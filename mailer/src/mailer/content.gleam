@@ -20,6 +20,39 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2025-02-27",
+    Some("A server for live reloading and thinking about errors."),
+    [
+      News(
+        "Olive - live reload for your classic server",
+        "https://github.com/fravan/olive",
+        "Olive takes care of launching your server as well as a proxy to enable live reloading features.",
+      ),
+      News(
+        "Gleam, coming from Erlang",
+        "https://olano.dev/blog/gleam-coming-from-erlang/",
+        "Notes on using Gleam from someone familiar with the BEAM.",
+      ),
+      News(
+        "outcome 1.0 - an error handling library",
+        "https://github.com/sporto/gleam-outcome",
+        "Inspired by snag, outcome distinguishes between expected and unexpected errors.",
+      ),
+    ],
+    [
+      Also(
+        "clockwork - an easy-to-use Cron library",
+        "https://github.com/renatillas/clockwork",
+        ProjectUpdate,
+      ),
+      Also(
+        "quaternion - a simple quaternion implementation",
+        "https://github.com/PiaCOS/quaternion_gleam",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2025-02-20",
     Some(
       "This issue of Gleam weekly it's Gleam Time. We also have some great talks from the community.",
