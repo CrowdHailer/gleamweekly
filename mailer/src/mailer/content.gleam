@@ -20,6 +20,46 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2025-03-06",
+    Some(
+      "Property testing and a chess bot competition I'm keen on both of these developments. Maybe I can combine them.",
+    ),
+    [
+      News(
+        "The Gleam Chess Tournament",
+        "https://github.com/isaacharrisholt/gleam-chess-tournament",
+        "A friendly competition to see who can create the best chess bot.",
+      ),
+      News(
+        "qcheck 1.0",
+        "https://github.com/mooreryan/gleam_qcheck",
+        "QuickCheck-inspired property testing with integrated shrinking.",
+      ),
+      News(
+        "Gleam 1.9.0 is out for testing",
+        "https://github.com/gleam-lang/gleam/releases/tag/v1.9.0-rc1",
+        "The next version of Gleam is ready for testing.",
+      ),
+      News(
+        "Gleam bindings to Datastar",
+        "https://github.com/sporto/gleam-datastar",
+        "Datastar - build reactive web applications with the simplicity of server-side rendering and the power of a full-stack SPA framework.",
+      ),
+    ],
+    [
+      Also(
+        "gleamstral 1.0 - client for the Mistral AI API",
+        "https://github.com/Neofox/gleamstral",
+        ProjectUpdate,
+      ),
+      Also(
+        "A partial port of Riak's vector clocks from Erlang to Gleam",
+        "https://github.com/aloussase/gleam-vector-clocks",
+        Educational,
+      ),
+    ],
+  ),
+  #(
     "2025-02-27",
     Some("A server for live reloading and thinking about errors."),
     [
