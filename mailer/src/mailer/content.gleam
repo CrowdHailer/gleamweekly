@@ -20,6 +20,34 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2025-03-20",
+    None,
+    [
+      News(
+        "A deep dive into Gleam's latest tooling, types, modules, and more.",
+        "https://www.youtube.com/watch?v=uLndcdX9ZYY",
+        "Raul takes us on a tour at Erlang Solution's Erlang & Elixir user group meet-up in Budapest",
+      ),
+      News(
+        "avmgls - AtomVM Gleam LED Strip application",
+        "https://github.com/karlsson/avmgls",
+        "AtomVM is an alternative erlang runtime for small devices. This demo show a setup that works with Gleam.",
+      ),
+      News(
+        "A Code Centric Journey into the Gleam Language",
+        "https://www.youtube.com/watch?v=PfPIiHCId0s",
+        "A inproved second iteration of this talk from Jak.",
+      ),
+    ],
+    [
+      Also(
+        "Estimated? Done! Planning poker in Gleam",
+        "https://estimated-done.ahlcode.fi",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2025-03-13",
     Some(
       "A lovely selection of libraries and a discount code for a conference stateside.",
