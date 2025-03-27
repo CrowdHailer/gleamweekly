@@ -20,6 +20,46 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2025-03-13",
+    Some(
+      "A lovely selection of libraries and a discount code for a conference stateside.",
+    ),
+    [
+      News(
+        "Gleam 1.9.1",
+        "https://github.com/gleam-lang/gleam/releases/tag/v1.9.1",
+        "Testing is over and Gleam 1.9 is ready.",
+      ),
+      News(
+        "LambdaConf 2025",
+        "http://www.eventbrite.com/e/903567092497/?discount=PETERSAXTON15",
+        "The conference is on May the 10th and 11th this year. Use the link for a discount.",
+      ),
+      News(
+        "mockth - a module mocking library",
+        "https://github.com/bondiano/mockth",
+        "A Gleam wrapper around the Meck library for erlang",
+      ),
+    ],
+    [
+      Also(
+        "Gond: faking Elixir's cond for multi branch expressions",
+        "https://github.com/inoas/gleam-gond",
+        ProjectUpdate,
+      ),
+      Also(
+        "Reimplementation of paralleldrive/cuid2 in Gleam.",
+        "https://github.com/fravan/cuid2_gleam",
+        ProjectUpdate,
+      ),
+      Also(
+        "A simple uwu-ifier library.",
+        "https://codeberg.org/JevFungus/uwu",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2025-03-06",
     Some(
       "Property testing and a chess bot competition I'm keen on both of these developments. Maybe I can combine them.",
