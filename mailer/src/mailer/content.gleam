@@ -20,6 +20,41 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2025-03-27",
+    Some(
+      "Consistent library growth in the Gleam ecosystem. And a new Elixir conference, that I will be involved with.",
+    ),
+    [
+      News(
+        "atomb 1.0",
+        "https://github.com/lpil/atomb",
+        "An unopinionated atom feed builder.",
+      ),
+      News(
+        "messua 1.0",
+        "https://codeberg.org//d2718/messua",
+        "A collection of convenience types and functions that might amount to a small web framework.",
+      ),
+      News(
+        "Alchemy Conf 2025 | March 31 - April 3 Braga, Portugal",
+        "https://alchemyconf.com/",
+        "A new Elixir conference joins the BEAM family.",
+      ),
+    ],
+    [
+      Also(
+        "glebs - An OAuth PKCE helper for the Browser",
+        "https://github.com/andho/glebs",
+        ProjectUpdate,
+      ),
+      Also(
+        "A Decision Maker's Guide to Typed Functional Languages",
+        "https://www.youtube.com/watch?v=sl1UQXgtepE",
+        Video,
+      ),
+    ],
+  ),
+  #(
     "2025-03-20",
     None,
     [
