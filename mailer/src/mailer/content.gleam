@@ -20,6 +20,44 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2025-04-10",
+    Some("A couple of blog post in this weeks issue."),
+    [
+      News(
+        "In praise of Gleam's decode",
+        "https://jonashedeng.github.io/posts/gleam-decode/",
+        "The decode api or some combination of terseness, weird dedicated syntax, macros, magics, etc.",
+      ),
+      News(
+        "Just 1.0",
+        "https://github.com/GearsDatapacks/just/",
+        "A JavaScript lexer and syntax highlighter for Gleam.",
+      ),
+      News(
+        "Lambda Days 2025 | 12 - 13 June.",
+        "https://www.lambdadays.org/lambdadays2025",
+        "Use the discount code GleamDreamTeam for 10% off.",
+      ),
+    ],
+    [
+      Also(
+        "It's TEA time: Nestful now manages state with Gleam and Lustre.",
+        "https://blog.nestful.app/p/its-tea-time-nestful-now-manages",
+        BlogPost,
+      ),
+      Also(
+        "Splitter a package for fast string parsing.",
+        "https://github.com/lpil/splitter",
+        ProjectUpdate,
+      ),
+      Also(
+        "glight: configurable actor based structured logging with multiple customizable transports.",
+        "https://github.com/distrill/glight",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2025-03-27",
     Some(
       "Consistent library growth in the Gleam ecosystem. And a new Elixir conference, that I will be involved with.",
