@@ -20,6 +20,7 @@ import plinth/javascript/date
 import plinth/node/process
 import simplifile
 import snag
+import spotless/oauth_2_1/authorization
 
 pub fn main() {
   do_main(list.drop(array.to_list(process.argv()), 2))
@@ -101,6 +102,33 @@ pub fn run(args) {
     }
     _ -> {
       let task = case args {
+        ["share"] -> {
+          let challenge = int.to_string(int.random(1_000_000_000))
+          let task = {
+            let request =
+              authorization.Request(
+                client_id: "localhost:3000",
+                redirect_uri: "localhost:3000",
+                code_challenge: challenge,
+                code_challenge_method: authorization.Plain,
+                scope: [],
+                state: "",
+              )
+            // Can I remove api without a redirect
+            let url =
+              authorization.request_to_url(
+                "localhost",
+                Some(3000),
+                "/api/auth/dnsimple",
+                request,
+              )
+            use redirect <- t.do(t.follow(url))
+            let assert Ok(response) = authorization.response_from_uri(redirect)
+            echo response
+            todo
+          }
+          task
+        }
         ["share", "twitter"] -> share_on_twitter(twitter_app)
         ["share", "linkedin"] -> share_on_linkedin(linkedin_app)
         ["share", "bluesky", password] ->
