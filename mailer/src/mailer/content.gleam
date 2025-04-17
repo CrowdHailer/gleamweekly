@@ -19,6 +19,10 @@ pub type Tag {
 }
 
 pub const issues = [
+  // https://www.youtube.com/watch?v=DpakV96jeRk
+  // https://github.com/cauebs/fortfound/
+  // https://www.kurz.net/posts/gleam-postcard
+  #("2025-04-17", None, [], []),
   #(
     "2025-04-10",
     Some("A couple of blog post in this weeks issue."),
