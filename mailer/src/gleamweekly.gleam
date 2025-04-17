@@ -1,3 +1,4 @@
+import gleam/http
 import gleam/int
 import gleam/io
 import gleam/javascript/array
@@ -21,6 +22,7 @@ import plinth/node/process
 import simplifile
 import snag
 import spotless/oauth_2_1/authorization
+import spotless/oauth_2_1/token
 
 pub fn main() {
   do_main(list.drop(array.to_list(process.argv()), 2))
@@ -103,12 +105,13 @@ pub fn run(args) {
     _ -> {
       let task = case args {
         ["share"] -> {
+          let client_id = "http://localhost:8080"
           let challenge = int.to_string(int.random(1_000_000_000))
           let task = {
             let request =
               authorization.Request(
-                client_id: "localhost:3000",
-                redirect_uri: "localhost:3000",
+                client_id:,
+                redirect_uri: "http://localhost:8080/",
                 code_challenge: challenge,
                 code_challenge_method: authorization.Plain,
                 scope: [],
@@ -117,13 +120,33 @@ pub fn run(args) {
             // Can I remove api without a redirect
             let url =
               authorization.request_to_url(
+                http.Http,
                 "localhost",
                 Some(3000),
-                "/api/auth/dnsimple",
+                // request sent out
+                "/api/authorize/dnsimple",
                 request,
               )
             use redirect <- t.do(t.follow(url))
             let assert Ok(response) = authorization.response_from_uri(redirect)
+            let code = response.code
+            let request =
+              token.Request(
+                grant_type: token.AuthorizationCode,
+                client_id:,
+                code:,
+                code_verifier: challenge,
+              )
+            echo response
+            use response <- t.do(
+              t.fetch(token.request_to_http(
+                http.Http,
+                "localhost",
+                Some(3000),
+                "/api/token",
+                request,
+              )),
+            )
             echo response
             todo
           }
