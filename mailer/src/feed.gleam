@@ -86,7 +86,7 @@ fn generate_rss_feed(entries: List(Issue)) -> Result(String, Nil) {
     })
   })
   |> end_xml
-  |> result.nil_error
+  |> result.replace_error(Nil)
 }
 
 pub fn build(root) {
@@ -96,7 +96,7 @@ pub fn build(root) {
   let path = string.replace(root, "/mailer", "/website/atom.xml")
   use _ <- result.try(
     simplifile.write(path, feed)
-    |> result.nil_error,
+    |> result.replace_error(Nil),
   )
 
   io.println("Successfully wrote atom feed to " <> path)
