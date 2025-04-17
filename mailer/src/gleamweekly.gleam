@@ -21,6 +21,7 @@ import plinth/javascript/date
 import plinth/node/process
 import simplifile
 import snag
+import spotless/oauth_2_1 as oa
 import spotless/oauth_2_1/authorization
 import spotless/oauth_2_1/token
 
@@ -105,6 +106,7 @@ pub fn run(args) {
     _ -> {
       let task = case args {
         ["share"] -> {
+          let origin = oa.Origin(http.Http, "localhost", Some(3000))
           let client_id = "http://localhost:8080"
           let challenge = int.to_string(int.random(1_000_000_000))
           let task = {
@@ -120,11 +122,7 @@ pub fn run(args) {
             // Can I remove api without a redirect
             let url =
               authorization.request_to_url(
-                http.Http,
-                "localhost",
-                Some(3000),
-                // request sent out
-                "/api/authorize/dnsimple",
+                #(origin, "/api/authorize/dnsimple"),
                 request,
               )
             use redirect <- t.do(t.follow(url))
@@ -139,15 +137,12 @@ pub fn run(args) {
               )
             echo response
             use response <- t.do(
-              t.fetch(token.request_to_http(
-                http.Http,
-                "localhost",
-                Some(3000),
-                "/api/token",
-                request,
-              )),
+              t.fetch(token.request_to_http(#(origin, "/api/token"), request)),
             )
+            let assert Ok(response) = token.response_from_http(response)
             echo response
+            let token = response.access_token
+            echo token
             todo
           }
           task
