@@ -20,6 +20,7 @@ import plinth/javascript/date
 import plinth/node/process
 import simplifile
 import snag
+import spotless
 
 pub fn main() {
   do_main(list.drop(array.to_list(process.argv()), 2))
@@ -52,7 +53,7 @@ fn website_dir() {
 }
 
 fn do_deploy(content) {
-  use token <- t.do(netlify.authenticate(netlify_local_app))
+  use token <- t.do(spotless.netlify(8080, []))
   use _ <- t.do(netlify.deploy_site(token, site_id, content))
   use _ <- t.do(t.log("Deployed"))
   t.done(Nil)

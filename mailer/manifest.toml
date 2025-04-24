@@ -32,6 +32,7 @@ packages = [
   { name = "shellout", version = "1.7.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "shellout", source = "hex", outer_checksum = "1BDC03438FEB97A6AF3E396F4ABEB32BECF20DF2452EC9A8C0ACEB7BDDF70B14" },
   { name = "simplifile", version = "1.7.0", build_tools = ["gleam"], requirements = ["filepath", "gleam_stdlib"], otp_app = "simplifile", source = "hex", outer_checksum = "1D5DFA3A2F9319EC85825F6ED88B8E449F381B0D55A62F5E61424E748E7DDEB0" },
   { name = "snag", version = "1.1.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "snag", source = "hex", outer_checksum = "7E9F06390040EB5FAB392CE642771484136F2EC103A92AE11BA898C8167E6E17" },
+  { name = "spotless", version = "1.0.0", build_tools = ["gleam"], requirements = ["gleam_http", "gleam_json", "gleam_stdlib", "midas", "snag"], otp_app = "spotless", source = "hex", outer_checksum = "D99540FA91538262D145E50DD00B6D8A5FD8AFFE8B2010AF60F8A0251481B216" },
   { name = "xmleam", version = "1.2.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "xmleam", source = "hex", outer_checksum = "3ECB3B573EA29BA319296FF0EF5DF7476BBE9262592F14B5AA065179C4E67C7B" },
 ]
 
@@ -48,4 +49,5 @@ midas_sdk = { version = ">= 0.4.1 and < 1.0.0" }
 plinth = { version = ">= 0.5.5 and < 1.0.0" }
 simplifile = { version = ">= 1.7.0 and < 2.0.0" }
 snag = { version = ">= 1.1.0 and < 2.0.0" }
+spotless = { version = ">= 1.0.0 and < 2.0.0" }
 xmleam = { version = ">= 1.1.5 and < 2.0.0" }

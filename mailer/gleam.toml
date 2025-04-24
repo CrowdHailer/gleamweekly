@@ -15,6 +15,7 @@ midas_node = ">= 1.2.1 and < 2.0.0"
 gleam_javascript = ">= 1.0.0 and < 2.0.0"
 simplifile = ">= 1.7.0 and < 2.0.0"
 snag = ">= 1.1.0 and < 2.0.0"
+spotless = ">= 1.0.0 and < 2.0.0"
 
 [dev-dependencies]
 gleeunit = "~> 1.0"

@@ -19,10 +19,54 @@ pub type Tag {
 }
 
 pub const issues = [
-  // https://www.youtube.com/watch?v=DpakV96jeRk
-  // https://github.com/cauebs/fortfound/
-  // https://www.kurz.net/posts/gleam-postcard
-  #("2025-04-17", None, [], []),
+  #(
+    "2025-04-24",
+    None,
+    [
+      News(
+        "Lustre 5.0",
+        "https://hexdocs.pm/lustre/announcements/2025-04-19.html",
+        "This release includes performance improvements, better HTML form support, new component functionality and more.",
+      ),
+      News(
+        "Supercharge your Tests with Snapshot Testing",
+        "https://www.youtube.com/watch?v=DpakV96jeRk",
+        "Jak is here with a promise to \"completely rid the developer of the boring task of having to manually write and manage unit tests' assertions\".",
+      ),
+      News(
+        "Spotless service",
+        "https://github.com/CrowdHailer/gleam_spotless",
+        "Instant OAuth integration for personal projects.",
+      ),
+      News(
+        "Fortfound",
+        "https://github.com/cauebs/fortfound",
+        "Reimplementation of Zachtronics' Fortune's Foundation.",
+      ),
+    ],
+    [
+      Also(
+        "lucid 1.0 - A little logic library.",
+        "https://github.com/RyanBrewer317/lucid",
+        ProjectUpdate,
+      ),
+      Also(
+        "Gleam Syntax Postcard.",
+        "https://www.kurz.net/posts/gleam-postcard",
+        BlogPost,
+      ),
+      Also(
+        "smol 1.0 - a little webserver for javascript.",
+        "https://gitlab.com/arkandos/smol",
+        ProjectUpdate,
+      ),
+      Also(
+        "rexen 1.0 - a 'regex engine' that compiles and evaluates regular expressions using a Non-deterministic Finite Automaton (NFA).",
+        "https://github.com/tonievictor/rexen",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     "2025-04-10",
     Some("A couple of blog post in this weeks issue."),
