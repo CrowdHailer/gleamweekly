@@ -1,4 +1,3 @@
-import gleam/int
 import gleam/io
 import gleam/javascript/array
 import gleam/javascript/promise
@@ -34,11 +33,6 @@ fn do_main(args) {
   }
 }
 
-pub const netlify_local_app = netlify.App(
-  "cQmYKaFm-2VasrJeeyobXXz5G58Fxy2zQ6DRMPANWow",
-  "http://localhost:8080/auth/netlify",
-)
-
 const site_id = "707096ea-de6d-4dca-a5c5-18d535da6413"
 
 // assumes that scripts are being run from the control project
@@ -58,17 +52,6 @@ fn do_deploy(content) {
   use _ <- t.do(t.log("Deployed"))
   t.done(Nil)
 }
-
-const twitter_app = #(
-  "XzB6RWJZaEJaVTJSSF9hWmpCdmc6MTpjaQ",
-  "https://eyg.run/auth/twitter",
-)
-
-const linkedin_app = linkedin.App(
-  "77h1lpzjndx2vq",
-  "TJiyaxhG1U1WRKA7",
-  "http://localhost:8080/",
-)
 
 const bluesky_name = "crowdhailer.bsky.social"
 
@@ -102,8 +85,8 @@ pub fn run(args) {
     }
     _ -> {
       let task = case args {
-        ["share", "twitter"] -> share_on_twitter(twitter_app)
-        ["share", "linkedin"] -> share_on_linkedin(linkedin_app)
+        ["share", "twitter"] -> share_on_twitter()
+        ["share", "linkedin"] -> share_on_linkedin()
         ["share", "bluesky", password] ->
           share_on_bluesky(#(bluesky_name, password))
 
@@ -112,17 +95,6 @@ pub fn run(args) {
       node.run(task, root)
     }
   }
-}
-
-// https://developer.twitter.com/en/portal/projects-and-apps
-fn twitter_authenticate(client_id, redirect_uri, local, scopes) {
-  let state = int.to_string(int.random(1_000_000_000))
-  let state = case local {
-    True -> "LOCAL" <> state
-    False -> state
-  }
-  let challenge = int.to_string(int.random(1_000_000_000))
-  twitter.do_authenticate(client_id, redirect_uri, scopes, state, challenge)
 }
 
 fn share_on_bluesky(cred) {
@@ -143,10 +115,10 @@ fn share_on_bluesky(cred) {
   t.done(Nil)
 }
 
-fn share_on_twitter(app) {
+fn share_on_twitter() {
   let scopes = ["tweet.read", "tweet.write", "users.read"]
-  let #(client_id, redirect_uri) = app
-  use token <- t.do(twitter_authenticate(client_id, redirect_uri, True, scopes))
+
+  use token <- t.do(spotless.twitter(8080, scopes))
 
   use share <- t.try(mailer.share() |> result.map_error(snag.new))
   let mailer.Share(comment, title, issue_url) = share
@@ -157,13 +129,12 @@ fn share_on_twitter(app) {
   t.done(Nil)
 }
 
-fn share_on_linkedin(app) {
+fn share_on_linkedin() {
   let me = linkedin.Person("YcszgIuyEv")
   let scopes = ["w_member_social", "openid", "profile", "email"]
+  use token <- t.do(spotless.linkedin(8080, scopes))
   use share <- t.try(mailer.share() |> result.map_error(snag.new))
   let mailer.Share(comment, title, issue_url) = share
-
-  use token <- t.do(linkedin.authenticate(app, scopes))
 
   use bits <- t.do(t.read("/website/lucymail.png"))
   use image <- t.do(linkedin.upload_image(token, me, bits))
