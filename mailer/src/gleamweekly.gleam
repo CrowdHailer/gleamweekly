@@ -78,9 +78,9 @@ pub fn run(args) {
         |> result.map_error(fn(err) { snag.new(string.inspect(err)) }),
       )
 
-      use response <- r.await(node.run(do_deploy(content), root))
+      use Nil <- r.await(node.run(do_deploy(content), root))
 
-      io.debug(response)
+      io.println("deployed")
       r.done(Nil)
     }
     _ -> {

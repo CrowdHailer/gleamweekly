@@ -20,6 +20,46 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2025-05-01",
+    Some(
+      "A job opportunity and release candidate for a stable release of gleam_erlang. This weeks issue show's Gleam is ever more production ready.",
+    ),
+    [
+      News(
+        "gleam_erlang v1 first release candidate",
+        "https://github.com/gleam-lang/erlang/releases/tag/v1.0.0-rc1",
+        "A foundational library for accessing the BEAM on Gleam. Test out the stable version.",
+      ),
+      News(
+        "Type-Safe Routing in Gleam",
+        "https://www.kurz.net/posts/gleam-routing",
+        "A discussion of type safety in Gleam, coming from the TypeScript ecosystem,",
+      ),
+      News(
+        "knit_string 1.0",
+        "https://github.com/SaphiraKai/knit",
+        "A neat composable string formatting library.",
+      ),
+      News(
+        "Founding engineer at iiNDY",
+        "https://discord.com/channels/768594524158427167/1367167777516945611",
+        "An opportunity to transform direct channel marketing with Gleam and a sprinkling of AI.",
+      ),
+    ],
+    [
+      Also(
+        "Maelstrom protocol implementation in Gleam",
+        "https://github.com/PieterJanVdb/gleamstrom",
+        ProjectUpdate,
+      ),
+      Also(
+        "Github API client library generated from Open API spec",
+        "https://discord.com/channels/768594524158427167/1047101890707603547/threads/1366863408934289460",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2025-04-24",
     None,
     [
