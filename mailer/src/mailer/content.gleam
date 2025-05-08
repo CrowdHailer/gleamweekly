@@ -14,11 +14,39 @@ pub type Tag {
   BlogPost
   ProjectUpdate
   Educational
-  JobOportunity
+  JobOpportunity
   Meetup
 }
 
 pub const issues = [
+  #(
+    "2025-05-08",
+    Some("Isaac is back with some more great video content."),
+    [
+      News(
+        "Decode dynamic data",
+        "https://www.youtube.com/watch?v=JPGiHrtWJCg",
+        "Isaac explains everything you need to know about Decoders.",
+      ),
+      News(
+        "Open API Spec (OAS) Generator",
+        "https://github.com/CrowdHailer/oas_generator",
+        "Generate client libraries from Open API Specifications.",
+      ),
+    ],
+    [
+      Also(
+        "A discord bot and CLI for generating plain text bridge diagrams.",
+        "https://github.com/drewolson/bridgebot",
+        ProjectUpdate,
+      ),
+      Also(
+        "Founding engineer at iiNDY.",
+        "https://discord.com/channels/768594524158427167/1367167777516945611",
+        JobOpportunity,
+      ),
+    ],
+  ),
   #(
     "2025-05-01",
     Some(
@@ -1154,7 +1182,7 @@ pub const issues = [
       Also(
         "Steerlab — A Job opportunity in Gleam",
         "https://steerlab.notion.site/Software-engineer-dd672cafae4c46438f91f37851b473ae",
-        JobOportunity,
+        JobOpportunity,
       ),
     ],
   ),
