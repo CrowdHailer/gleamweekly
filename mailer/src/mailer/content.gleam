@@ -19,6 +19,11 @@ pub type Tag {
 }
 
 pub const issues = [
+  // https://erlef.org/blog/security/eef-cna-announcement
+  // https://hex.pm/packages/choire
+  // https://github.com/Daniel-Shunom/glindo
+  // 1.11
+  // event in London
   #(
     "2025-05-08",
     Some("Isaac is back with some more great video content."),
