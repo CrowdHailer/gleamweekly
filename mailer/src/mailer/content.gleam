@@ -19,11 +19,51 @@ pub type Tag {
 }
 
 pub const issues = [
-  // https://erlef.org/blog/security/eef-cna-announcement
-  // https://hex.pm/packages/choire
+  #(
+    "2025-05-22",
+    Some("Events past and future as well as the latest release candidate."),
+    [
+      News(
+        "Erlang Ecosystem Foundation Becomes CVE Numbering Authority (CNA)",
+        "https://erlef.org/blog/security/eef-cna-announcement",
+        "This designation allows them to assign CVE IDs and publish CVE Records for publicly disclosed cybersecurity vulnerabilities within their defined scope.",
+      ),
+      News(
+        "Code BEAM Lite Stockholm | 2 June 2025",
+        "https://codebeamstockholm.com",
+        "Single day single track conference all about the BEAM ecosystem held in Stockholm.",
+      ),
+      News(
+        "Gleam 1.11.0 first release candidate",
+        "https://github.com/gleam-lang/gleam/blob/main/CHANGELOG.md#v1110-rc1---2025-05-15",
+        "Try it out the latest features and improvements.",
+      ),
+      News(
+        "Glindo 1.0",
+        "https://github.com/Daniel-Shunom/glindo",
+        "a functional parser-combinator library that makes it easy to build powerful, composable parsers for context-free grammars.",
+      ),
+    ],
+    [
+      Also(
+        "Microcontrollers with Gleam - Ray De Los Santos.",
+        "https://www.youtube.com/watch?v=-jd1lRQ4LZg",
+        Video,
+      ),
+      Also(
+        "A fun little Gleam social today happened London southbank.",
+        "https://bsky.app/profile/lpil.uk/post/3lppluxtft22y",
+        Meetup,
+      ),
+      Also(
+        "Choire 1.0 - gleam dependency tooling.",
+        "https://github.com/daniellionel01/choire",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   // https://github.com/Daniel-Shunom/glindo
-  // 1.11
-  // event in London
+
   #(
     "2025-05-08",
     Some("Isaac is back with some more great video content."),
