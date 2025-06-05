@@ -20,6 +20,44 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2025-06-05",
+    None,
+    [
+      News(
+        "EGG: Evolve your Game with Gleam",
+        "https://www.youtube.com/watch?v=tIYLGJ7QINY",
+        "Kero shows off a game in Gleam that can be updated while games are running.",
+      ),
+      News(
+        "Shore 1.0",
+        "https://github.com/bgwdotdev/shore",
+        "A Gleam TUI framework.",
+      ),
+      News(
+        "Assert",
+        "https://github.com/GearsDatapacks/asset",
+        "A tool for converting to Gleam's new `assert` syntax ",
+      ),
+    ],
+    [
+      Also(
+        "The Gleamlins little intro to Erlang applications ",
+        "https://github.com/karlsson/glite",
+        Educational,
+      ),
+      Also(
+        "Gleeter - Command-line tool to fetch and display XKCD comics right in your terminal.",
+        "https://github.com/massix/gleeter",
+        ProjectUpdate,
+      ),
+      Also(
+        "The AtomVM and New Horizons for Elixir",
+        "https://www.youtube.com/watch?v=ep--rQO1FRI",
+        Video,
+      ),
+    ],
+  ),
+  #(
     "2025-05-22",
     Some("Events past and future as well as the latest release candidate."),
     [
