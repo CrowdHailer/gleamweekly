@@ -20,6 +20,39 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2025-06-19",
+    None,
+    [
+      News(
+        "gleam_otp 1.0",
+        "https://github.com/gleam-lang/otp",
+        "The magic of fault tolerant multicore programs with actors.",
+      ),
+      News(
+        "It’s time to start paying attention to WebAssembly (again)",
+        "https://www.youtube.com/watch?v=2mkplD9W-IM",
+        "There are now multiple options to integrate Elixir and WebAssembly at a higher level in a more productive way. In this session, we’ll start with a brief (re-)introduction to WebAssembly and discuss the possibilities it unlocks for us as Elixir developers.",
+      ),
+      News(
+        "Full Stack Web Development in Gleam, 04 Nov at Code BEAM Europe.",
+        "https://codebeameurope.com/trainings/full-stack-web-development-in-gleam/",
+        "During this training day we take a look at how to build a typical full-stack Web application in pure Gleam."
+      ),
+    ],
+    [
+      Also(
+        "gleam_erlang 1.0 - Types and functions for programs running on Erlang.",
+        "https://github.com/gleam-lang/erlang",
+        ProjectUpdate,
+      ),
+      Also(
+        "mug 2.0 - A TCP client for Gleam.",
+        "https://github.com/lpil/mug",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2025-06-05",
     None,
     [
