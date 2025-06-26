@@ -20,6 +20,51 @@ pub type Tag {
 
 pub const issues = [
   #(
+    "2025-06-26",
+    Some(
+      "A stream on writing compilers with Gleam, converting from Elm to Gleam and 1.11 language features.",
+    ),
+    [
+      News(
+        "I finished converting an Elm app to Gleam",
+        "https://ianmjones.com/2025/06/wp-cron-pixie-v1-5-0-released-front-end-switched-from-elm-to-gleam/",
+        "There’s a brand new version of WP Cron Pixie available to install, and with luck, even though it’s changed immensely under the hood, you’ll not see any difference compared to the previous version",
+      ),
+      News(
+        "What's new in Gleam 1.11",
+        "https://www.youtube.com/watch?v=AKIZG0Dq3Bc",
+        "Giacomo presents the latest features in this lightning talk ",
+      ),
+      News(
+        "Parrot 1.0",
+        "https://github.com/daniellionel01/parrot",
+        "type-safe SQL for sqlite, postgresql & mysql",
+      ),
+      News(
+        "Essentials of Compilation",
+        "https://www.youtube.com/playlist?list=PL_eVLc-qrivZyj1tGZg3DQeWLE2ThCTzp",
+        "Sean continues building a compiler from scratch in Gleam",
+      ),
+    ],
+    [
+      Also(
+        "A lightweight, high performance client for Valkey, KeyDB, Redis, Dragonfly and other Redis-compatible databases",
+        "https://github.com/Pevensie/valkyrie",
+        ProjectUpdate,
+      ),
+      Also(
+        "My First Impressions of Gleam",
+        "https://mtlynch.io/notes/gleam-first-impressions/",
+        BlogPost,
+      ),
+      Also(
+        "Converts text into URL-friendly slugs.",
+        "https://github.com/maxh213/glugify",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2025-06-19",
     None,
     [
