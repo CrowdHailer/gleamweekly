@@ -34,7 +34,7 @@ pub fn content(issue, number) {
 
   h.div(
     [
-      a.style([
+      a.styles([
         #("font-family", "Helvetica, Arial, sans-serif"),
         #("line-height", "1.5"),
       ]),
@@ -51,7 +51,7 @@ pub fn content(issue, number) {
 pub fn header(issue_url, number) {
   h.div(
     [
-      a.style([
+      a.styles([
         #("padding", ".5rem 1.5rem"),
         #("background", aged_plastic_yellow),
       ]),
@@ -67,12 +67,12 @@ pub fn header(issue_url, number) {
         [
           h.tbody([], [
             h.tr([], [
-              h.td([a.style([#("vertical-align", "text-bottom")])], [
+              h.td([a.styles([#("vertical-align", "text-bottom")])], [
                 h.img([
                   a.src("https://gleamweekly.com/lucymail.png"),
                   a.width(80),
                   a.height(64),
-                  a.style([
+                  a.styles([
                     #("width", "80px"),
                     #("height", "64px"),
                     #("vertical-align", "text-bottom"),
@@ -82,7 +82,7 @@ pub fn header(issue_url, number) {
                 ]),
                 h.span(
                   [
-                    a.style([
+                    a.styles([
                       #("font-size", "1.5rem"),
                       #("color", blacker),
                       #("font-weight", "bold"),
@@ -92,7 +92,7 @@ pub fn header(issue_url, number) {
                     h.a(
                       [
                         a.href("https://gleamweekly.com/"),
-                        a.style([
+                        a.styles([
                           #("text-decoration", "none"),
                           #("color", blacker),
                         ]),
@@ -101,11 +101,11 @@ pub fn header(issue_url, number) {
                     ),
                   ],
                 ),
-                h.span([a.style([#("color", unexpected_aubergine)])], [
+                h.span([a.styles([#("color", unexpected_aubergine)])], [
                   text(" by "),
                   h.a(
                     [
-                      a.style([
+                      a.styles([
                         #("text-decoration", "none"),
                         #("color", blacker),
                       ]),
@@ -117,7 +117,7 @@ pub fn header(issue_url, number) {
               ]),
               h.td(
                 [
-                  a.style([
+                  a.styles([
                     #("text-align", "right"),
                     #("vertical-align", "text-bottom"),
                   ]),
@@ -127,7 +127,7 @@ pub fn header(issue_url, number) {
                   h.a(
                     [
                       a.href(issue_url),
-                      a.style([
+                      a.styles([
                         #("font-size", "1.5rem"),
                         #("text-decoration", "none"),
                         #("color", blacker),
@@ -148,10 +148,10 @@ pub fn header(issue_url, number) {
 const section_style = [#("padding", "1.5rem 1.5rem 0rem 1.5rem")]
 
 pub fn news(items) {
-  h.div([a.style(section_style)], [
+  h.div([a.styles(section_style)], [
     h.div(
       [
-        a.style([
+        a.styles([
           #("color", charcoal),
           #("font-size", "1.25rem"),
           #("font-weight", "bold"),
@@ -168,21 +168,21 @@ fn news_item(item) {
   h.p([], [
     h.a(
       [
-        a.style([#("font-size", "1.125rem"), #("text-decoration", "underline")]),
+        a.styles([#("font-size", "1.125rem"), #("text-decoration", "underline")]),
         a.href(link),
       ],
       [text(title)],
     ),
     h.br([]),
-    h.span([a.style([#("color", charcoal)])], [text(description)]),
+    h.span([a.styles([#("color", charcoal)])], [text(description)]),
   ])
 }
 
 pub fn others(others) {
-  h.div([a.style(section_style)], [
+  h.div([a.styles(section_style)], [
     h.div(
       [
-        a.style([
+        a.styles([
           #("color", charcoal),
           #("font-size", "1.25rem"),
           #("font-weight", "bold"),
@@ -199,7 +199,7 @@ fn other_item(item) {
   h.p([], [
     h.a(
       [
-        a.style([#("font-size", "1.125rem"), #("text-decoration", "underline")]),
+        a.styles([#("font-size", "1.125rem"), #("text-decoration", "underline")]),
         a.href(link),
       ],
       [text(title)],
@@ -221,7 +221,7 @@ fn render_tag(tag) {
   }
   h.span(
     [
-      a.style([
+      a.styles([
         #("background-color", bg),
         #("color", color),
         #("border-radius", "3px"),
@@ -234,14 +234,14 @@ fn render_tag(tag) {
 }
 
 fn submit(issue_url, number) {
-  h.div([a.style([#("background", aged_plastic_yellow), ..section_style])], [
-    h.div([a.style([#("text-align", "center"), #("padding", "25px")])], [
+  h.div([a.styles([#("background", aged_plastic_yellow), ..section_style])], [
+    h.div([a.styles([#("text-align", "center"), #("padding", "25px")])], [
       h.a(
         [
           a.href(
             "https://discord.com/channels/768594524158427167/1047101890707603547",
           ),
-          a.style([
+          a.styles([
             #("background", unexpected_aubergine),
             #("padding", "15px 20px"),
             #("border-radius", "30px"),
@@ -252,12 +252,12 @@ fn submit(issue_url, number) {
         [text("Share your own Gleam news")],
       ),
     ]),
-    h.p([a.style([#("margin-bottom", "0")])], [
+    h.p([a.styles([#("margin-bottom", "0")])], [
       text("That's all for this week, have a lovely day."),
       h.br([]),
       h.a(
         [
-          a.style([#("text-decoration", "none")]),
+          a.styles([#("text-decoration", "none")]),
           a.href("https://twitter.com/crowdhailer"),
         ],
         [text("@Crowdhailer")],
@@ -265,7 +265,7 @@ fn submit(issue_url, number) {
       text(" ("),
       h.a(
         [
-          a.style([#("text-decoration", "none")]),
+          a.styles([#("text-decoration", "none")]),
           a.href("https://bsky.app/profile/crowdhailer.bsky.social"),
         ],
         [text("or on Bluesky")],
@@ -275,7 +275,7 @@ fn submit(issue_url, number) {
       h.a(
         [
           a.href("https://gleamweekly.com/"),
-          a.style([#("text-decoration", "none")]),
+          a.styles([#("text-decoration", "none")]),
         ],
         [text("Gleam Weekly")],
       ),

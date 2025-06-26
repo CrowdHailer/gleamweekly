@@ -12,7 +12,7 @@ import midas/node/browser
 import midas/node/file_system as fs
 import midas/sdk/bluesky
 import midas/sdk/linkedin
-import midas/sdk/netlify
+import netlify
 import midas/sdk/twitter
 import midas/task as t
 import plinth/javascript/date

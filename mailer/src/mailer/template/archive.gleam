@@ -25,7 +25,7 @@ pub fn render(issue, number) {
     element.to_string(
       h.div(
         [
-          a.style([
+          a.styles([
             #("margin", "12px auto"),
             #("max-width", "660px"),
             #("background", template.white),
@@ -38,14 +38,14 @@ pub fn render(issue, number) {
           template.content(issue, number),
           h.div(
             [
-              a.style([
+              a.styles([
                 #("padding", "1.5rem 1.5rem 0 1.5rem "),
                 #("text-align", "center"),
               ]),
             ],
             [text("You can subscribe below.")],
           ),
-          h.div([a.style([#("margin", "0 auto"), #("max-width", "600px")])], [
+          h.div([a.styles([#("margin", "0 auto"), #("max-width", "600px")])], [
             h.script(
               [
                 a.src(
