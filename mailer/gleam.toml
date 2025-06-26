@@ -14,10 +14,12 @@ plinth = ">= 0.5.5 and < 1.0.0"
 # midas_node = ">= 1.2.1 and < 2.0.0"
 midas_node = {git = "git@github.com:midas-framework/midas_node", ref = "main"}
 netlify = {path = "../../mono-2024/midas_sdk/sdks/netlify"}
+at_protocol = {path = "../../mono-2024/midas_sdk/sdks/at_protocol"}
 gleam_javascript = ">= 1.0.0 and < 2.0.0"
 simplifile = ">= 1.7.0 and < 2.0.0"
 snag = ">= 1.1.0 and < 2.0.0"
-spotless = ">= 1.0.0 and < 2.0.0"
+# spotless = ">= 2.0.0 and < 3.0.0"
+spotless = {path = "../../gleam_spotless"}
 email_octopus = {path = "../../mono-2024/midas_sdk/sdks/email_octopus"}
 
 [dev-dependencies]

@@ -2,6 +2,7 @@
 # You typically do not need to edit this file
 
 packages = [
+  { name = "at_protocol", version = "1.0.0", build_tools = ["gleam"], requirements = ["gleam_http", "gleam_javascript", "gleam_json", "gleam_stdlib", "midas", "snag"], source = "local", path = "../../mono-2024/midas_sdk/sdks/at_protocol" },
   { name = "birl", version = "1.8.0", build_tools = ["gleam"], requirements = ["gleam_regexp", "gleam_stdlib", "ranger"], otp_app = "birl", source = "hex", outer_checksum = "2AC7BA26F998E3DFADDB657148BD5DDFE966958AD4D6D6957DD0D22E5B56C400" },
   { name = "conversation", version = "2.0.1", build_tools = ["gleam"], requirements = ["gleam_http", "gleam_javascript", "gleam_stdlib"], source = "git", repo = "git@github.com:moedevelops/conversation", commit = "d568ecc827c3398d400730babb8178ee8b92f0a9" },
   { name = "email_octopus", version = "1.0.0", build_tools = ["gleam"], requirements = ["gleam_http", "gleam_javascript", "gleam_json", "gleam_stdlib", "midas", "snag"], source = "local", path = "../../mono-2024/midas_sdk/sdks/email_octopus" },
@@ -34,11 +35,12 @@ packages = [
   { name = "shellout", version = "1.7.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "shellout", source = "hex", outer_checksum = "1BDC03438FEB97A6AF3E396F4ABEB32BECF20DF2452EC9A8C0ACEB7BDDF70B14" },
   { name = "simplifile", version = "1.7.0", build_tools = ["gleam"], requirements = ["filepath", "gleam_stdlib"], otp_app = "simplifile", source = "hex", outer_checksum = "1D5DFA3A2F9319EC85825F6ED88B8E449F381B0D55A62F5E61424E748E7DDEB0" },
   { name = "snag", version = "1.1.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "snag", source = "hex", outer_checksum = "7E9F06390040EB5FAB392CE642771484136F2EC103A92AE11BA898C8167E6E17" },
-  { name = "spotless", version = "1.1.2", build_tools = ["gleam"], requirements = ["gleam_http", "gleam_json", "gleam_stdlib", "midas", "snag"], otp_app = "spotless", source = "hex", outer_checksum = "D41792DCF984361F491B324196FF2E973313DA8685593D3496505D6358FAD312" },
+  { name = "spotless", version = "2.0.0", build_tools = ["gleam"], requirements = ["gleam_http", "gleam_json", "gleam_stdlib", "midas", "snag"], source = "local", path = "../../gleam_spotless" },
   { name = "xmleam", version = "1.2.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "xmleam", source = "hex", outer_checksum = "3ECB3B573EA29BA319296FF0EF5DF7476BBE9262592F14B5AA065179C4E67C7B" },
 ]
 
 [requirements]
+at_protocol = { path = "../../mono-2024/midas_sdk/sdks/at_protocol" }
 birl = { version = ">= 1.6.1 and < 2.0.0" }
 email_octopus = { path = "../../mono-2024/midas_sdk/sdks/email_octopus" }
 gleam_javascript = { version = ">= 1.0.0 and < 2.0.0" }
@@ -53,5 +55,5 @@ netlify = { path = "../../mono-2024/midas_sdk/sdks/netlify" }
 plinth = { version = ">= 0.5.5 and < 1.0.0" }
 simplifile = { version = ">= 1.7.0 and < 2.0.0" }
 snag = { version = ">= 1.1.0 and < 2.0.0" }
-spotless = { version = ">= 1.0.0 and < 2.0.0" }
+spotless = { path = "../../gleam_spotless" }
 xmleam = { version = ">= 1.1.5 and < 2.0.0" }

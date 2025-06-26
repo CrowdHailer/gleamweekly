@@ -1,7 +1,10 @@
+import at_protocol/operations
 import email_octopus
+import gleam/http/request
 import gleam/io
 import gleam/javascript/array
 import gleam/javascript/promise
+import gleam/json
 import gleam/list
 import gleam/option.{None, Some}
 import gleam/result
@@ -11,7 +14,6 @@ import midas/js/run as r
 import midas/node
 import midas/node/browser
 import midas/node/file_system as fs
-import midas/sdk/bluesky
 import midas/sdk/linkedin
 import midas/sdk/twitter
 import midas/task as t
@@ -21,6 +23,7 @@ import plinth/node/process
 import simplifile
 import snag
 import spotless
+import spotless/demonstrating_proof_of_possession as dpop
 
 pub fn main() {
   do_main(list.drop(array.to_list(process.argv()), 2))
@@ -53,8 +56,6 @@ fn do_deploy(content) {
   use _ <- t.do(t.log("Deployed"))
   t.done(Nil)
 }
-
-const bluesky_name = "crowdhailer.bsky.social"
 
 pub fn run(args) {
   let assert Ok(project) = fs.current_directory()
@@ -89,9 +90,7 @@ pub fn run(args) {
         ["stats"] -> stats()
         ["share", "twitter"] -> share_on_twitter()
         ["share", "linkedin"] -> share_on_linkedin()
-        ["share", "bluesky", password] ->
-          share_on_bluesky(#(bluesky_name, password))
-
+        ["share", "bluesky"] -> share_on_bsky()
         _ -> t.abort(snag.new("no task for gleam weekly"))
       }
       node.run(task, root)
@@ -99,10 +98,118 @@ pub fn run(args) {
   }
 }
 
-fn share_on_bluesky(cred) {
-  let #(handle, password) = cred
+// OAuth tokens are meant for PDS access only
+// Sending an OAuth token as a bearer token results in "Bad token scope"
+// https://bsky.social/xrpc/com.atproto.identity.resolveHandle?handle=crowdhailer.bsky.social
+// did:plc:goi6zchuico5fqsoiycwcexy
+// https://plc.directory/did:plc:goi6zchuico5fqsoiycwcexy
+// https://yellowfoot.us-west.host.bsky.network/xrpc/com.atproto.identity.resolveHandle?handle=crowdhailer.bsky.social
+// PDS is the protected resource
+// https://yellowfoot.us-west.host.bsky.network/.well-known/oauth-protected-resource
 
-  use access_token <- t.do(bluesky.create_session(handle, password))
+// Needs auth
+// https://yellowfoot.us-west.host.bsky.network/xrpc/app.bsky.actor.getProfile
+
+// If not auth is set the PDS doesn't return a nonce
+
+pub type Context(key) {
+  Context(host: String, keypair: t.KeyPair(key), token: String, nonce: String)
+}
+
+fn sign_request(context, request) {
+  let Context(host:, token:, keypair:, nonce:) = context
+  let request = request.set_host(request, host)
+  use jwt <- t.do(dpop.jwt_for_request(
+    request,
+    keypair,
+    Some(nonce),
+    Some(token),
+  ))
+
+  let request =
+    request
+    |> request.prepend_header("authorization", "DPoP " <> token)
+    |> request.prepend_header("dpop", jwt)
+  t.done(request)
+}
+
+fn send_request(context, original, handle_response) {
+  use signed <- t.do(sign_request(context, original))
+  use response <- t.do(t.fetch(signed))
+  use response <- t.do(case response.status {
+    401 ->
+      case list.key_find(response.headers, "dpop-nonce") {
+        // retry only once with new nonce
+        Ok(nonce) if nonce != context.nonce -> {
+          let context = Context(..context, nonce:)
+          use signed <- t.do(sign_request(context, original))
+          t.fetch(signed)
+        }
+        _ -> t.done(response)
+      }
+    _ -> {
+      t.done(response)
+    }
+  })
+  case handle_response(response) {
+    Ok(reply) -> t.done(#(context, reply))
+    Error(r) -> t.abort(snag.new("failed to decode \n" <> string.inspect(r)))
+  }
+}
+
+fn app_bsky_actor_get_profile(context, handle) {
+  let base = request.set_body(request.new(), <<>>)
+  let request = operations.app_bsky_actor_get_profile_request(base, handle)
+  send_request(context, request, operations.app_bsky_actor_get_profile_response)
+}
+
+fn com_atproto_repo_create_record(context, data) {
+  let base = request.set_body(request.new(), <<>>)
+  let request = operations.com_atproto_repo_create_record_request(base, data)
+  send_request(
+    context,
+    request,
+    operations.com_atproto_repo_create_record_response,
+  )
+}
+
+fn create_post(context, handle, text, now) {
+  let repo = handle
+  let collection = "app.bsky.feed.post"
+  // let now = date.now()
+  // let at = date.to_iso_string(now)
+  let record =
+    json.object([
+      #("$type", json.string("app.bsky.feed.post")),
+      #("text", json.string(text)),
+      #("createdAt", json.string(now)),
+    ])
+  let payload =
+    operations.ComAtprotoRepoCreateRecordRequest(
+      None,
+      None,
+      record,
+      repo,
+      None,
+      collection,
+    )
+  com_atproto_repo_create_record(context, payload)
+}
+
+fn share_on_bsky() {
+  use keypair <- t.do(dpop.generate_key())
+  use auth <- t.do(spotless.bsky(
+    8080,
+    ["atproto", "transition:generic"],
+    "x",
+    keypair,
+  ))
+  let host = "yellowfoot.us-west.host.bsky.network"
+  let context = Context(host, keypair, auth.access_token, "")
+  // use profile <- t.do(app_bsky_actor_get_profile(
+  //   context,
+  //   "crowdhailer.bsky.social",
+  // ))
 
   let now = date.now()
   let now = date.to_iso_string(now)
@@ -111,9 +218,11 @@ fn share_on_bluesky(cred) {
   let mailer.Share(comment, title, issue_url) = share
 
   let text = title <> " now available. " <> issue_url <> "\n\n" <> comment
+  let handle = "crowdhailer.bsky.social"
 
-  use url <- t.do(bluesky.create_post(access_token, handle, text, now))
-  use Nil <- t.do(t.log(url))
+  use response <- t.do(create_post(context, handle, text, now))
+  echo response
+  // use Nil <- t.do(t.log(url))
   t.done(Nil)
 }
 

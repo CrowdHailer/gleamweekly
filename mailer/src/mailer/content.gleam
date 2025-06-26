@@ -36,7 +36,7 @@ pub const issues = [
       News(
         "Full Stack Web Development in Gleam, 04 Nov at Code BEAM Europe.",
         "https://codebeameurope.com/trainings/full-stack-web-development-in-gleam/",
-        "During this training day we take a look at how to build a typical full-stack Web application in pure Gleam."
+        "During this training day we take a look at how to build a typical full-stack Web application in pure Gleam.",
       ),
     ],
     [
