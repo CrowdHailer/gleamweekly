@@ -1,8 +1,9 @@
+import email_octopus
 import gleam/io
 import gleam/javascript/array
 import gleam/javascript/promise
 import gleam/list
-import gleam/option.{Some}
+import gleam/option.{None, Some}
 import gleam/result
 import gleam/string
 import mailer
@@ -12,9 +13,9 @@ import midas/node/browser
 import midas/node/file_system as fs
 import midas/sdk/bluesky
 import midas/sdk/linkedin
-import netlify
 import midas/sdk/twitter
 import midas/task as t
+import netlify
 import plinth/javascript/date
 import plinth/node/process
 import simplifile
@@ -85,6 +86,7 @@ pub fn run(args) {
     }
     _ -> {
       let task = case args {
+        ["stats"] -> stats()
         ["share", "twitter"] -> share_on_twitter()
         ["share", "linkedin"] -> share_on_linkedin()
         ["share", "bluesky", password] ->
@@ -151,4 +153,14 @@ fn share_on_linkedin() {
     )
   use share <- t.do(linkedin.create_post(token, me, Some(content), comment))
   t.log("created linkedin post with identifier: " <> share)
+}
+
+fn stats() {
+  let token = ""
+  use response <- t.do(email_octopus.api_campaigns_get(token, None, None))
+  let assert Ok(response) = response
+  echo list.map(response.data |> option.unwrap([]), fn(c) {
+    #(c.name, c.sent_at, c.status)
+  })
+  t.done(Nil)
 }

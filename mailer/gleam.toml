@@ -18,6 +18,7 @@ gleam_javascript = ">= 1.0.0 and < 2.0.0"
 simplifile = ">= 1.7.0 and < 2.0.0"
 snag = ">= 1.1.0 and < 2.0.0"
 spotless = ">= 1.0.0 and < 2.0.0"
+email_octopus = {path = "../../mono-2024/midas_sdk/sdks/email_octopus"}
 
 [dev-dependencies]
 gleeunit = "~> 1.0"

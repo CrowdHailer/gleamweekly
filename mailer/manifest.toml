@@ -4,6 +4,7 @@
 packages = [
   { name = "birl", version = "1.8.0", build_tools = ["gleam"], requirements = ["gleam_regexp", "gleam_stdlib", "ranger"], otp_app = "birl", source = "hex", outer_checksum = "2AC7BA26F998E3DFADDB657148BD5DDFE966958AD4D6D6957DD0D22E5B56C400" },
   { name = "conversation", version = "2.0.1", build_tools = ["gleam"], requirements = ["gleam_http", "gleam_javascript", "gleam_stdlib"], source = "git", repo = "git@github.com:moedevelops/conversation", commit = "d568ecc827c3398d400730babb8178ee8b92f0a9" },
+  { name = "email_octopus", version = "1.0.0", build_tools = ["gleam"], requirements = ["gleam_http", "gleam_javascript", "gleam_json", "gleam_stdlib", "midas", "snag"], source = "local", path = "../../mono-2024/midas_sdk/sdks/email_octopus" },
   { name = "filepath", version = "1.1.2", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "filepath", source = "hex", outer_checksum = "B06A9AF0BF10E51401D64B98E4B627F1D2E48C154967DA7AF4D0914780A6D40A" },
   { name = "gleam_community_ansi", version = "1.4.3", build_tools = ["gleam"], requirements = ["gleam_community_colour", "gleam_regexp", "gleam_stdlib"], otp_app = "gleam_community_ansi", source = "hex", outer_checksum = "8A62AE9CC6EA65BEA630D95016D6C07E4F9973565FA3D0DE68DC4200D8E0DD27" },
   { name = "gleam_community_colour", version = "2.0.1", build_tools = ["gleam"], requirements = ["gleam_json", "gleam_stdlib"], otp_app = "gleam_community_colour", source = "hex", outer_checksum = "F0ACE69E3A47E913B03D3D0BB23A5563A91A4A7D20956916286068F4A9F817FE" },
@@ -39,6 +40,7 @@ packages = [
 
 [requirements]
 birl = { version = ">= 1.6.1 and < 2.0.0" }
+email_octopus = { path = "../../mono-2024/midas_sdk/sdks/email_octopus" }
 gleam_javascript = { version = ">= 1.0.0 and < 2.0.0" }
 gleam_json = { version = ">= 3.0.1 and < 4.0.0" }
 gleam_stdlib = { version = ">= 0.40.0 and < 1.0.0" }
