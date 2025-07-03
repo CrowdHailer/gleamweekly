@@ -3,6 +3,7 @@ import lustre/attribute as a
 import lustre/element.{text}
 import lustre/element/html as h
 import mailer/template
+import mailer/template/archive/index
 
 pub fn render(issue, number) {
   string.concat([
@@ -63,4 +64,9 @@ pub fn render(issue, number) {
     "</body>
 </html>",
   ])
+}
+
+pub fn render_index(issues) {
+  index.render(issues)
+  |> element.to_document_string()
 }

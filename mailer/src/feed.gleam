@@ -1,14 +1,11 @@
 import birl
 import gleam/int
-import gleam/io
 import gleam/list
 import gleam/result
-import gleam/string
 import lustre/element
 import lustre/element/html
 import mailer/content
 import mailer/template
-import simplifile
 import xmleam/xml_builder.{
   Opt, block_tag, end_xml, new, option_block_tag, option_content_tag, option_tag,
   tag,
@@ -35,7 +32,7 @@ fn render_issues() -> List(Issue) {
 }
 
 // for reference see https://validator.w3.org/feed/docs/atom.html
-fn generate_rss_feed(entries: List(Issue)) -> Result(String, Nil) {
+fn generate_rss_feed(entries: List(Issue)) {
   xml_builder.new_document()
   |> option_block_tag("feed", [Opt("xmlns", "http://www.w3.org/2005/Atom")], {
     let document =
@@ -86,24 +83,10 @@ fn generate_rss_feed(entries: List(Issue)) -> Result(String, Nil) {
     })
   })
   |> end_xml
-  |> result.replace_error(Nil)
 }
 
-pub fn build(root) {
-  let contents: List(Issue) = render_issues()
-
+pub fn content() {
+  let contents = render_issues()
   use feed <- result.try(generate_rss_feed(contents))
-  let path = string.replace(root, "/mailer", "/website/atom.xml")
-  use _ <- result.try(
-    simplifile.write(path, feed)
-    |> result.replace_error(Nil),
-  )
-
-  io.println("Successfully wrote atom feed to " <> path)
-  |> Ok
-}
-
-pub fn main() {
-  let assert Ok(cwd) = simplifile.current_directory()
-  build(cwd)
+  Ok(#("/atom.xml", <<feed:utf8>>))
 }

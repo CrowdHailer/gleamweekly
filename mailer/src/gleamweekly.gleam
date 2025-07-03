@@ -62,9 +62,18 @@ pub fn run(args) {
   let root = string.replace(project, "/gleamweekly/mailer", "/gleamweekly")
   case args {
     ["preview"] -> {
-      use _ <- r.try(
-        mailer.build(mailer_dir())
+      use content <- r.try(
+        mailer.content(mailer_dir())
         |> result.map_error(fn(err) { snag.new(string.inspect(err)) }),
+      )
+      use Nil <- r.try(
+        list.try_each(content, fn(file) {
+          let #(path, content) = file
+          let path = root <> "/website" <> path
+
+          simplifile.write_bits(path, content)
+          |> result.map_error(fn(error) { snag.new(string.inspect(error)) })
+        }),
       )
 
       browser.open(string.append(
@@ -79,7 +88,6 @@ pub fn run(args) {
         mailer.content(mailer_dir())
         |> result.map_error(fn(err) { snag.new(string.inspect(err)) }),
       )
-
       use Nil <- r.await(node.run(do_deploy(content), root))
 
       io.println("deployed")

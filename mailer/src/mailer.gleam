@@ -1,7 +1,6 @@
 import feed
 import gleam/bit_array
 import gleam/int
-import gleam/io
 import gleam/list
 import gleam/option.{None, Some}
 import gleam/result.{try}
@@ -11,28 +10,6 @@ import mailer/template
 import mailer/template/archive
 import mailer/template/email
 import simplifile
-
-pub fn build(root) {
-  let issues = render_issues()
-  let assert Ok(_) =
-    list.try_map(issues, fn(file) {
-      let #(path, content) = file
-      let path =
-        string.replace(root, "/mailer", "/website")
-        |> string.append(path)
-      simplifile.write_bits(path, content)
-    })
-
-  let path = string.replace(root, "/mailer", "/email.html")
-  use _ <- result.try(
-    simplifile.write(path, email(root))
-    |> result.replace_error(Nil),
-  )
-
-  io.println("Successfully wrote email to " <> path)
-
-  let _ = feed.build(root)
-}
 
 pub fn current_issue_number() {
   list.length(content.issues)
@@ -67,7 +44,7 @@ pub fn render_issues() {
 }
 
 const static = [
-  "index.html", "lucymail.png", "lucymail.svg", "tribe.f61a533e.css", "atom.xml",
+  "index.html", "lucymail.png", "lucymail.svg", "tribe.f61a533e.css",
 ]
 
 pub fn content(root) {
@@ -78,7 +55,14 @@ pub fn content(root) {
       Ok(#("/" <> file, content))
     }),
   )
-  Ok(list.append(static, render_issues()))
+
+  let files = list.append(static, render_issues())
+  let index = archive.render_index(content.issues)
+  let assert Ok(feed) = feed.content()
+
+  let files =
+    list.append(files, [#("/issues/index.html", <<index:utf8>>), feed])
+  Ok(files)
 }
 
 pub fn issue_path(number) {
