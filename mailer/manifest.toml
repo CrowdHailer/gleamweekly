@@ -4,7 +4,7 @@
 packages = [
   { name = "at_protocol", version = "1.0.0", build_tools = ["gleam"], requirements = ["gleam_http", "gleam_javascript", "gleam_json", "gleam_stdlib", "midas", "snag"], source = "local", path = "../../mono-2024/midas_sdk/sdks/at_protocol" },
   { name = "birl", version = "1.8.0", build_tools = ["gleam"], requirements = ["gleam_regexp", "gleam_stdlib", "ranger"], otp_app = "birl", source = "hex", outer_checksum = "2AC7BA26F998E3DFADDB657148BD5DDFE966958AD4D6D6957DD0D22E5B56C400" },
-  { name = "conversation", version = "2.0.1", build_tools = ["gleam"], requirements = ["gleam_http", "gleam_javascript", "gleam_stdlib"], source = "git", repo = "git@github.com:moedevelops/conversation", commit = "d568ecc827c3398d400730babb8178ee8b92f0a9" },
+  { name = "conversation", version = "2.0.2", build_tools = ["gleam"], requirements = ["gleam_http", "gleam_javascript", "gleam_stdlib"], otp_app = "conversation", source = "hex", outer_checksum = "60AFB424A723D5B29925487BCA66FF09EB157FD3EF72AF072714FEC903701226" },
   { name = "email_octopus", version = "1.0.0", build_tools = ["gleam"], requirements = ["gleam_http", "gleam_javascript", "gleam_json", "gleam_stdlib", "midas", "snag"], source = "local", path = "../../mono-2024/midas_sdk/sdks/email_octopus" },
   { name = "filepath", version = "1.1.2", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "filepath", source = "hex", outer_checksum = "B06A9AF0BF10E51401D64B98E4B627F1D2E48C154967DA7AF4D0914780A6D40A" },
   { name = "gleam_community_ansi", version = "1.4.3", build_tools = ["gleam"], requirements = ["gleam_community_colour", "gleam_regexp", "gleam_stdlib"], otp_app = "gleam_community_ansi", source = "hex", outer_checksum = "8A62AE9CC6EA65BEA630D95016D6C07E4F9973565FA3D0DE68DC4200D8E0DD27" },
@@ -17,26 +17,26 @@ packages = [
   { name = "gleam_json", version = "3.0.1", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleam_json", source = "hex", outer_checksum = "5BA154440B22D9800955B1AB854282FA37B97F30F409D76B0824D0A60C934188" },
   { name = "gleam_otp", version = "1.0.0", build_tools = ["gleam"], requirements = ["gleam_erlang", "gleam_stdlib"], otp_app = "gleam_otp", source = "hex", outer_checksum = "7020E652D18F9ABAC9C877270B14160519FA0856EE80126231C505D719AD68DA" },
   { name = "gleam_regexp", version = "1.1.1", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleam_regexp", source = "hex", outer_checksum = "9C215C6CA84A5B35BB934A9B61A9A306EC743153BE2B0425A0D032E477B062A9" },
-  { name = "gleam_stdlib", version = "0.60.0", build_tools = ["gleam"], requirements = [], otp_app = "gleam_stdlib", source = "hex", outer_checksum = "621D600BB134BC239CB2537630899817B1A42E60A1D46C5E9F3FAE39F88C800B" },
+  { name = "gleam_stdlib", version = "0.61.0", build_tools = ["gleam"], requirements = [], otp_app = "gleam_stdlib", source = "hex", outer_checksum = "3DC407D6EDA98FCE089150C11F3AD892B6F4C3CA77C87A97BAE8D5AB5E41F331" },
   { name = "gleam_yielder", version = "1.1.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleam_yielder", source = "hex", outer_checksum = "8E4E4ECFA7982859F430C57F549200C7749823C106759F4A19A78AEA6687717A" },
-  { name = "gleeunit", version = "1.5.1", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleeunit", source = "hex", outer_checksum = "D33B7736CF0766ED3065F64A1EBB351E72B2E8DE39BAFC8ADA0E35E92A6A934F" },
-  { name = "glen", version = "2.2.2", build_tools = ["gleam"], requirements = ["conversation", "filepath", "gleam_community_ansi", "gleam_http", "gleam_javascript", "gleam_stdlib", "marceau"], source = "git", repo = "git@github.com:crowdhailer/glen", commit = "8a500bc59e99f4a807700c6608bb3f9b44ae8784" },
+  { name = "gleeunit", version = "1.6.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleeunit", source = "hex", outer_checksum = "63022D81C12C17B7F1A60E029964E830A4CBD846BBC6740004FC1F1031AE0326" },
+  { name = "glen", version = "2.2.3", build_tools = ["gleam"], requirements = ["conversation", "filepath", "gleam_community_ansi", "gleam_http", "gleam_javascript", "gleam_stdlib", "marceau"], otp_app = "glen", source = "hex", outer_checksum = "A3A3A8CF2614344C660E1F0F984374CBCF2FE97E32CDD03935FCE8B39190A1B0" },
   { name = "glen_node", version = "0.0.3", build_tools = ["gleam"], requirements = ["gleam_javascript", "glen"], otp_app = "glen_node", source = "hex", outer_checksum = "0A81302C16B9719FC47FB022A127A51EA668D4F78CE6DCCCF430A3C098395511" },
   { name = "houdini", version = "1.1.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "houdini", source = "hex", outer_checksum = "5BA517E5179F132F0471CB314F27FE210A10407387DA1EA4F6FD084F74469FC2" },
   { name = "javascript_mutable_reference", version = "1.0.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "javascript_mutable_reference", source = "hex", outer_checksum = "3EE953EE7FE4FAFD17C16F24184F4C832FE260D761753F28F20D4AC1DA080F03" },
   { name = "lustre", version = "5.2.1", build_tools = ["gleam"], requirements = ["gleam_erlang", "gleam_json", "gleam_otp", "gleam_stdlib", "houdini"], otp_app = "lustre", source = "hex", outer_checksum = "DCD121F8E6B7E179B27D9A8AEB6C828D8380E26DF2E16D078511EDAD1CA9F2A7" },
   { name = "marceau", version = "1.3.0", build_tools = ["gleam"], requirements = [], otp_app = "marceau", source = "hex", outer_checksum = "2D1C27504BEF45005F5DFB18591F8610FB4BFA91744878210BDC464412EC44E9" },
   { name = "midas", version = "1.6.0", build_tools = ["gleam"], requirements = ["filepath", "gleam_http", "gleam_json", "gleam_stdlib", "snag"], otp_app = "midas", source = "hex", outer_checksum = "3AE76A773CE6BCD8D518CBDEB011FF2309D222E65451170E4AE6ADD3D35BD74F" },
-  { name = "midas_node", version = "1.2.7", build_tools = ["gleam"], requirements = ["conversation", "filepath", "gleam_crypto", "gleam_fetch", "gleam_http", "gleam_javascript", "gleam_stdlib", "glen", "glen_node", "javascript_mutable_reference", "midas", "plinth", "shellout", "simplifile", "snag"], source = "git", repo = "git@github.com:midas-framework/midas_node", commit = "8d260b02a4eb9cb22f1fbcf13df81092201cfee4" },
+  { name = "midas_node", version = "1.3.0", build_tools = ["gleam"], requirements = ["conversation", "filepath", "gleam_crypto", "gleam_fetch", "gleam_http", "gleam_javascript", "gleam_stdlib", "glen", "glen_node", "javascript_mutable_reference", "midas", "plinth", "shellout", "simplifile", "snag"], otp_app = "midas_node", source = "hex", outer_checksum = "050DC78DA6A17DE6E504A7F445E6E030F600276137B358F3642B093E204B82B6" },
   { name = "midas_sdk", version = "0.5.1", build_tools = ["gleam"], requirements = ["gleam_http", "gleam_json", "gleam_stdlib", "midas", "snag"], otp_app = "midas_sdk", source = "hex", outer_checksum = "B977D9E4EE3EB87BF00956265461507DBC7DFA81E57A0CFB3BA36758EF81D35E" },
   { name = "netlify", version = "1.0.0", build_tools = ["gleam"], requirements = ["gleam_http", "gleam_javascript", "gleam_json", "gleam_stdlib", "midas", "snag"], source = "local", path = "../../mono-2024/midas_sdk/sdks/netlify" },
-  { name = "plinth", version = "0.6.1", build_tools = ["gleam"], requirements = ["gleam_javascript", "gleam_json", "gleam_stdlib"], otp_app = "plinth", source = "hex", outer_checksum = "02D6421A27795CDC5C3A452240E21D5D3CB8217219020BB247917132E36CC8F1" },
+  { name = "plinth", version = "0.7.0", build_tools = ["gleam"], requirements = ["gleam_javascript", "gleam_json", "gleam_stdlib"], otp_app = "plinth", source = "hex", outer_checksum = "8C37ACFD941623AEC78268ABB3B6220E3F3533A8316943E14600CD8342D5EF25" },
   { name = "ranger", version = "1.4.0", build_tools = ["gleam"], requirements = ["gleam_stdlib", "gleam_yielder"], otp_app = "ranger", source = "hex", outer_checksum = "C8988E8F8CDBD3E7F4D8F2E663EF76490390899C2B2885A6432E942495B3E854" },
   { name = "shellout", version = "1.7.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "shellout", source = "hex", outer_checksum = "1BDC03438FEB97A6AF3E396F4ABEB32BECF20DF2452EC9A8C0ACEB7BDDF70B14" },
   { name = "simplifile", version = "1.7.0", build_tools = ["gleam"], requirements = ["filepath", "gleam_stdlib"], otp_app = "simplifile", source = "hex", outer_checksum = "1D5DFA3A2F9319EC85825F6ED88B8E449F381B0D55A62F5E61424E748E7DDEB0" },
   { name = "snag", version = "1.1.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "snag", source = "hex", outer_checksum = "7E9F06390040EB5FAB392CE642771484136F2EC103A92AE11BA898C8167E6E17" },
-  { name = "spotless", version = "2.0.0", build_tools = ["gleam"], requirements = ["gleam_http", "gleam_json", "gleam_stdlib", "midas", "snag"], source = "local", path = "../../gleam_spotless" },
-  { name = "xmleam", version = "1.2.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "xmleam", source = "hex", outer_checksum = "3ECB3B573EA29BA319296FF0EF5DF7476BBE9262592F14B5AA065179C4E67C7B" },
+  { name = "spotless", version = "2.1.0", build_tools = ["gleam"], requirements = ["gleam_http", "gleam_json", "gleam_stdlib", "midas", "snag"], otp_app = "spotless", source = "hex", outer_checksum = "7265D0B8086A97D4A47F9B096268147D2AC5939319695587E35377C80B71A5F1" },
+  { name = "xmleam", version = "1.2.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], source = "git", repo = "git@github.com:crowdhailer/xmleam.git", commit = "47ab5344e34def673d23bdef321c9d0a6fc2c119" },
 ]
 
 [requirements]
@@ -49,11 +49,11 @@ gleam_stdlib = { version = ">= 0.40.0 and < 1.0.0" }
 gleeunit = { version = "~> 1.0" }
 lustre = { version = ">= 5.2.1 and < 6.0.0" }
 midas = { version = ">= 1.0.0 and < 2.0.0" }
-midas_node = { git = "git@github.com:midas-framework/midas_node", ref = "main" }
+midas_node = { version = ">= 1.3.0 and < 2.0.0" }
 midas_sdk = { version = ">= 0.4.1 and < 1.0.0" }
 netlify = { path = "../../mono-2024/midas_sdk/sdks/netlify" }
 plinth = { version = ">= 0.5.5 and < 1.0.0" }
 simplifile = { version = ">= 1.7.0 and < 2.0.0" }
 snag = { version = ">= 1.1.0 and < 2.0.0" }
-spotless = { path = "../../gleam_spotless" }
-xmleam = { version = ">= 1.1.5 and < 2.0.0" }
+spotless = { version = ">= 2.0.0 and < 3.0.0" }
+xmleam = { git = "git@github.com:crowdhailer/xmleam.git", ref = "47ab5344e34def673d23bdef321c9d0a6fc2c119" }
