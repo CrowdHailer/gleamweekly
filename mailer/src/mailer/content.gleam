@@ -19,6 +19,49 @@ pub type Tag {
 }
 
 pub const issues = [
+  // https://peakd.com/softwareengineering/@simplestack/why-gleam-wins-over-f
+  // https://lozdev.com/why-gleam-deserves-a-spot-in-your-2025-toolkit-beyond-the-syntax/
+  #(
+    "2025-07-10",
+    Some(
+      "Your regular updates from the Gleam community including register your interest for Gleam Gathering 2026.",
+    ),
+    [
+      News(
+        "Register Your Interest for Gleam Gathering 2026",
+        "https://gleamgathering.com/",
+        "We want to bring the wonderful Gleam community together in the UK for a one-day conference, talking all things Gleamy.
+        To do this, we need an indication of the interest levels, so that we can find a venue which fits the likely attendee numbers.",
+      ),
+      News(
+        "Gleam’s Interoperability with Erlang and Elixir",
+        "https://www.youtube.com/watch?v=63Z2oNW1Bf4",
+        "Raúl showing how Gleam can work alongside Elixir and Erlang code, use their dependencies, and embed Elixir modules like Phoenix LiveView within.",
+      ),
+      News(
+        "gmsg 1.0",
+        "https://github.com/HeroesLament/gmsg",
+        "Work with messagepack in Gleam",
+      ),
+    ],
+    [
+      Also(
+        "Compile Time Configuration of Elixir Dependencies in Gleam",
+        "https://blog.nytsoi.net/2025/06/28/gleam-elixir-compile-config",
+        Educational,
+      ),
+      Also(
+        "typeid_gleam 1.0 - Type-safe, K-sortable, globally unique identifier inspired by Stripe IDs.",
+        "https://github.com/okkdev/typeid_gleam?tab=readme-ov-file",
+        ProjectUpdate,
+      ),
+      Also(
+        "Glap 1.0 - CLI argument parser library, featuring commands, flags and unnamed arguments",
+        "https://github.com/aintea4/glap",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     "2025-06-26",
     Some(

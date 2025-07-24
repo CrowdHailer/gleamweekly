@@ -66,6 +66,13 @@ pub fn run(args) {
         mailer.content(mailer_dir())
         |> result.map_error(fn(err) { snag.new(string.inspect(err)) }),
       )
+
+      let email = mailer.email(mailer_dir())
+      use Nil <- r.try(
+        simplifile.write_bits(root <> "/email.html", <<email:utf8>>)
+        |> result.map_error(fn(error) { snag.new(string.inspect(error)) }),
+      )
+
       use Nil <- r.try(
         list.try_each(content, fn(file) {
           let #(path, content) = file
