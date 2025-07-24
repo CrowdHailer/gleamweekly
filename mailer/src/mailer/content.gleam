@@ -19,8 +19,54 @@ pub type Tag {
 }
 
 pub const issues = [
-  // https://peakd.com/softwareengineering/@simplestack/why-gleam-wins-over-f
-  // https://lozdev.com/why-gleam-deserves-a-spot-in-your-2025-toolkit-beyond-the-syntax/
+  #(
+    "2025-07-24",
+    None,
+    [
+      News(
+        "The Glodot is real",
+        "https://nnb.codeberg.page/blog/en/posts/19/",
+        "Glodot is a way to run Gleam code inside Godot.",
+      ),
+      News(
+        "jscheam 1.0",
+        "https://github.com/Neofox/jscheam",
+        "A Gleam library for generating JSON Schema documents.",
+      ),
+      News(
+        "Why Gleam Deserves a Spot in Your 2025 Toolkit",
+        "https://lozdev.com/why-gleam-deserves-a-spot-in-your-2025-toolkit-beyond-the-syntax/",
+        "Gleam it’s not just another functional language—it’s a strategic choice for specific architectural challenges.",
+      ),
+    ],
+    [
+      Also(
+        "gbor 1.0 - A CBOR library implemented in Gleam.",
+        "https://github.com/Beaudidly/gbor",
+        ProjectUpdate,
+      ),
+      Also(
+        "plinth_cloudflare 1.0 - bindings to the cloudflare worker API's.",
+        "https://github.com/CrowdHailer/plinth_cloudflare",
+        ProjectUpdate,
+      ),
+      Also(
+        "Why Gleam Wins Over F#.",
+        "https://peakd.com/softwareengineering/@simplestack/why-gleam-wins-over-f",
+        BlogPost,
+      ),
+      Also(
+        "timeago 1.0 - A lightweight Gleam library for describing time differences in a human readable format.",
+        "https://github.com/ayoung19/timeago",
+        ProjectUpdate,
+      ),
+      Also(
+        "formal v3 - Type safe HTML form decoding and validation",
+        "https://github.com/lpil/formal",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     "2025-07-10",
     Some(
