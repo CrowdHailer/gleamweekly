@@ -19,6 +19,43 @@ pub type Tag {
 }
 
 pub const issues = [
+  // https://lindbakk.com/blog/looking-into-performance-issues-with-surtoget-and-gleam
+  #(
+    "2025-08-07",
+    Some(
+      "Another issue of Gleam Weekly. This time with another new release, v1.12.0, of the second most admired language on Stack Overflows 2025 Developer Survey.",
+    ),
+    [
+      News(
+        "No more dependency management headaches",
+        "https://gleam.run/news/no-more-dependency-management-headaches/",
+        "Gleam v1.12.0 released",
+      ),
+      News("Beach 1.0", "https://github.com/bgwdotdev/beach", "TUIs over SSH."),
+      News(
+        "Introducing: Surtoget.no",
+        "https://lindbakk.com/blog/introducing-surtoget_no",
+        "A technical write up of John's interesting personal project triggered by his dissatisfaction with this one train line in Norway",
+      ),
+      News(
+        "Jumping on the Bandwagon: How I ended up writing Gleam.",
+        "https://www.youtube.com/watch?v=BfPRcanTWXA",
+        "Isaac discusses how a series of unexpected events led to a career in Gleam, highlighting the lessons learned along the way and how to write production-ready Gleam code.",
+      ),
+    ],
+    [
+      Also(
+        "What's new in Gleam 1.12?",
+        "https://www.youtube.com/watch?v=KYvydMeTpzQ",
+        Video,
+      ),
+      Also(
+        "Taskle -  Elixir-like task module.",
+        "https://github.com/bondiano/taskle",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     "2025-07-24",
     None,
@@ -267,8 +304,6 @@ pub const issues = [
       ),
     ],
   ),
-  // https://github.com/Daniel-Shunom/glindo
-
   #(
     "2025-05-08",
     Some("Isaac is back with some more great video content."),
