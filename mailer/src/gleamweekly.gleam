@@ -1,10 +1,10 @@
 import at_protocol/operations
 import email_octopus
+import gleam/dict
 import gleam/http/request
 import gleam/io
 import gleam/javascript/array
 import gleam/javascript/promise
-import gleam/json
 import gleam/list
 import gleam/option.{None, Some}
 import gleam/result
@@ -18,6 +18,7 @@ import midas/sdk/linkedin
 import midas/sdk/twitter
 import midas/task as t
 import netlify
+import oas/generator/utils
 import plinth/javascript/date
 import plinth/node/process
 import simplifile
@@ -194,11 +195,13 @@ fn create_post(context, handle, text, now) {
   // let now = date.now()
   // let at = date.to_iso_string(now)
   let record =
-    json.object([
-      #("$type", json.string("app.bsky.feed.post")),
-      #("text", json.string(text)),
-      #("createdAt", json.string(now)),
-    ])
+    utils.Object(
+      dict.from_list([
+        #("$type", utils.String("app.bsky.feed.post")),
+        #("text", utils.String(text)),
+        #("createdAt", utils.String(now)),
+      ]),
+    )
   let payload =
     operations.ComAtprotoRepoCreateRecordRequest(
       None,
