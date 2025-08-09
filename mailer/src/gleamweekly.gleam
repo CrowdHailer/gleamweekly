@@ -1,4 +1,5 @@
 import at_protocol/operations
+import deploy
 import email_octopus
 import gleam/dict
 import gleam/http/request
@@ -17,7 +18,6 @@ import midas/node/file_system as fs
 import midas/sdk/linkedin
 import midas/sdk/twitter
 import midas/task as t
-import netlify
 import oas/generator/utils
 import plinth/javascript/date
 import plinth/node/process
@@ -53,9 +53,7 @@ fn website_dir() {
 
 fn do_deploy(content) {
   use token <- t.do(spotless.netlify(8080, []))
-  use _ <- t.do(netlify.deploy_site(token, site_id, content))
-  use _ <- t.do(t.log("Deployed"))
-  t.done(Nil)
+  deploy.run(token, site_id, content)
 }
 
 pub fn run(args) {
