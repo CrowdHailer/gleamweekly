@@ -94,6 +94,7 @@ pub fn run(args) {
         mailer.content(mailer_dir())
         |> result.map_error(fn(err) { snag.new(string.inspect(err)) }),
       )
+
       use Nil <- r.await(node.run(do_deploy(content), root))
 
       io.println("deployed")

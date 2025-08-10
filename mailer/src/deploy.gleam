@@ -39,6 +39,33 @@ pub fn run(token, site_id, content) {
     ),
   )
   let #(files, blobs) = list.unzip(files)
+  let functions = [
+    #("mcp", <<
+      "
+      export async function handler(req, context) {
+        console.log(context)
+        // const { city, country } = context.params;
+
+        return new Response(`You're visiting city in country!`);
+      };
+      const config = {
+        path: '/mcp'
+      };
+      ",
+    >>),
+  ]
+  use functions <- t.do(
+    t.sequential(
+      list.map(functions, fn(function) {
+        let #(path, bytes) = function
+        use bytes <- t.do(t.zip([#("mcp.mjs", bytes)]))
+        use hash <- t.do(t.hash(t.SHA256, bytes))
+        let hash = string.lowercase(bit_array.base16_encode(hash))
+        t.done(#(#(path, utils.String(hash)), #(hash, #(path, bytes))))
+      }),
+    ),
+  )
+  let #(functions, fn_blobs) = list.unzip(functions)
   let deploy_files =
     schema.DeployFiles(
       draft: None,
@@ -47,7 +74,7 @@ pub fn run(token, site_id, content) {
       function_schedules: None,
       files: Some(dict.from_list(files)),
       framework_version: None,
-      functions: None,
+      functions: Some(dict.from_list(functions)),
       async: None,
       framework: None,
     )
@@ -65,11 +92,11 @@ pub fn run(token, site_id, content) {
   case response {
     Ok(response) -> {
       let required = option.unwrap(response.required, [])
+      let assert Some(id) = response.id
       use _ <- t.do(
         t.sequential(
           list.map(required, fn(hash) {
             let assert Ok(#(path, bytes)) = list.key_find(blobs, hash)
-            let assert Some(id) = response.id
             // TODO Needs to accept application/octet stream to work better
             // TODO I think netlify updated their Spec to have more required fields
             let path = string.replace(path, "/", "%2F")
@@ -77,6 +104,34 @@ pub fn run(token, site_id, content) {
               netlify.base_request(token)
               |> utils.append_path("/deploys/" <> id <> "/files/" <> path)
               |> request.set_method(http.Put)
+              |> request.set_body(bytes)
+              |> request.set_header("Content-Type", "application/octet-stream")
+
+            use response <- t.do(t.fetch(request))
+            case response.status {
+              200 -> t.done(Nil)
+              _ -> {
+                use Nil <- t.do(t.log(
+                  bit_array.to_string(response.body) |> result.unwrap(""),
+                ))
+                t.abort(snag.new("failed to upload " <> path))
+              }
+            }
+          }),
+        ),
+      )
+      use _ <- t.do(
+        t.sequential(
+          list.map(response.required_functions |> option.unwrap([]), fn(hash) {
+            let assert Ok(#(path, bytes)) = list.key_find(fn_blobs, hash)
+            // TODO Needs to accept application/octet stream to work better
+            // TODO I think netlify updated their Spec to have more required fields
+            let path = string.replace(path, "/", "%2F")
+            let request =
+              netlify.base_request(token)
+              |> utils.append_path("/deploys/" <> id <> "/functions/" <> path)
+              |> request.set_method(http.Put)
+              |> request.set_query([#("runtime", "js")])
               |> request.set_body(bytes)
               |> request.set_header("Content-Type", "application/octet-stream")
 
