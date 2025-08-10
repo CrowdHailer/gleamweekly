@@ -4,7 +4,7 @@ import gleam/string
 import lustre/attribute as a
 import lustre/element.{text}
 import lustre/element/html as h
-import mailer/content.{Also, News}
+import weekly/content.{Also, News}
 
 const faff_pink = "#ffaff3"
 
