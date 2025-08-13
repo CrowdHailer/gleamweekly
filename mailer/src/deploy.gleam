@@ -32,6 +32,7 @@ pub fn run(token, site_id, content) {
     #("_redirects", <<
       "/mcp/*  https://server-thrumming-glade-9985.fly.dev/mcp  200",
     >>),
+    ..content
   ]
   use files <- t.do(
     t.sequential(
