@@ -4,8 +4,8 @@ import gleam/list
 import gleam/result
 import lustre/element
 import lustre/element/html
-import mailer/content
 import mailer/template
+import weekly/content
 import xmleam/xml_builder.{
   Opt, block_tag, end_xml, new, option_block_tag, option_content_tag, option_tag,
   tag,

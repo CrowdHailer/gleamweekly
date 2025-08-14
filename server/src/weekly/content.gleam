@@ -18,6 +18,18 @@ pub type Tag {
   Meetup
 }
 
+pub fn tag_to_string(tag) {
+  case tag {
+    Podcast -> "Podcast"
+    Video -> "Video"
+    BlogPost -> "Blog post"
+    ProjectUpdate -> "Project update"
+    Educational -> "Educational"
+    JobOpportunity -> "Job oportunity"
+    Meetup -> "Meetup"
+  }
+}
+
 pub const issues = [
   // https://lindbakk.com/blog/looking-into-performance-issues-with-surtoget-and-gleam
   #(

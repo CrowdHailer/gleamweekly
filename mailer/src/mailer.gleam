@@ -5,11 +5,11 @@ import gleam/list
 import gleam/option.{None, Some}
 import gleam/result.{try}
 import gleam/string
-import mailer/content
 import mailer/template
 import mailer/template/archive
 import mailer/template/email
 import simplifile
+import weekly/content
 
 pub fn current_issue_number() {
   list.length(content.issues)
