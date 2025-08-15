@@ -33,6 +33,23 @@ pub fn tag_to_string(tag) {
 pub const issues = [
   // https://lindbakk.com/blog/looking-into-performance-issues-with-surtoget-and-gleam
   #(
+    "2025-08-13",
+    None,
+    [],
+    [
+      Also(
+        "PubSub and Registry for actors with distributed clustering support",
+        "https://github.com/mbuhot/glyn",
+        ProjectUpdate,
+      ),
+      Also(
+        "An FTP server written in Gleam ",
+        "https://github.com/raineycat/gleam-ftp",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2025-08-07",
     Some(
       "Another issue of Gleam Weekly. This time with another new release, v1.12.0, of the second most admired language on Stack Overflows 2025 Developer Survey.",

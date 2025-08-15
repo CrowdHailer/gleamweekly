@@ -1,36 +1,36 @@
-import gleam/dict
-import gleam/json
+import aide/tool
+import gleam/dict.{type Dict}
 import gleam/list
 import gleam/option.{None, Some}
 import oas/generator/utils
-import oas/json_schema
-import oas/mcp
-import oas/mcp/messages
 import weekly/content
+
+pub type Return =
+  Dict(String, utils.Any)
+
+pub type Issue =
+  #(String, option.Option(String), List(content.News), List(content.Also))
+
+pub type Call {
+  ListIssues(cast: fn(List(Issue)) -> Return)
+}
 
 pub fn all() {
   [
     #(
-      messages.Tool(
-        name: "list_issues",
-        title: Some("List all issues of Gleam Weekly."),
-        description: Some(
+      tool.new("list_issues", dict.from_list([]))
+        |> tool.set_title("List all issues of Gleam Weekly.")
+        |> tool.set_description(
           "Gleam weekly is a weekly newsletter about the Gleam programming language. It contains handpicked articles and community news. This tool lists all previous published issues.",
         ),
-        input_schema: mcp.args(dict.from_list([])),
-        output_schema: None,
-        meta: None,
-        annotations: None,
-      ),
-      call,
+      fn(_) { Ok(ListIssues(cast:)) },
     ),
   ]
 }
 
-fn call(_arguments) {
+fn cast(issues) {
   let issues =
-    content.issues
-    |> list.map(fn(issue) {
+    list.map(issues, fn(issue) {
       let #(date, summary, main, also) = issue
       utils.Object(
         dict.from_list([
@@ -77,25 +77,5 @@ fn call(_arguments) {
       )
     })
     |> utils.Array
-  let issues_json =
-    issues
-    |> utils.any_to_json
-  let content =
-    json.object([#("issues", issues_json)])
-    |> json.to_string
-    |> utils.String
-
-  messages.CallToolResult(
-    meta: None,
-    structured_content: Some(dict.from_list([#("issues", issues)])),
-    content: [
-      utils.Object(
-        dict.from_list([
-          #("type", utils.String("text")),
-          #("text", content),
-        ]),
-      ),
-    ],
-    is_error: Some(False),
-  )
+  dict.from_list([#("issues", issues)])
 }
