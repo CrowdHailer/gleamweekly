@@ -1,8 +1,10 @@
 import aide/tool
 import gleam/dict.{type Dict}
+import gleam/dynamic/decode
 import gleam/list
 import gleam/option.{None, Some}
 import oas/generator/utils
+import oas/json_schema
 import weekly/content
 
 pub type Return =
@@ -18,12 +20,17 @@ pub type Call {
 pub fn all() {
   [
     #(
-      tool.new("list_issues", dict.from_list([]))
+      tool.new("list_issues", [], [
+        json_schema.field(
+          "issues",
+          json_schema.array(json_schema.Inline(json_schema.object([]))),
+        ),
+      ])
         |> tool.set_title("List all issues of Gleam Weekly.")
         |> tool.set_description(
           "Gleam weekly is a weekly newsletter about the Gleam programming language. It contains handpicked articles and community news. This tool lists all previous published issues.",
         ),
-      fn(_) { Ok(ListIssues(cast:)) },
+      decode.success(ListIssues(cast:)),
     ),
   ]
 }

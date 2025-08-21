@@ -33,9 +33,15 @@ pub fn tag_to_string(tag) {
 pub const issues = [
   // https://lindbakk.com/blog/looking-into-performance-issues-with-surtoget-and-gleam
   #(
-    "2025-08-13",
+    "2025-08-21",
     None,
-    [],
+    [
+      News(
+        "Gleam Gathering 2026 tickets and call for talks",
+        "https://gleamgathering.com/",
+        "Buy tickets and submit your talk proposals for the very first Gleam conference.",
+      ),
+    ],
     [
       Also(
         "PubSub and Registry for actors with distributed clustering support",
