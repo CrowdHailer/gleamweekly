@@ -31,15 +31,27 @@ pub fn tag_to_string(tag) {
 }
 
 pub const issues = [
-  // https://lindbakk.com/blog/looking-into-performance-issues-with-surtoget-and-gleam
+  // https://lindbakk.com/blog/is-gleam-production-ready-part-1
   #(
     "2025-08-21",
-    None,
+    Some(
+      "Tickets and call for talks for the first Gleam Gathering. As well as all the latest from the community.",
+    ),
     [
       News(
         "Gleam Gathering 2026 tickets and call for talks",
         "https://gleamgathering.com/",
         "Buy tickets and submit your talk proposals for the very first Gleam conference.",
+      ),
+      News(
+        "Looking into performance issues with surtoget.no",
+        "https://lindbakk.com/blog/looking-into-performance-issues-with-surtoget-and-gleam",
+        "Falling down a rabbit hole of investigating performance in a Gleam side project.",
+      ),
+      News(
+        "Presentable Soup 1.0",
+        "https://github.com/lpil/presentable-soup",
+        "Querying, scraping, and parsing of HTML. Good for snapshot testing too.",
       ),
     ],
     [
@@ -51,6 +63,16 @@ pub const issues = [
       Also(
         "An FTP server written in Gleam ",
         "https://github.com/raineycat/gleam-ftp",
+        ProjectUpdate,
+      ),
+      Also(
+        "Calling 3rd party node modules from Gleam",
+        "https://codeberg.org/sfinnie/gleam_tips/src/branch/main/node_module_ffi",
+        Educational,
+      ),
+      Also(
+        "hanguleam - Korean text processing, providing comprehensive tools for handling Hangul characters.",
+        "https://github.com/jcha0713/hanguleam",
         ProjectUpdate,
       ),
     ],
