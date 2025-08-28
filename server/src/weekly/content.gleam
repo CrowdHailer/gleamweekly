@@ -31,7 +31,44 @@ pub fn tag_to_string(tag) {
 }
 
 pub const issues = [
-  // https://lindbakk.com/blog/is-gleam-production-ready-part-1
+  #(
+    "2025-08-28",
+    Some("In Gleam production ready? Well yes it has been for a while."),
+    [
+      News(
+        "Is Gleam production ready?",
+        "https://lindbakk.com/blog/is-gleam-production-ready-part-1",
+        "John discusses running Gleam in production for about six months.",
+      ),
+      News(
+        "Lessons from Building a Game Engine from Scratch in Gleam",
+        "https://www.youtube.com/watch?v=uExwRo_qM-k",
+        "In this talk, Will explains why they picked Gleam to build a game engine, and reflect on the most important takeaways.",
+      ),
+      News(
+        "pearl 1.0 and 2.0",
+        "https://github.com/GearsDatapacks/pearl",
+        "An Erlang lexer and syntax highlighter for Gleam.",
+      ),
+    ],
+    [
+      Also(
+        "git_store - A library for using GitHub as backend storage",
+        "https://github.com/jmcharter/GitStore",
+        ProjectUpdate,
+      ),
+      Also(
+        "Carotte 2.0 - A RabbitMQ library.",
+        "https://github.com/renatillas/carotte",
+        ProjectUpdate,
+      ),
+      Also(
+        "Somachord A simple self-hosted Subsonic web client.",
+        "https://github.com/sammy-ette/Somachord",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     "2025-08-21",
     Some(
