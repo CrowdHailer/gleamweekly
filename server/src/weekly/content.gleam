@@ -30,6 +30,19 @@ pub fn tag_to_string(tag) {
   }
 }
 
+pub fn tag_from_string(tag) {
+  case tag {
+    "Podcast" -> Ok(Podcast)
+    "Video" -> Ok(Video)
+    "Blog post" -> Ok(BlogPost)
+    "Project update" -> Ok(ProjectUpdate)
+    "Educational" -> Ok(Educational)
+    "Job oportunity" -> Ok(JobOpportunity)
+    "Meetup" -> Ok(Meetup)
+    _ -> Error(Nil)
+  }
+}
+
 pub const issues = [
   #(
     "2025-08-28",

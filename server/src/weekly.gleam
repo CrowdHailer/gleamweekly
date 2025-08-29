@@ -1,9 +1,11 @@
 import gleam/erlang/process
 import mist
 import weekly/router
+import wisp
 import wisp/wisp_mist
 
 pub fn main() -> Nil {
+  wisp.configure_logger()
   let secret_key_base = "TODO"
 
   let assert Ok(_) =
