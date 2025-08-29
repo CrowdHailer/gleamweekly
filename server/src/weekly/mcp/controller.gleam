@@ -63,6 +63,6 @@ fn handle_rpc(request) {
 
 fn tool_call(args) {
   case args {
-    tools.ListIssues(cast:) -> cast(content.issues)
+    tools.ListIssues(cast:) -> Ok(cast(content.issues))
   }
 }
