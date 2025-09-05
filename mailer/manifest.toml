@@ -2,7 +2,7 @@
 # You typically do not need to edit this file
 
 packages = [
-  { name = "aide", version = "0.4.1", build_tools = ["gleam"], requirements = ["gleam_json", "gleam_stdlib", "oas", "oas_generator_utils"], otp_app = "aide", source = "hex", outer_checksum = "F5B0E7352C59BA2B41D55D440E48EFA1A34464F543AA01833176CED96DB8D8C2" },
+  { name = "aide", version = "0.4.1", build_tools = ["gleam"], requirements = ["gleam_json", "gleam_stdlib", "oas", "oas_generator_utils"], source = "local", path = "../../aide" },
   { name = "at_protocol", version = "1.0.0", build_tools = ["gleam"], requirements = ["gleam_http", "gleam_javascript", "gleam_json", "gleam_stdlib", "midas", "oas_generator_utils", "snag"], source = "local", path = "../../mono-2024/midas_sdk/sdks/at_protocol" },
   { name = "birl", version = "1.8.0", build_tools = ["gleam"], requirements = ["gleam_regexp", "gleam_stdlib", "ranger"], otp_app = "birl", source = "hex", outer_checksum = "2AC7BA26F998E3DFADDB657148BD5DDFE966958AD4D6D6957DD0D22E5B56C400" },
   { name = "conversation", version = "2.0.2", build_tools = ["gleam"], requirements = ["gleam_http", "gleam_javascript", "gleam_stdlib"], otp_app = "conversation", source = "hex", outer_checksum = "60AFB424A723D5B29925487BCA66FF09EB157FD3EF72AF072714FEC903701226" },
@@ -32,7 +32,7 @@ packages = [
   { name = "hpack_erl", version = "0.3.0", build_tools = ["rebar3"], requirements = [], otp_app = "hpack", source = "hex", outer_checksum = "D6137D7079169D8C485C6962DFE261AF5B9EF60FBC557344511C1E65E3D95FB0" },
   { name = "javascript_mutable_reference", version = "1.0.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "javascript_mutable_reference", source = "hex", outer_checksum = "3EE953EE7FE4FAFD17C16F24184F4C832FE260D761753F28F20D4AC1DA080F03" },
   { name = "logging", version = "1.3.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "logging", source = "hex", outer_checksum = "1098FBF10B54B44C2C7FDF0B01C1253CAFACDACABEFB4B0D027803246753E06D" },
-  { name = "lustre", version = "5.3.4", build_tools = ["gleam"], requirements = ["gleam_erlang", "gleam_json", "gleam_otp", "gleam_stdlib", "houdini"], otp_app = "lustre", source = "hex", outer_checksum = "D0EF92316D51435823A234ADA4FFDD799740C89F1A188412CBC76722139121A5" },
+  { name = "lustre", version = "5.3.5", build_tools = ["gleam"], requirements = ["gleam_erlang", "gleam_json", "gleam_otp", "gleam_stdlib", "houdini"], otp_app = "lustre", source = "hex", outer_checksum = "5CBB5DD2849D8316A2101792FC35AEB58CE4B151451044A9C2A2A70A2F7FCEB8" },
   { name = "marceau", version = "1.3.0", build_tools = ["gleam"], requirements = [], otp_app = "marceau", source = "hex", outer_checksum = "2D1C27504BEF45005F5DFB18591F8610FB4BFA91744878210BDC464412EC44E9" },
   { name = "midas", version = "1.7.0", build_tools = ["gleam"], requirements = ["filepath", "gleam_http", "gleam_json", "gleam_stdlib", "snag"], otp_app = "midas", source = "hex", outer_checksum = "672ECD0DFE877AE23AAAC8C0F4B4D83A4C4374346EE483C5DD269A970D8193F4" },
   { name = "midas_node", version = "1.3.0", build_tools = ["gleam"], requirements = ["conversation", "filepath", "gleam_crypto", "gleam_fetch", "gleam_http", "gleam_javascript", "gleam_stdlib", "glen", "glen_node", "javascript_mutable_reference", "midas", "plinth", "shellout", "simplifile", "snag"], otp_app = "midas_node", source = "hex", outer_checksum = "050DC78DA6A17DE6E504A7F445E6E030F600276137B358F3642B093E204B82B6" },

@@ -45,6 +45,36 @@ pub fn tag_from_string(tag) {
 
 pub const issues = [
   #(
+    "2025-09-04",
+    Some(
+      "Advice for web projects and a call out for talk submissions to Gleam Gathering.",
+    ),
+    [
+      News(
+        "PostgreSQL in Gleam with pog, squirrel, and cigogne",
+        "https://nulltree.xyz/articles/basic-postgres-setup-in-gleam/",
+        "A basic yet opinionated PostgreSQL setup.",
+      ),
+      News(
+        "Wisp 2.0",
+        "https://github.com/gleam-wisp/wisp/blob/main/CHANGELOG.md#v200---2025-09-04",
+        "Next major release from Wisp, the practical web framework.",
+      ),
+      News(
+        "Submit your talk for Gleam Gathering.",
+        "https://discord.com/channels/768594524158427167/1047101890707603547/threads/1412885231798714428",
+        "One month remains for talk submissions to the first Gleam conference.",
+      ),
+    ],
+    [
+      Also(
+        "M25 A background job library.",
+        "https://github.com/Pevensie/m25",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2025-08-28",
     Some("In Gleam production ready? Well yes it has been for a while."),
     [
