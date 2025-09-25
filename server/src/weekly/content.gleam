@@ -45,6 +45,29 @@ pub fn tag_from_string(tag) {
 
 pub const issues = [
   #(
+    "2025-09-25",
+    Some("Last week for talk submissions to Gleam Gathering."),
+    [
+      News(
+        "Basic Gleam Debugging Tips",
+        "https://brian-dot-brian-dot-brian.ghost.io/gleam-debugging-tips/",
+        "Here are some tools and techniques in the mighty Gleam ecosystem that helped Brian debug his first fullstack app.",
+      ),
+      News(
+        "Call for talks for Gleam Gathering closes this week.",
+        "https://gleamgathering.com/",
+        "Tell us what you're building, all topics welcome. Come and be a part of the first dedicated Gleam conference.",
+      ),
+    ],
+    [
+      Also(
+        "Gleam theme and syntax highlighting for the Lite XL text editor.",
+        "https://github.com/0riginaln0/lite-xl-gleam",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2025-09-18",
     None,
     [
