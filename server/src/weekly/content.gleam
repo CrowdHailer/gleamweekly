@@ -45,6 +45,54 @@ pub fn tag_from_string(tag) {
 
 pub const issues = [
   #(
+    "2025-09-18",
+    None,
+    [
+      News(
+        "Fixing my gripes with GitHub using Gleam and a Raspberry Pi.",
+        "https://giacomocavalieri.me/posts/fixing-my-gripes-with-github-using-gleam-and-a-raspberry-pi",
+        "As a programmer there's no greater joy than trying to code my way out of little daily annoyances. Jak has been annoyed by GitHub's UI and I set up to fix this using Gleam and a little Raspberry Pi Zero.",
+      ),
+      News(
+        "Crew",
+        "https://gitlab.com/arkandos/crew",
+        "A lightweight, generic worker/task pool for Gleam that distributes work across multiple managed worker processes",
+      ),
+    ],
+    [
+      Also(
+        "legos - Layout and style that's easy to refactor, all without thinking about CSS.",
+        "https://github.com/NduatiK/legos",
+        ProjectUpdate,
+      ),
+      Also(
+        "Gleam my new obsession",
+        "https://ericcodes.io/blog/gleam-my-new-obsession.html",
+        BlogPost,
+      ),
+      Also(
+        "g18n - Internationalization in Gleam",
+        "https://github.com/renatillas/g18n",
+        ProjectUpdate,
+      ),
+      Also(
+        "A heterogeneous stack data structure, because we can.",
+        "https://github.com/willmartian/hstack",
+        ProjectUpdate,
+      ),
+      Also(
+        "bindings to Erlang's process groups. Useful for pubsub",
+        "https://github.com/lpil/group_registry",
+        ProjectUpdate,
+      ),
+      Also(
+        "Pack - A tool for downloading Gleam packages",
+        "https://github.com/GearsDatapacks/pack",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2025-09-04",
     Some(
       "Advice for web projects and a call out for talk submissions to Gleam Gathering.",
