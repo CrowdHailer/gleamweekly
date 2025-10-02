@@ -45,6 +45,44 @@ pub fn tag_from_string(tag) {
 
 pub const issues = [
   #(
+    "2025-10-02",
+    Some("More great libraries and some internet points for those libraries."),
+    [
+      News(
+        "RSS Reader",
+        "https://billuc.github.io/blog/gleam-rss-reader",
+        "How I built my own news aggregator in Gleam.",
+      ),
+      News(
+        "Casper",
+        "https://github.com/chiroptical/casper",
+        "An opinionated symmetric cipher library",
+      ),
+      News(
+        "Gleam packages internet points,",
+        "https://packages.gleam.run/internet-points",
+        "Some fun statistics, now the package site has accurate download numbers.",
+      ),
+      News(
+        "Protobin",
+        "https://github.com/chiroptical/casper",
+        "https://github.com/gavinmorrow/protobin",
+      ),
+    ],
+    [
+      Also(
+        "Yet another JWT library",
+        "https://gitlab.com/arkandos/ywt",
+        ProjectUpdate,
+      ),
+      Also(
+        "gleam2nix provides a set of nix functions and tools to help you build your gleam applications with nix.",
+        "https://git.isincredibly.gay/srxl/gleam2nix",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2025-09-25",
     Some("Last week for talk submissions to Gleam Gathering."),
     [
