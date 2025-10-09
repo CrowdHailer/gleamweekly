@@ -45,6 +45,36 @@ pub fn tag_from_string(tag) {
 
 pub const issues = [
   #(
+    "2025-10-09",
+    Some(
+      "Gleam OTP is maturing, with factory supervisor and Lustre dev tools getting a 2.0 release.",
+    ),
+    [
+      News(
+        "tiramisu 1.0",
+        "https://github.com/renatillas/tiramisu",
+        "Tiramisu brings the power of functional programming and static type safety to game development, leveraging Three.js for professional-grade 3D rendering.",
+      ),
+      News(
+        "Better dev tooling with lustre_dev_tools v2",
+        "https://hexdocs.pm/lustre/announcements/2025-10-05.html",
+        "As many of Lustre’s users are new to frontend or would prefer to avoid modern JavaScript toolchains, Lustre’s own development tooling has become a core part of the developer experience.",
+      ),
+      News(
+        "gleam_otp 1.2 with factory supervisor",
+        "https://github.com/gleam-lang/otp",
+        "A supervisor where child processes are started dynamically from a pre-specified template, so new processes can be created as needed while the program is running.",
+      ),
+    ],
+    [
+      Also(
+        "Static erlang for Linux - a statically-linked distribution of Erlang/OTP for Linux with no external dependencies.",
+        "https://github.com/yoshi-monster/static_erlang",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2025-10-02",
     Some("More great libraries and some internet points for those libraries."),
     [
