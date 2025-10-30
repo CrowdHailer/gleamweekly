@@ -45,6 +45,44 @@ pub fn tag_from_string(tag) {
 
 pub const issues = [
   #(
+    "2025-10-30",
+    None,
+    [
+      News(
+        "How I made my own web server in Gleam",
+        "https://wskiy.de/blog/making_my_own_web_server_in_gleam",
+        "Building a brand new webserver called ewe.",
+      ),
+      News(
+        "New Hexdocs home page",
+        "https://github.com/hexpm/hexdocs-search",
+        "The new homepage for Hexdocs is a SPA built with Gleam and Lustre",
+      ),
+      News(
+        "tear 1.0",
+        "https://gitlab.com/arkandos/tear",
+        "A lexer and highlighter for Elixir source code",
+      ),
+    ],
+    [
+      Also(
+        "Visualising Gleam's Changelog Entries",
+        "https://x.com/daniellionel01/status/1977153083772895423",
+        Educational,
+      ),
+      Also(
+        "Gleam, as a canvas for laying out concepts",
+        "https://www.youtube.com/watch?v=1h3Z-cKMp_U",
+        Video,
+      ),
+      Also(
+        "Implementation of RFC 6902",
+        "https://github.com/otters/squirtle",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2025-10-09",
     Some(
       "Gleam OTP is maturing, with factory supervisor and Lustre dev tools getting a 2.0 release.",
