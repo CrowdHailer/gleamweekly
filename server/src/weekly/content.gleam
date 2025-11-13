@@ -44,6 +44,48 @@ pub fn tag_from_string(tag) {
 }
 
 pub const issues = [
+  // https://hexdocs.pm/snowball_stemmer/index.html
+  // https://discord.com/channels/768594524158427167/1047101890707603547/threads/1438223075685437460
+  #(
+    "2025-11-13",
+    Some(
+      "Why not build your own implementation of the BEAM, or drive your browser from Gleam.",
+    ),
+    [
+      News(
+        "Writing your own BEAM",
+        "https://martin.janiczek.cz/2025/11/09/writing-your-own-beam.html",
+        "Martin builds a toy single-threaded implementation of the BEAM scheduler from first principles",
+      ),
+      News(
+        "Butterbee 1.0",
+        "https://codeberg.org/gelei/butterbee",
+        "Control the browser with gleam code.",
+      ),
+      News(
+        "Modelling Permissions in Gleam",
+        "https://www.kurz.net/posts/gleam-permissions",
+        "How do you enforce application logic on a compiler level?",
+      ),
+    ],
+    [
+      Also(
+        "Building self-contained executables with Gleam",
+        "https://www.youtube.com/watch?v=Ojs0YREqX8k",
+        Video,
+      ),
+      Also(
+        "MÖRK - Commonmark for Gleam",
+        "https://git.liten.app/krig/mork",
+        ProjectUpdate,
+      ),
+      Also(
+        "Basic HTTP Authentication Scheme for Wisp",
+        "https://github.com/iindyverse/wisp_basic_auth",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     "2025-10-30",
     None,
