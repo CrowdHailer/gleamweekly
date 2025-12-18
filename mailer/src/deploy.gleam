@@ -8,6 +8,7 @@ import gleam/list
 import gleam/option.{None, Some}
 import gleam/result
 import gleam/string
+import midas/effect as e
 import midas/task as t
 import netlify
 import netlify/schema
@@ -38,7 +39,7 @@ pub fn run(token, site_id, content) {
     t.sequential(
       list.map(content, fn(content) {
         let #(path, bytes) = content
-        use hash <- t.do(t.hash(t.SHA1, bytes))
+        use hash <- t.do(t.hash(e.Sha1, bytes))
         let hash = string.lowercase(bit_array.base16_encode(hash))
         t.done(#(#(path, utils.String(hash)), #(hash, #(path, bytes))))
       }),
@@ -65,7 +66,7 @@ pub fn run(token, site_id, content) {
       list.map(functions, fn(function) {
         let #(path, bytes) = function
         use bytes <- t.do(t.zip([#("mcp.mjs", bytes)]))
-        use hash <- t.do(t.hash(t.SHA256, bytes))
+        use hash <- t.do(t.hash(e.Sha256, bytes))
         let hash = string.lowercase(bit_array.base16_encode(hash))
         t.done(#(#(path, utils.String(hash)), #(hash, #(path, bytes))))
       }),

@@ -11,6 +11,7 @@ import gleam/option.{None, Some}
 import gleam/result
 import gleam/string
 import mailer
+import midas/effect as e
 import midas/js/run as r
 import midas/node
 import midas/node/browser
@@ -128,7 +129,7 @@ pub fn run(args) {
 // If not auth is set the PDS doesn't return a nonce
 
 pub type Context(key) {
-  Context(host: String, keypair: t.KeyPair(key), token: String, nonce: String)
+  Context(host: String, keypair: e.KeyPair(key), token: String, nonce: String)
 }
 
 fn sign_request(context, request) {

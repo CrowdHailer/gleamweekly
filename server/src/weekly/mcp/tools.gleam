@@ -19,18 +19,20 @@ pub type Call {
 
 pub fn all() {
   [
-    #(
-      tool.new("list_issues", [], [
-        json_schema.field(
-          "issues",
-          json_schema.array(json_schema.Inline(json_schema.object([]))),
-        ),
-      ])
-        |> tool.set_title("List all issues of Gleam Weekly.")
-        |> tool.set_description(
-          "Gleam weekly is a weekly newsletter about the Gleam programming language. It contains handpicked articles and community news. This tool lists all previous published issues.",
-        ),
-      decode.success(ListIssues(cast:)),
+    tool.Tool(
+      spec: tool.Spec(
+        name: "list_issues",
+        title: "List all issues of Gleam Weekly.",
+        description: "Gleam weekly is a weekly newsletter about the Gleam programming language. It contains handpicked articles and community news. This tool lists all previous published issues.",
+        input: [],
+        output: [
+          json_schema.field(
+            "issues",
+            json_schema.array(json_schema.Inline(json_schema.object([]))),
+          ),
+        ],
+      ),
+      decoder: decode.success(ListIssues(cast:)),
     ),
   ]
 }

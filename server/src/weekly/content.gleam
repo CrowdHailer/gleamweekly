@@ -46,6 +46,58 @@ pub fn tag_from_string(tag) {
 pub const issues = [
   // https://hexdocs.pm/snowball_stemmer/index.html
   // https://discord.com/channels/768594524158427167/1047101890707603547/threads/1438223075685437460
+  // https://blog.tymscar.com/posts/gleamaoc2025/
+  // https://gearsco.de/blog/bit-array-syntax/
+  #(
+    "2025-12-18",
+    Some(
+      "The Gleam gathering schedule is out and the first recordings from Lambda Days.",
+    ),
+    [
+      News(
+        "Gleam Gathering full lineup announced",
+        "https://gleamgathering.com/#schedule",
+        "We have 9 awesome members of the Gleam community talking about all sorts of exciting topics.",
+      ),
+      News(
+        "You don't need an ORM",
+        "https://www.youtube.com/watch?v=XEJxk5VUSTs",
+        "Using SQL from other programming languages can prove to be quite the hassle. This talk takes a look at Squirrel, a library that tackles database access in Gleam.",
+      ),
+      News(
+        "Etch - 1.0",
+        "github.com/bananaofhappiness/etch",
+        "A Gleam TUI Backend Library",
+      ),
+    ],
+    [
+      Also(
+        "Gelman: purely functional statistics",
+        "https://github.com/daikonradish/gelman",
+        ProjectUpdate,
+      ),
+      Also(
+        "On Making Impossible States Impossible",
+        "https://dev.to/stoft/on-making-impossible-states-impossible-1goj",
+        BlogPost,
+      ),
+      Also(
+        "Gleam! A Chat with Peter Saxton on BEAM Radio",
+        "https://www.beamrad.io/97",
+        Podcast,
+      ),
+      Also(
+        "glip - Efficient Gleam representation for IP addresses ",
+        "https://github.com/sbergen/glip",
+        ProjectUpdate,
+      ),
+      Also(
+        "midas_browser - Run midas tasks in the browser.",
+        "https://github.com/midas-framework/midas_browser",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     "2025-11-27",
     Some(
