@@ -47,6 +47,46 @@ pub const issues = [
   // https://hexdocs.pm/snowball_stemmer/index.html
   // https://discord.com/channels/768594524158427167/1047101890707603547/threads/1438223075685437460
   #(
+    "2025-11-27",
+    Some(
+      "Several blog posts writing about Gleam, it's good to see more of them.",
+    ),
+    [
+      News(
+        "A pathway to developer happiness",
+        "https://stoft.github.io/prez-gateway-drug-to-fp-st/",
+        "Why Elm, Gleam, (or F#) might be your next favorite language.",
+      ),
+      News(
+        "Test timeouts in Gleam",
+        "https://gearsco.de/blog/gleam-test-timeouts/",
+        "People ask quite a lot about test timeouts using gleeunit, so I thought I'd write about how to configure it",
+      ),
+    ],
+    [
+      Also(
+        "We Rewrote Our Startup from PHP to Gleam in 3 Weeks",
+        "https://www.radical-elements.com/minor-epiphanies/we-rewrote-our-startup-from-php-to-gleam-in-3-weeks",
+        BlogPost,
+      ),
+      Also(
+        "Embed Lua in Gleam applications.",
+        "https://github.com/selenil/glua",
+        ProjectUpdate,
+      ),
+      Also(
+        "Building Caffeine, a compiler written in Gleam that compiles service expectations to reliability artifacts.",
+        "https://caffeine-lang.run/blog/packaging-caffeine",
+        BlogPost,
+      ),
+      Also(
+        "Gleaming Wails: A new series of live coding videos",
+        "https://ianmjones.com/2025/11/gleaming-wails-a-new-series-of-live-coding-videos/",
+        Educational,
+      ),
+    ],
+  ),
+  #(
     "2025-11-13",
     Some(
       "Why not build your own implementation of the BEAM, or drive your browser from Gleam.",
