@@ -66,7 +66,7 @@ pub const issues = [
       ),
       News(
         "Etch - 1.0",
-        "github.com/bananaofhappiness/etch",
+        "https://github.com/bananaofhappiness/etch",
         "A Gleam TUI Backend Library",
       ),
     ],
