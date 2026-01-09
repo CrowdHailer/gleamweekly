@@ -1,10 +1,10 @@
 import aide/tool
+import castor
 import gleam/dict.{type Dict}
 import gleam/dynamic/decode
 import gleam/list
 import gleam/option.{None, Some}
 import oas/generator/utils
-import oas/json_schema
 import weekly/content
 
 pub type Return =
@@ -26,10 +26,7 @@ pub fn all() {
         description: "Gleam weekly is a weekly newsletter about the Gleam programming language. It contains handpicked articles and community news. This tool lists all previous published issues.",
         input: [],
         output: [
-          json_schema.field(
-            "issues",
-            json_schema.array(json_schema.Inline(json_schema.object([]))),
-          ),
+          castor.field("issues", castor.array(castor.Inline(castor.object([])))),
         ],
       ),
       decoder: decode.success(ListIssues(cast:)),

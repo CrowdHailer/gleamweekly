@@ -44,10 +44,82 @@ pub fn tag_from_string(tag) {
 }
 
 pub const issues = [
-  // https://hexdocs.pm/snowball_stemmer/index.html
-  // https://discord.com/channels/768594524158427167/1047101890707603547/threads/1438223075685437460
-  // https://blog.tymscar.com/posts/gleamaoc2025/
-  // https://gearsco.de/blog/bit-array-syntax/
+  #(
+    "2026-01-08",
+    Some(
+      "A bumper newsletter after the Christmas holidays. We have the latest release the 2025 Developer survey and a bounty of blogs and libraries.",
+    ),
+    [
+      News(
+        "The Gleam developer survey 2025 is out",
+        "https://developer-survey.gleam.run/",
+        "This is your chance to shape our 2026 plans, so fill it in and share with your friends!
+        You don't need to currently be a Gleam programmer to participate. Just an interest is good.",
+      ),
+      News(
+        "The happy holidays release 2025",
+        "https://gleam.run/news/the-happy-holidays-2025-release/",
+        "Gleam v1.14.0 released",
+      ),
+      News(
+        "Making the Most of Bit Arrays",
+        "https://gearsco.de/blog/bit-array-syntax/",
+        "Bit arrays are extremely powerful. Gears write a comprehensive guide, to make it as easy as possible to understand how they work.",
+      ),
+      News(
+        "Savoiardi - Three.js bindings",
+        "https://github.com/renatillas/savoiardi",
+        "part of the tiramisu game engine ecosystem",
+      ),
+    ],
+    [
+      Also(
+        "Gleam powering UK train data collection",
+        "https://grafana.traini.ac/public-dashboards/fb3b963903244df8bae5f5f757d34266",
+        Educational,
+      ),
+      Also(
+        "Building my college project with Gleam",
+        "https://kacaii-blog.fly.dev/posts/building-my-college-project-with-gleam",
+        BlogPost,
+      ),
+      Also(
+        "storygleam; an interface for using storybook in your gleam projects.",
+        "https://codeberg.org/theSuess/storygleam",
+        ProjectUpdate,
+      ),
+      Also(
+        "kafein; TLS client for Gleam on Erlang",
+        "https://github.com/fuzzko/kafein",
+        ProjectUpdate,
+      ),
+      Also(
+        "I Tried Gleam for Advent of Code, and I Get the Hype",
+        "https://blog.tymscar.com/posts/gleamaoc2025/",
+        BlogPost,
+      ),
+      Also(
+        "Castor 1.0: A library for working with JSON Schema",
+        "https://github.com/CrowdHailer/castor",
+        ProjectUpdate,
+      ),
+      Also(
+        "Gleam 1.14 release video",
+        "https://www.youtube.com/watch?v=Ux9mT-XULwM",
+        Video,
+      ),
+      Also(
+        "Roundabout - A route types and helpers generator",
+        "https://github.com/sporto/gleam-roundabout",
+        ProjectUpdate,
+      ),
+      Also(
+        "Pollux 1.0: A library for working with JSON RPC",
+        "https://github.com/CrowdHailer/pollux",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     "2025-12-18",
     Some(
