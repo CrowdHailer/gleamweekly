@@ -45,6 +45,44 @@ pub fn tag_from_string(tag) {
 
 pub const issues = [
   #(
+    "2026-01-22",
+    None,
+    [
+      News(
+        "Building a Blog in Gleam",
+        "https://gearsco.de/blog/blog-in-gleam/",
+        "A starting point for writing your own blog site in Gleam.",
+      ),
+      News(
+        "Krypto 1.0 released",
+        "https://github.com/jtdowney/kryptos",
+        "Cryptography library with AEAD ciphers, key derivation and digital signatures.",
+      ),
+      News(
+        "Sextant 1.0",
+        "https://github.com/Pevensie/sextant",
+        "Type-safe JSON Schema generation and validation",
+      ),
+    ],
+    [
+      Also(
+        "Bulletproof Type Safety in Gleam: From Database to Client",
+        "https://blog.andreyfadeev.com/p/bulletproof-type-safety-in-gleam",
+        BlogPost,
+      ),
+      Also(
+        "Gleam: First Impressions - Fun, Functional Programming at it's Finest",
+        "https://www.youtube.com/watch?v=4RlS6NnitYs",
+        Video,
+      ),
+      Also(
+        "geckolex - A Type Agnostic Lexer",
+        "https://github.com/mewfinity06/geckolex",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2026-01-08",
     Some(
       "A bumper newsletter after the Christmas holidays. We have the latest release the 2025 Developer survey and a bounty of blogs and libraries.",
