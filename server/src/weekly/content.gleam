@@ -45,6 +45,39 @@ pub fn tag_from_string(tag) {
 
 pub const issues = [
   #(
+    "2026-01-29",
+    Some("This week sees the Gleam Gathering keynote announced."),
+    [
+      News(
+        "Happy (almost) 2nd Birthday Gleam",
+        "https://gleamgathering.com/#schedule",
+        "Gleam Gathering keynote. Louis will dig into the data of these first 2 years and unveil a plan for the future, laying out additions and projects to keep Gleam improving and growing in years 3, 4, and beyond.",
+      ),
+      News(
+        "How we dropped Vue for Gleam and Lustre.",
+        "https://blog.nestful.app/p/how-we-dropped-vue-for-gleam-and",
+        "Write up on the conclusion of a transition that started more than a year ago, stemming from a frustration with TypeScript and the state of front-end frameworks.",
+      ),
+      News(
+        "An experimental and unofficial Gleam to WebAssembly compiler",
+        "https://tufteddeer.github.io/raytracing-gleam/",
+        "Built as part of a Master's thesis about compiling Gleam to WebAssembly.",
+      ),
+    ],
+    [
+      Also(
+        "Solving FizzBuzz in Gleam",
+        "https://www.youtube.com/watch?v=6RGw4IbUGpA",
+        Video,
+      ),
+      Also(
+        "Parsing Markdown in Gleam",
+        "https://gleamtalk-jan26.liten.app/",
+        Educational,
+      ),
+    ],
+  ),
+  #(
     "2026-01-22",
     None,
     [
