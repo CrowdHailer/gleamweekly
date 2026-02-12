@@ -45,6 +45,54 @@ pub fn tag_from_string(tag) {
 
 pub const issues = [
   #(
+    "2026-02-12",
+    Some("Talks from FOSDEM and a Gnome based explainer."),
+    [
+      News(
+        "AtomVM: Elixir, Erlang, and Gleam on Microcontrollers.",
+        "https://fosdem.org/2026/schedule/event/YP97YR-atomvm_elixir_erlang_and_gleam_on_microcontrollers/",
+        "AtomVM is a from-scratch implementation of the Erlang VM designed for constrained devices. This talk will introduce AtomVM and show how it can be used in real embedded projects.",
+      ),
+      News(
+        "Testing can be fun, actually.",
+        "https://giacomocavalieri.me/writing/testing-can-be-fun-actually",
+        "Jak wrote a blog post about snapshot testing",
+      ),
+      News(
+        "The Gnome Village.",
+        "https://happihacking.com/blog/posts/2025/the-gnome-village/",
+        "OTP actor pattern and archetypes",
+      ),
+    ],
+    [
+      Also(
+        "Jake made a scrabble solver.",
+        "https://github.com/jzwood/scrabble-oracle",
+        ProjectUpdate,
+      ),
+      Also(
+        "Func Prog Podcast #15 - Giacomo Cavalieri",
+        "https://www.youtube.com/watch?v=IW-p9dXLLpY",
+        Podcast,
+      ),
+      Also(
+        "Sceall - Spawn shell programs and stream their stdio using BEAM ports.",
+        "https://github.com/lpil/sceall",
+        ProjectUpdate,
+      ),
+      Also(
+        "Use watchexec as a cross-platform file event watcher on the BEAM.",
+        "https://github.com/lpil/watchexec",
+        ProjectUpdate,
+      ),
+      Also(
+        "Making Web Components work: a framework's perspective.",
+        "https://fosdem.org/2026/schedule/event/9MJ8LX-making-web-components-work/",
+        Video,
+      ),
+    ],
+  ),
+  #(
     "2026-01-29",
     Some("This week sees the Gleam Gathering keynote announced."),
     [
