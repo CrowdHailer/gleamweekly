@@ -44,6 +44,52 @@ pub fn tag_from_string(tag) {
 }
 
 pub const issues = [
+  // https://curling.io/blog/background-jobs-without-the-baggage
+  #(
+    "2026-02-26",
+    Some(
+      "The Gleam community go ham on writing libraries. We have libraries for PDF, thermal printers, QR codes and static site generation.",
+    ),
+    [
+      News(
+        "Gleam is boring, so I went to a conference about it",
+        "https://builders.perk.com/gleam-is-boring-so-i-went-to-a-conference-about-it-8f08a52c3de3",
+        "What Gavin actually means is that Gleam is a straightforward, predictable and stable language.",
+      ),
+      News(
+        "ESC/POS library for thermal printers",
+        "https://tangled.org/okk.moe/escpos",
+        "Used live as part of a fun lightning talk at Gleam Gathering.",
+      ),
+      News(
+        "Glqr: A pure gleam QR code generator",
+        "https://github.com/imcquee/glqr",
+        "A great library to generate QR codes on JavaScript or the BEAM.",
+      ),
+    ],
+    [
+      Also(
+        "Build static blogs with Lustre and Markdown. Generates HTML pages, RSS feeds, sitemaps and robots.txt",
+        "https://github.com/veeso/blogatto",
+        ProjectUpdate,
+      ),
+      Also(
+        "A Gleam FTP/FTPS client library with full RFC support for both passive and active mode",
+        "https://github.com/veeso/gftp",
+        ProjectUpdate,
+      ),
+      Also(
+        "A pure-Gleam PDF generator.",
+        "https://github.com/lpil/paddlefish/",
+        ProjectUpdate,
+      ),
+      Also(
+        "The Next Version of Curling IO",
+        "https://curling.io/blog/the-next-version-of-curling-io",
+        BlogPost,
+      ),
+    ],
+  ),
   #(
     "2026-02-12",
     Some("Talks from FOSDEM and a Gnome based explainer."),
