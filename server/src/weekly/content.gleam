@@ -45,6 +45,63 @@ pub fn tag_from_string(tag) {
 
 pub const issues = [
   // https://curling.io/blog/background-jobs-without-the-baggage
+  // https://curling.io/blog/why-we-chose-sqlite
+  // A simple library to recur something https://tangled.org/fuzzko.neocities.org/cycle
+  // https://curling.io/blog/parallel-tests-for-free
+  // cute gh stats https://discord.com/channels/768594524158427167/1047101890707603547/threads/1482459458050457731
+  // orbital atom https://discord.com/channels/768594524158427167/1047101890707603547/threads/1483128033312505957
+  // https://blog.guillheu.dev/articles/gleam-decoding/
+  // https://discord.com/channels/768594524158427167/1047101890707603547/threads/1483401983317774447
+  #(
+    "2026-03-19",
+    Some(
+      "Gleam 1.15 is here, tail calls explained and making illegal states unrepresentable",
+    ),
+    [
+      News(
+        "Upgrading Hex security",
+        "https://gleam.run/news/upgrading-hex-security/",
+        "Gleam v1.15.0 released",
+      ),
+      News(
+        "The Tailless Deno",
+        "https://caffeine-lang.run/blog/the-tailless-deno",
+        "Rob explains tail calls and why he moved to Bun",
+      ),
+      News(
+        "Lustre bindings to framework-agnostic UI Component Libraries",
+        "https://github.com/daniellionel01/glaze",
+        "Bindings to libraries Oat and Basecoat",
+      ),
+      News(
+        "Ensuring correctness through the type system",
+        "https://lindbakk.com/blog/ensuring-correctness-through-the-type-system",
+        "Expanding on 'Make Illegal States Unrepresentable'",
+      ),
+      News(
+        "gose 1.0",
+        "https://github.com/jtdowney/gose",
+        "JOSE (JSON Object Signing and Encryption) standards (JWS, JWE, JWK, and JWT)",
+      ),
+    ],
+    [
+      Also(
+        "Yog - a comprehensive graph and pathfinding library",
+        "https://github.com/code-shoily/yog",
+        ProjectUpdate,
+      ),
+      Also(
+        "smalto - a general-purpose syntax highlighting library with regex-based grammars for 30 languages.",
+        "https://github.com/veeso/smalto",
+        ProjectUpdate,
+      ),
+      Also(
+        "Send Email Using Lustre",
+        "https://uhkay.com/blog/send-email-using-lustre/",
+        BlogPost,
+      ),
+    ],
+  ),
   #(
     "2026-02-26",
     Some(
