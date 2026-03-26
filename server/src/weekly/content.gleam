@@ -44,14 +44,68 @@ pub fn tag_from_string(tag) {
 }
 
 pub const issues = [
+  // https://github.com/CrowdHailer/ogre
   // https://curling.io/blog/background-jobs-without-the-baggage
   // https://curling.io/blog/why-we-chose-sqlite
+  // https://github.com/lpil/blimp/
   // A simple library to recur something https://tangled.org/fuzzko.neocities.org/cycle
-  // https://curling.io/blog/parallel-tests-for-free
   // cute gh stats https://discord.com/channels/768594524158427167/1047101890707603547/threads/1482459458050457731
   // orbital atom https://discord.com/channels/768594524158427167/1047101890707603547/threads/1483128033312505957
-  // https://blog.guillheu.dev/articles/gleam-decoding/
-  // https://discord.com/channels/768594524158427167/1047101890707603547/threads/1483401983317774447
+  #(
+    "2026-03-26",
+    Some(
+      "I'm impressed with the amount of libraries released this week, we even have one for getting Gleam on microcontrollers.",
+    ),
+    [
+      News(
+        "Zsh completions for Gleam",
+        "https://github.com/giacomocavalieri/zsh_gleam_completions",
+        "Zsh tab completions supporting the entire range of commands that the Gleam CLI has to offer; with smart completions for files, packages, and modules.",
+      ),
+      News(
+        "Gleam decoding",
+        "https://blog.guillheu.dev/articles/gleam-decoding/",
+        "And why dynamic.from had to die.",
+      ),
+      News(
+        "New Blog… Again",
+        "https://blog.nytsoi.net/2026/03/25/new-blog/",
+        "Rewriting a blog in Gleam, for the second time.",
+      ),
+      News(
+        "Orbital 1.0",
+        "https://github.com/giacomocavalieri/orbital",
+        "Build and flash Gleam projects to devices running AtomVM.",
+      ),
+      News(
+        "EYG is now open source",
+        "https://eyg.run/news/editions/6",
+        "Eat Your Greens is a scripting language with managed effects implemented in Gleam.",
+      ),
+    ],
+    [
+      Also(
+        "Hoist is a POSIX- and CLIG-compliant command line option parser.",
+        "https://github.com/Pevensie/hoist",
+        ProjectUpdate,
+      ),
+      Also(
+        "Julienne is a JSON parser that decodes JSON into a flat (non recursive) data structure",
+        "https://github.com/CrowdHailer/julienne",
+        ProjectUpdate,
+      ),
+      Also(
+        "Parallel Tests for Free",
+        "https://curling.io/blog/parallel-tests-for-free",
+        BlogPost,
+      ),
+      Also(
+        "Sara 1.0 - Serialization code generator",
+        "https://github.com/gungun974/Sara",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     "2026-03-19",
     Some(
