@@ -44,13 +44,48 @@ pub fn tag_from_string(tag) {
 }
 
 pub const issues = [
-  // https://github.com/CrowdHailer/ogre
-  // https://curling.io/blog/background-jobs-without-the-baggage
-  // https://curling.io/blog/why-we-chose-sqlite
-  // https://github.com/lpil/blimp/
+  // https://curling.io/blog/live-admin-without-javascript
   // A simple library to recur something https://tangled.org/fuzzko.neocities.org/cycle
-  // cute gh stats https://discord.com/channels/768594524158427167/1047101890707603547/threads/1482459458050457731
-  // orbital atom https://discord.com/channels/768594524158427167/1047101890707603547/threads/1483128033312505957
+  #(
+    "2026-04-02",
+    Some(
+      "Libraries for images, splines and certificate management. Great times.",
+    ),
+    [
+      News(
+        "Background Jobs Without the Baggage",
+        "https://curling.io/blog/background-jobs-without-the-baggage",
+        "On the BEAM background jobs are just another process.",
+      ),
+      News(
+        "Acumen 1.0",
+        "https://github.com/jtdowney/acumen",
+        "Library for interacting with Automatic Certificate Management Environment (ACME) servers like Let's Encrypt ",
+      ),
+    ],
+    [
+      Also(
+        "Ogre - types for working with origins and relative paths.",
+        "https://github.com/CrowdHailer/ogre",
+        ProjectUpdate,
+      ),
+      Also(
+        "Blimp - render BMP images",
+        "https://github.com/lpil/blimp/",
+        ProjectUpdate,
+      ),
+      Also(
+        "An implementation of popular parametric splines for use in graphics, simulations, and games.",
+        "https://github.com/seancribbs/splines",
+        ProjectUpdate,
+      ),
+      Also(
+        "Why we chose SQLite",
+        "https://curling.io/blog/why-we-chose-sqlite",
+        BlogPost,
+      ),
+    ],
+  ),
   #(
     "2026-03-26",
     Some(
