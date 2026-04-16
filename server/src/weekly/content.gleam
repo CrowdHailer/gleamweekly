@@ -44,8 +44,57 @@ pub fn tag_from_string(tag) {
 }
 
 pub const issues = [
-  // https://curling.io/blog/live-admin-without-javascript
-  // A simple library to recur something https://tangled.org/fuzzko.neocities.org/cycle
+  // https://github.com/halostatue/pontil
+  #(
+    "2026-04-16",
+    Some(
+      "Write Gleam in Gleam, or GH Actions in Gleam, or EYG in Gleam. There's always another compiler in Gleam land.",
+    ),
+    [
+      News(
+        "Reflecting on deserialization.",
+        "https://hashset.dev/article/2026/03/21/reflecting-on-deserialization-why-you-should-explicitly-decode-your-json/",
+        "Why you should explicitly decode your JSON, an opinionated piece about JSON deserialization.",
+      ),
+      News(
+        "Libero 2.0",
+        "https://github.com/pairshaped/libero",
+        "Typed Gleam RPC for Lustre SPAs without REST, JSON codecs, or hand-written dispatch tables.",
+      ),
+      News(
+        "Gleam in (an) Action",
+        "https://www.halostatue.ca/posts/2026/04/gleam-in-an-action",
+        "Experience report on writing GitHub actions in Gleam.",
+      ),
+      News(
+        "EYG scripting in Gleam",
+        "https://github.com/CrowdHailer/eyg-lang/blob/main/guides/embedding_in_gleam.md",
+        "A technical guide on embedding EYG into Gleam to execute scripts and implement managed side effects.",
+      ),
+      News(
+        "trick code generation library for Gleam",
+        "https://github.com/GearsDatapacks/trick",
+        "First iteration of trick code generation API.",
+      ),
+    ],
+    [
+      Also(
+        "niji - a practical OKLCH colour toolkit.",
+        "https://github.com/kwando/niji",
+        ProjectUpdate,
+      ),
+      Also(
+        "Collie - a websocket client on the BEAM.",
+        "https://github.com/vshakitskiy/collie",
+        ProjectUpdate,
+      ),
+      Also(
+        "LiveView Admin Panel w/ Gleam and Lustre",
+        "https://curling.io/blog/live-admin-without-javascript",
+        BlogPost,
+      ),
+    ],
+  ),
   #(
     "2026-04-02",
     Some(
