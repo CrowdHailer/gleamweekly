@@ -44,7 +44,41 @@ pub fn tag_from_string(tag) {
 }
 
 pub const issues = [
-  // https://github.com/halostatue/pontil
+  #(
+    "2026-04-30",
+    Some(
+      "Gleam gets everywhere. Guide for a full stack Gleam application kicks of this week.",
+    ),
+    [
+      News(
+        "Full-stack Gleam.",
+        "https://lukwol.github.io/gleam-guide/",
+        "A guide to building Gleam apps for web, desktop, and mobile",
+      ),
+      News(
+        "Gleamgen 1.0",
+        "https://github.com/BrewingWeasel/gleamgen",
+        "Type-safe gleam codegen (in gleam)",
+      ),
+    ],
+    [
+      Also(
+        "smail - Write HTML compliant email with peace of mind.",
+        "https://github.com/gungun974/smail",
+        ProjectUpdate,
+      ),
+      Also(
+        "GitHub Actions for a Gleam monorepo.",
+        "https://crowdhailer.me/2026-04-21/github-actions-for-a-gleam-monorepo/",
+        BlogPost,
+      ),
+      Also(
+        "star - bindings to erlangs tar library.",
+        "https://github.com/jtdowney/star",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     "2026-04-16",
     Some(
