@@ -45,6 +45,44 @@ pub fn tag_from_string(tag) {
 
 pub const issues = [
   #(
+    "2026-05-14",
+    Some("We share the first video from the Gleam Gathering conference."),
+    [
+      News(
+        "Core Team Panel - Gleam Gathering 2026",
+        "https://youtu.be/LgfzH_WBlr4",
+        "Louis Pilfold, Giacomo Cavalieri, Hayleigh Thompson and Surya Rose talk with Isaac Harris-Holt about the past, present and future of Gleam to kick off the inaugural conference",
+      ),
+      News(
+        "Rally 1.0",
+        "https://github.com/pairshaped/rally-gleam",
+        "A full-stack web framework for Gleam on the BEAM. Write page modules where client code and server code live in the same file.",
+      ),
+      News(
+        "beaky a toy array-oriented, postfix-notation language",
+        "alexshroyer.com/pages/beaky/",
+        "Early days of another language implemented in Gleam",
+      ),
+    ],
+    [
+      Also(
+        "sqid, short, unique identifiers generated from numbers ",
+        "https://github.com/giacomocavalieri/sqid",
+        ProjectUpdate,
+      ),
+      Also(
+        "taffy yaml parser",
+        "https://github.com/qwexvf/taffy",
+        ProjectUpdate,
+      ),
+      Also(
+        "voauth - access-token vault for Gleam",
+        "https://github.com/binajmen/voauth",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2026-04-30",
     Some(
       "Gleam gets everywhere. Guide for a full stack Gleam application kicks of this week.",
