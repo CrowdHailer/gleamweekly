@@ -45,6 +45,34 @@ pub fn tag_from_string(tag) {
 
 pub const issues = [
   #(
+    "2026-05-21",
+    Some("Two more terrific talks from the Gathering."),
+    [
+      News(
+        "Riding the Sour Train - John Mikael Lindbakk - Gleam Gathering 2026",
+        "https://www.youtube.com/watch?v=gq2-eR10vn8",
+        "Like trains? Like Gleam? This talk's for you. ",
+      ),
+      News(
+        "10,000 Lines Later: When a Tool Became a Compiler - Rob Durst - Gleam Gathering 2026",
+        "https://www.youtube.com/watch?v=wVQLEAHrwrI",
+        "A tale as old as time. \"Programmer finds Gleam, Programmer writes new language\". Rob talks compilers",
+      ),
+      News(
+        "Shiny Wheat - Interpreter for the Wheat esoteric programming language",
+        "https://codeberg.org/Deepfriedice/shiny-wheat",
+        "Every Wheat program runs in a loop, outputting characters and reading in characters from the previous iteration. There is no external input.",
+      ),
+    ],
+    [
+      Also(
+        "datastar_gleam - implementation of the Datastar SDK with first-class integrations for Mist, Wisp, and Lustre.",
+        "https://github.com/felstormrage/datastar_gleam",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2026-05-14",
     Some("We share the first video from the Gleam Gathering conference."),
     [
