@@ -45,6 +45,44 @@ pub fn tag_from_string(tag) {
 
 pub const issues = [
   #(
+    "2026-05-28",
+    Some("The next two Gathering talks, one from the illustrious leader."),
+    [
+      News(
+        "How I used Lustre to build the best Eve Online arbitrage tool - Guillaume Heu - Gleam Gathering 2026",
+        "https://youtu.be/hDebQpja5tc",
+        "Gleam for finance, in space.",
+      ),
+      News(
+        "DDD in Gleam book",
+        "https://escherize.com/gleam-katas/",
+        "A 10-kata progression that teaches idiomatic Gleam through DDD’s vocabulary. ",
+      ),
+      News(
+        "Happy almost 2nd Birthday Gleam - Louis Pilfold - Gleam Gathering 2026",
+        "https://youtu.be/iMHVglCQyf0",
+        "Louis talks about the crazy 2 years since Gleam 1.0",
+      ),
+    ],
+    [
+      Also(
+        "plume - Sensible HTTP security headers for Gleam web servers.",
+        "https://github.com/scott-ray-wilson/plume",
+        ProjectUpdate,
+      ),
+      Also(
+        "Building an SMTP Server in Gleam - STREAM",
+        "https://www.youtube.com/live/I4BZMR3jSzU",
+        Video,
+      ),
+      Also(
+        "squirtle - A JSON Patch implementation",
+        "https://github.com/alii/squirtle",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2026-05-21",
     Some("Two more terrific talks from the Gathering."),
     [
