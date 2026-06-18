@@ -44,6 +44,52 @@ pub fn tag_from_string(tag) {
 }
 
 pub const issues = [
+  // Gleam for Python programmers. https://third-bit.com/gl4py/
+  // https://crowdhailer.me/2026-06-08/a-programming-language-for-humans/
+  // https://github.com/Willyboar/gleam-langdev
+  #(
+    "2026-06-18",
+    Some("Rounding up the final Gleam Gather talks plus more fun stuff."),
+    [
+      News(
+        "Inside the Lustre runtime - Rebecca Reusch - Gleam Gathering 2026",
+        "https://youtu.be/_CNcl7beTeY",
+        "A tour of the Lustre internals.",
+      ),
+      News(
+        "Optimising the hell out of Gleam - Surya Rose - Gleam Gathering 2026",
+        "https://youtu.be/D_HaX_O1TAo",
+        "This is a good insight into writing Gleam and a fun roundup of the first Gleam Chess competition",
+      ),
+      News(
+        "Learning Lustre",
+        "https://blog.kacaii.dev/3mn6n3lvibc2b",
+        "Type-safe frontend development with Gleam",
+      ),
+      News(
+        "Could WebAssembly be in Gleam's future - Danielle Maywood - Gleam Gathering 2026",
+        "https://youtu.be/UQ0--ODjiDk",
+        "Not an unreasonable question surely.",
+      ),
+    ],
+    [
+      Also(
+        "girard 1.0 - A type annotator for Gleam",
+        "https://github.com/alvivi/girard",
+        ProjectUpdate,
+      ),
+      Also(
+        "Gleam and the value of small",
+        "https://www.youtube.com/watch?v=E6_JqYMeNqs",
+        Video,
+      ),
+      Also(
+        "Armadillo - A self-hosted DNS server for homelab use",
+        "https://github.com/vshakitskiy/armadillo",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     "2026-05-28",
     Some("The next two Gathering talks, one from the illustrious leader."),
