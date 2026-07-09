@@ -44,9 +44,45 @@ pub fn tag_from_string(tag) {
 }
 
 pub const issues = [
-  // Gleam for Python programmers. https://third-bit.com/gl4py/
   // https://crowdhailer.me/2026-06-08/a-programming-language-for-humans/
-  // https://github.com/Willyboar/gleam-langdev
+  #(
+    "2026-07-09",
+    None,
+    [
+      News(
+        "Lightning Talks - Gleam Gathering 2026",
+        "https://youtu.be/rh2ePzHIQmU",
+        "All 7 lightning talks from Gleam Gathering.",
+      ),
+      News(
+        "Command line reference",
+        "https://gleam.run/command-line-reference/",
+        "Getting things done in the terminal",
+      ),
+      News(
+        "Gleam for Python Programmers",
+        "https://third-bit.com/gl4py/",
+        "A translation from Software Design by Example in Python",
+      ),
+      News(
+        "Gleam LangDev",
+        "https://github.com/Willyboar/gleam-langdev",
+        "A curated collection of programming languages, compilers, interpreters, and language development tools written in Gleam.",
+      ),
+    ],
+    [
+      Also(
+        "Possum - ATproto library.",
+        "https://tangled.org/kacaii.dev/possum",
+        ProjectUpdate,
+      ),
+      Also(
+        "LumenMail - A fast SMTP library",
+        "https://github.com/davecaos/lumenmail",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     "2026-06-18",
     Some("Rounding up the final Gleam Gather talks plus more fun stuff."),
