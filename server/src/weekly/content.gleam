@@ -44,7 +44,49 @@ pub fn tag_from_string(tag) {
 }
 
 pub const issues = [
-  // https://crowdhailer.me/2026-06-08/a-programming-language-for-humans/
+  #(
+    "2026-07-16",
+    Some("Gleam Gathering 2027 is announced and a clutch of blog posts."),
+    [
+      News(
+        "Gleam Gathering will return in February 2027, this time in London",
+        "https://gleamgathering.com/",
+        "Register your interest now, leave a comment and help us understand how to make the best Gathering yet.",
+      ),
+      News(
+        "Closing a three-year-old issue using Rust arenas",
+        "https://giacomocavalieri.me/writing/gleam-rust-arenas",
+        "Giacomo uses Rust arenas to make Gleam's pretty printer 24% faster while reducing the formatter's peak memory usage by 10%.",
+      ),
+      News(
+        "Abstracting effects with continuations",
+        "https://crowdhailer.me/2026-07-15/abstracting-effects-with-continuations/",
+        "Using continuations to reuse business logic across direct, fallible and asynchronous computation.",
+      ),
+      News(
+        "Making indie games with Gleam and Lustre",
+        "https://www.youtube.com/watch?v=zhi2_L7JkUA",
+        "NNB is making an indie game using Gleam. It's called Wood of Lies.",
+      ),
+      News(
+        "Querying public data from your Personal Data Server (PDS)",
+        "https://blog.kacaii.dev/3mqa3f6vpzc27",
+        "A first Gleam library and contribution to the ATproto ecosystem",
+      ),
+    ],
+    [
+      Also(
+        "JavaScript sucks. Here's how to build with Vite and Gleam",
+        "https://hendassa100k.github.io/posts/2026-07-11-gleam-and-vite/",
+        BlogPost,
+      ),
+      Also(
+        "Atuin AI Core",
+        "https://github.com/atuinsh/atuin-ai-core",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     "2026-07-09",
     None,
