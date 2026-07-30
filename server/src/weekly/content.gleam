@@ -44,6 +44,45 @@ pub fn tag_from_string(tag) {
 }
 
 pub const issues = [
+  // https://tylerbutler.com/trellis/
+  #(
+    "2026-07-30",
+    Some("Get to know tyler and his tools, also Gleam 1.18 is out."),
+    [
+      News(
+        "trellis: tools for multi-package Gleam repos",
+        "https://trellis.tylerbutler.com/",
+        "A single binary for working across a Gleam monorepo.",
+      ),
+      News(
+        "A field day for Gleam's language server",
+        "https://gleam.run/news/a-field-day-for-gleams-language-server/",
+        "Gleam v1.18.0 released",
+      ),
+      News(
+        "Collaborative apps, CRDTs, and Gleam",
+        "https://www.youtube.com/watch?v=UOFA74zsSnk",
+        "Tyler talks about type-safe real-time channels and presence.",
+      ),
+    ],
+    [
+      Also(
+        "Becoming eve-rich with Gleam",
+        "https://www.youtube.com/watch?v=XypXk-5cICo",
+        Podcast,
+      ),
+      Also(
+        "A universal approach to testing side effects",
+        "https://crowdhailer.me/2026-07-30/a-universal-approach-to-mocking/",
+        BlogPost,
+      ),
+      Also(
+        "munch 1.0 - crypto on all targets",
+        "https://tangled.org/becca.monster/munch",
+        ProjectUpdate,
+      ),
+    ],
+  ),
   #(
     "2026-07-16",
     Some("Gleam Gathering 2027 is announced and a clutch of blog posts."),
