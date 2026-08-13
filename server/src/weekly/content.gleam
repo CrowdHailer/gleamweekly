@@ -44,7 +44,45 @@ pub fn tag_from_string(tag) {
 }
 
 pub const issues = [
-  // https://tylerbutler.com/trellis/
+  #(
+    "2026-08-13",
+    Some("Two games written in Gleam."),
+    [
+      News(
+        "A daily hashiwokakero puzzle",
+        "https://github.com/giacomocavalieri/hashi",
+        "A web app that gives you a hashiwokakero puzzle to solve each day.",
+      ),
+      News(
+        "Curlify 1.0",
+        "https://kwando.github.io/curlify/",
+        "Convert curl commands to Gleam requests and vica versa.",
+      ),
+      News(
+        "Lustre Factory",
+        "https://github.com/gungun974/lustrefactory",
+        "An incremental game to send as many Lustre messages as possible.",
+      ),
+    ],
+    [
+      Also(
+        "The Unreasonable Effectiveness of Constructive Data Modeling",
+        "https://www.youtube.com/watch?v=0BXuYlNrUmE",
+        Video,
+      ),
+      Also(
+        "Rewriting Neotoma in Gleam",
+        "https://www.youtube.com/playlist?list=PLEaS5WtkvV_E",
+        Video,
+      ),
+      Also(
+        "Trellis: workspace tooling for Gleam monorepos",
+        "https://tylerbutler.com/trellis/",
+        BlogPost,
+      ),
+    ],
+  ),
+
   #(
     "2026-07-30",
     Some("Get to know tyler and his tools, also Gleam 1.18 is out."),
