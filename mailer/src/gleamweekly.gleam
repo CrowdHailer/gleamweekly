@@ -1,6 +1,7 @@
 import at_protocol/operations
 import deploy
 import email_octopus
+import filepath
 import gleam/dict
 import gleam/http/request
 import gleam/io
@@ -77,6 +78,11 @@ pub fn run(args) {
         list.try_each(content, fn(file) {
           let #(path, content) = file
           let path = root <> "/website" <> path
+          use Nil <- result.try(
+            filepath.directory_name(path)
+            |> simplifile.create_directory_all()
+            |> result.map_error(fn(error) { snag.new(string.inspect(error)) }),
+          )
 
           simplifile.write_bits(path, content)
           |> result.map_error(fn(error) { snag.new(string.inspect(error)) })
