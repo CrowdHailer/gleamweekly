@@ -45,6 +45,51 @@ pub fn tag_from_string(tag) {
 
 pub const issues = [
   #(
+    "2026-08-27",
+    Some(
+      "Tickets available and call for talks for Gleam Gathering, plus a selection of blog posts from the community.",
+    ),
+    [
+      News(
+        "Gleam Gathering 2027 tickets available and call for talks open",
+        "https://gleamgathering.com/",
+        "Buy tickets, submit your talk proposals for the next Gleam conference.",
+      ),
+      News(
+        "Single file apps with Gleam and Bun",
+        "https://alistair.sh/gleam-bun-apps",
+        "Alistair explains bundling your projects into a single binary.",
+      ),
+      News(
+        "My experience as a first time speaker",
+        "https://blog.guillheu.dev/articles/first-time-speaker/",
+        "Guillaume gives some choice pointers for those who want to get into speaking.",
+      ),
+      News(
+        "wavye",
+        "https://dev.lekkice.moe/blog/wavye/",
+        "listen together web app for Navidrome.",
+      ),
+    ],
+    [
+      Also(
+        "Fuzzing The Gleam Compiler",
+        "https://www.kurz.net/posts/fuzzing-gleam-compiler",
+        BlogPost,
+      ),
+      Also(
+        "Time, Hard Problems, other Hard Problems",
+        "https://www.youtube.com/watch?v=ZaPBaRmWbgI",
+        Video,
+      ),
+      Also(
+        "Vouch - A gleeunit-compatible test runner",
+        "https://github.com/richardcocks/vouch",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2026-08-13",
     Some("Two games written in Gleam."),
     [
