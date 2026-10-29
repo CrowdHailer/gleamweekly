@@ -45,6 +45,39 @@ pub fn tag_from_string(tag) {
 
 pub const issues = [
   #(
+    "2026-10-29",
+    None,
+    [
+      News(
+        "Howdy web framework - 1.0",
+        "https://github.com/howdy-gleam/howdy",
+        "A full-featured web framework written in Gleam. Typed from end to end and running on the BEAM.",
+      ),
+      News(
+        "Making dns_erlang Fast",
+        "https://blog.dnsimple.com/2026/10/making-dns-erlang-fast/",
+        "Binary Tricks for the BEAM",
+      ),
+    ],
+    [
+      Also(
+        "koine: a Gemtext-based SSG",
+        "https://tangled.org/journcy.net/koine",
+        ProjectUpdate,
+      ),
+      Also(
+        "Embedded Gleam for Everyone - BEAM There, Done That",
+        "https://www.youtube.com/watch?v=57Vhx7FHk34",
+        Podcast,
+      ),
+      Also(
+        "etui 2.0 - A TUI library",
+        "https://github.com/lupodevelop/etui",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2026-10-08",
     Some("Blogs on Lustre and Nerves and a podcast from Louis"),
     [
