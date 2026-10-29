@@ -46,7 +46,7 @@ pub fn tag_from_string(tag) {
 pub const issues = [
   #(
     "2026-10-29",
-    None,
+    Some("Gleam gets a new web framework."),
     [
       News(
         "Howdy web framework - 1.0",
