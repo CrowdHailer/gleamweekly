@@ -45,6 +45,54 @@ pub fn tag_from_string(tag) {
 
 pub const issues = [
   #(
+    "2026-10-08",
+    Some("Blogs on Lustre and Nerves and a podcast from Louis"),
+    [
+      News(
+        "X-Clacks-Overhead: GNU Terry Pratchett",
+        "https://github.com/lpil/clacks-overhead",
+        "For the Discworld fans",
+      ),
+      News(
+        "Lustre, Mist, and BEAM messages",
+        "https://blog.guillheu.dev/articles/lustre-mist-and-beam-messages/",
+        "Guillaume walks us through a snag he dealt with working with BEAM messages.",
+      ),
+      News(
+        "Gleam on Nerves",
+        "https://github.com/nerves-project/nerves_examples/tree/main/hello_gleam",
+        "A hello world example of using Gleam on Nerves for embedded systems.",
+      ),
+      News(
+        "Gleam Gathering 2027",
+        "https://gleamgathering.com/",
+        "Last week for talk submissions.",
+      ),
+    ],
+    [
+      Also(
+        "Louis Pilfold on Building Gleam - BEAM There, Done That",
+        "https://www.youtube.com/watch?v=E4kqlNsVdgU",
+        Podcast,
+      ),
+      Also(
+        "Drag and Drop Using Lustre",
+        "https://uhkay.com/blog/drag-and-drop-using-lustre/",
+        BlogPost,
+      ),
+      Also(
+        "Tup - acceptor pool using relay supervisor",
+        "https://github.com/vshakitskiy/tup",
+        ProjectUpdate,
+      ),
+      Also(
+        "Intelligence 1.0 - A type-safe client for Jev",
+        "https://github.com/CrowdHailer/eyg-lang/tree/main/packages/intelligence",
+        ProjectUpdate,
+      ),
+    ],
+  ),
+  #(
     "2026-09-10",
     Some("A choice selection of libraries from the community."),
     [
